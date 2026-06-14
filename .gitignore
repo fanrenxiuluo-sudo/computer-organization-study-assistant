@@ -1,0 +1,27 @@
+node_modules/
+dist/
+target/
+.idea/
+.vscode/
+
+# Logs
+*.log
+*.tmp
+
+# Database files (user data)
+*.db
+*.sqlite
+
+# Environment files
+.env
+.env.*
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor swap files
+*.swp
+*.swo
+*.suo
+*.user
