@@ -1,183 +1,166 @@
-import { useMemo, useRef, useState } from "react";
-import seedData from "../data/seed_questions.json";
-import type { SeedData } from "./types";
-
-const data = seedData as SeedData;
-
-const roadmap = [
-  { label: "OBE 任务", status: "当前阶段", percent: 35 },
-  { label: "作答复盘", status: "下一阶段", percent: 0 },
-  { label: "学习统计", status: "规划中", percent: 0 },
-  { label: "模拟考核", status: "规划中", percent: 0 }
-];
+import { useState, useCallback, useRef, useEffect } from "react";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+import { Sidebar } from "./components/layout/Sidebar";
+import { MetricGrid } from "./components/overview/MetricGrid";
+import { TaskCard } from "./components/practice/TaskCard";
+import { ChapterProgressPanel } from "./components/overview/ChapterProgress";
+import { useChapters } from "./hooks/useChapters";
+import { useTasks } from "./hooks/useTasks";
+import { useTaskDetail } from "./hooks/useTaskDetail";
+import { useStats } from "./hooks/useStats";
+import { usePracticeMode } from "./hooks/usePracticeMode";
+import { api } from "./services/api";
+import type { TaskDetail, Assessment } from "./types";
 
 function App() {
   const workspaceRef = useRef<HTMLElement>(null);
-  const [activeChapterId, setActiveChapterId] = useState(data.chapters[0].id);
-  const [studentAnswer, setStudentAnswer] = useState("");
-  const [showReference, setShowReference] = useState(false);
+  const { chapters, outcomes, loading: chaptersLoading } = useChapters();
+  const { mode, selectedKnowledgePointId, switchMode, selectKnowledgePoint } = usePracticeMode();
 
-  const activeChapter = data.chapters.find((chapter) => chapter.id === activeChapterId);
-  const chapterTasks = useMemo(
-    () => data.tasks.filter((task) => task.chapterId === activeChapterId),
-    [activeChapterId]
+  const [activeChapterId, setActiveChapterId] = useState("");
+  const [activeTaskIndex, setActiveTaskIndex] = useState(0);
+
+  useEffect(() => {
+    if (chapters.length > 0 && !activeChapterId) {
+      setActiveChapterId(chapters[0].id);
+    }
+  }, [chapters, activeChapterId]);
+
+  const { tasks, total, loading: tasksLoading, refresh: refreshTasks } = useTasks(
+    activeChapterId,
+    0,
+    200
   );
-  const currentTask = chapterTasks[0];
 
-  const switchChapter = (chapterId: string) => {
-    setActiveChapterId(chapterId);
-    setStudentAnswer("");
-    setShowReference(false);
-    workspaceRef.current?.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const currentTaskId: string | null =
+    tasks.length > 0 && activeTaskIndex < tasks.length
+      ? tasks[activeTaskIndex].task.id
+      : null;
+
+  const {
+    detail,
+    loading: detailLoading,
+    currentAnswer,
+    revealed,
+    reqStatuses,
+    updateAnswer,
+    saveCurrentAnswer,
+    revealReference,
+    assessReq,
+    assessWholeTask,
+  } = useTaskDetail(currentTaskId);
+
+  const { overall, chapter: chapterProgress, refresh: refreshStats } = useStats(activeChapterId);
+
+  const handleSwitchChapter = useCallback(
+    (chapterId: string) => {
+      saveCurrentAnswer();
+      setActiveChapterId(chapterId);
+      setActiveTaskIndex(0);
+      refreshTasks();
+      refreshStats();
+      workspaceRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    [saveCurrentAnswer, refreshTasks, refreshStats]
+  );
+
+  const handleSwitchMode = useCallback(
+    (newMode: typeof mode) => {
+      switchMode(newMode);
+      setActiveTaskIndex(0);
+      refreshTasks();
+    },
+    [switchMode, refreshTasks]
+  );
+
+  const handleAssessTask = useCallback(
+    async (assessment: Assessment) => {
+      await assessWholeTask(assessment);
+      refreshStats();
+    },
+    [assessWholeTask, refreshStats]
+  );
+
+  const currentDetail: TaskDetail | null = detail;
 
   return (
-    <main className="app-shell">
-      <aside className="side-panel">
-        <div className="brand-block">
-          <span className="brand-mark">CO</span>
-          <div>
-            <p className="eyebrow">Network Engineering Project</p>
-            <h1>计组备考助手</h1>
-          </div>
-        </div>
+    <ErrorBoundary>
+      <main className="app-shell">
+        <Sidebar
+          chapters={chapters}
+          outcomes={outcomes}
+          activeChapterId={activeChapterId}
+          practiceMode={mode}
+          overallMastered={overall?.mastered ?? 0}
+          overallTotal={overall?.totalTasks ?? 0}
+          outcomeProgress={overall?.outcomes ?? []}
+          onSwitchChapter={handleSwitchChapter}
+          onSwitchMode={handleSwitchMode}
+        />
 
-        <nav className="chapter-list" aria-label="章节列表">
-          {data.chapters.map((chapter) => (
-            <button
-              key={chapter.id}
-              className={`chapter-button ${chapter.id === activeChapterId ? "is-active" : ""}`}
-              type="button"
-              onClick={() => switchChapter(chapter.id)}
-            >
-              <span>{chapter.orderIndex.toString().padStart(2, "0")}</span>
-              {chapter.title}
-            </button>
-          ))}
-        </nav>
-      </aside>
-
-      <section className="workspace" ref={workspaceRef}>
-        <header className="top-bar">
-          <div>
-            <p className="eyebrow">v0.1 OBE 任务练习版</p>
-            <h2>按课程目标完成综合作答，再扩展复盘和统计</h2>
-          </div>
-          <div className="exam-chip">期末通过优先</div>
-        </header>
-
-        <section className="metric-grid" aria-label="项目状态">
-          <div className="metric-card">
-            <span>章节数</span>
-            <strong>{data.chapters.length}</strong>
-          </div>
-          <div className="metric-card">
-            <span>OBE 任务</span>
-            <strong>{data.tasks.length}</strong>
-          </div>
-          <div className="metric-card">
-            <span>当前目标</span>
-            <strong>v0.1</strong>
-          </div>
-        </section>
-
-        <section className="content-grid">
-          <article className="question-panel">
-            <div className="panel-heading">
-              <span className="section-index">01</span>
-              <div>
-                <p className="eyebrow">{activeChapter?.title ?? "章节"}</p>
-                <h3>{currentTask?.scenario ?? "本章节 OBE 综合任务正在补充"}</h3>
-              </div>
+        <section className="workspace" ref={workspaceRef}>
+          <header className="top-bar">
+            <div>
+              <p className="eyebrow">v0.1 OBE 任务练习版</p>
+              <h2>按课程目标完成综合作答，逐条自评掌握程度</h2>
             </div>
+            <div className="exam-chip">期末通过优先</div>
+          </header>
 
-            {currentTask ? (
-              <>
-                <div className="outcome-block">
-                  <span>课程目标</span>
-                  <p>{currentTask.outcome}</p>
-                </div>
+          <MetricGrid
+            overall={overall}
+            chapterCount={chapters.length}
+            loading={chaptersLoading}
+          />
 
-                <div className="requirement-block">
-                  <span>作答要求</span>
-                  <ul>
-                    {currentTask.requirements.map((requirement) => (
-                      <li key={requirement}>{requirement}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <label className="answer-editor">
-                  <span>我的作答</span>
-                  <textarea
-                    value={studentAnswer}
-                    onWheel={(event) => {
-                      const workspace = workspaceRef.current;
-                      if (!workspace) return;
-                      workspace.scrollTop += event.deltaY;
-                    }}
-                    onChange={(event) => {
-                      setStudentAnswer(event.target.value);
-                      setShowReference(false);
-                    }}
-                    placeholder="按作答要求分点写出你的分析过程。"
-                  />
-                </label>
-
-                <div className="action-row">
-                  <button
-                    className="primary-button"
-                    type="button"
-                    disabled={studentAnswer.trim().length < 10}
-                    onClick={() => setShowReference(true)}
-                  >
-                    对照参考答案
-                  </button>
-                  <span className="answer-pending">
-                    已输入 {studentAnswer.trim().length} 字，至少输入 10 字后可查看参考答案
-                  </span>
-                </div>
-
-                {showReference ? (
-                  <div className="analysis-block">
-                    <span>参考答案</span>
-                    <p>{currentTask.reference}</p>
-                  </div>
-                ) : null}
-              </>
+          <section className="content-grid">
+            {currentDetail && !detailLoading ? (
+              <TaskCard
+                detail={currentDetail}
+                currentAnswer={currentAnswer}
+                revealed={revealed}
+                reqStatuses={reqStatuses}
+                onAnswerChange={updateAnswer}
+                onReveal={revealReference}
+                onAssessReq={assessReq}
+                onAssessTask={handleAssessTask}
+                onNext={() => {
+                  saveCurrentAnswer();
+                  setActiveTaskIndex((i) => Math.min(i + 1, tasks.length - 1));
+                }}
+                onPrev={() => {
+                  saveCurrentAnswer();
+                  setActiveTaskIndex((i) => Math.max(i - 1, 0));
+                }}
+                currentIndex={activeTaskIndex}
+                totalCount={tasks.length}
+              />
             ) : (
-              <div className="empty-block">当前章节没有题目，后续步骤会继续补充题库。</div>
+              <div className="empty-block">
+                {tasksLoading || detailLoading ? "加载中…" : "当前章节暂无题目，后续会继续补充题库。"}
+              </div>
             )}
-          </article>
 
-          <article className="roadmap-panel">
-            <p className="eyebrow">开发进度</p>
-            <h3>桌面学习系统路线</h3>
-            <div className="roadmap-list">
-              {roadmap.map((item) => (
-                <div className="roadmap-item" key={item.label}>
-                  <div className="roadmap-row">
-                    <span>{item.label}</span>
-                    <em>{item.status}</em>
-                  </div>
-                  <div className="progress-track">
-                    <div style={{ width: `${item.percent}%` }} />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </article>
+            <ChapterProgressPanel
+              chapters={chapters}
+              activeChapterId={activeChapterId}
+              chapterProgress={chapterProgress}
+              onSelectKnowledgePoint={(kpId: string) => {
+                selectKnowledgePoint(kpId);
+              }}
+            />
+          </section>
+
+          <button
+            className="back-top-button"
+            type="button"
+            onClick={() => workspaceRef.current?.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            回到顶部
+          </button>
         </section>
-
-        <button
-          className="back-top-button"
-          type="button"
-          onClick={() => workspaceRef.current?.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          回到顶部
-        </button>
-      </section>
-    </main>
+      </main>
+    </ErrorBoundary>
   );
 }
 
