@@ -1,6 +1,6 @@
 [package]
 name = "computer-organization-study-assistant"
-version = "0.1.0"
+version = "0.2.0"
 description = "面向计算机组成原理课程的 Windows 桌面学习与训练系统"
 authors = ["fanrenxiuluo-sudo"]
 edition = "2021"

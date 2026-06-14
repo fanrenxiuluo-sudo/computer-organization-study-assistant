@@ -1,5 +1,4 @@
 use crate::db::DbState;
-use rusqlite::params;
 use tauri::State;
 
 #[tauri::command]

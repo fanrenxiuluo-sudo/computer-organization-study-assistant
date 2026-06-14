@@ -13,8 +13,6 @@ import type {
 } from "../types";
 
 export const api = {
-  initDb: () => invoke<void>("init_db"),
-
   listChapters: () => invoke<Chapter[]>("list_chapters"),
   listCourseOutcomes: () => invoke<CourseOutcome[]>("list_course_outcomes"),
   listKnowledgePoints: (p: { chapterId?: string }) =>

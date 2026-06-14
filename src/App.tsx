@@ -9,7 +9,6 @@ import { useTasks } from "./hooks/useTasks";
 import { useTaskDetail } from "./hooks/useTaskDetail";
 import { useStats } from "./hooks/useStats";
 import { usePracticeMode } from "./hooks/usePracticeMode";
-import { api } from "./services/api";
 import type { TaskDetail, Assessment } from "./types";
 
 function App() {
@@ -28,6 +27,8 @@ function App() {
 
   const { tasks, total, loading: tasksLoading, refresh: refreshTasks } = useTasks(
     activeChapterId,
+    mode,
+    selectedKnowledgePointId,
     0,
     200
   );
@@ -101,7 +102,7 @@ function App() {
         <section className="workspace" ref={workspaceRef}>
           <header className="top-bar">
             <div>
-              <p className="eyebrow">v0.1 OBE 任务练习版</p>
+              <p className="eyebrow">v0.2 多模式练习版</p>
               <h2>按课程目标完成综合作答，逐条自评掌握程度</h2>
             </div>
             <div className="exam-chip">期末通过优先</div>
@@ -137,7 +138,11 @@ function App() {
               />
             ) : (
               <div className="empty-block">
-                {tasksLoading || detailLoading ? "加载中…" : "当前章节暂无题目，后续会继续补充题库。"}
+                {tasksLoading || detailLoading ? "加载中…" :
+                  mode === "weak" ? '当前章节暂无薄弱题目，请先完成一些练习并标记"需加强"。' :
+                  mode === "random" ? "当前章节暂无题目，后续会继续补充题库。" :
+                  mode === "knowledge-point" ? "当前考点暂无关联题目，后续会继续补充。" :
+                  "当前章节暂无题目，后续会继续补充题库。"}
               </div>
             )}
 

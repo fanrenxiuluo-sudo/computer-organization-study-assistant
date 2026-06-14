@@ -1,5 +1,4 @@
-use rusqlite::{Connection, Result as SqlResult};
-use std::fs;
+use rusqlite::Connection;
 use std::path::PathBuf;
 use std::sync::Mutex;
 

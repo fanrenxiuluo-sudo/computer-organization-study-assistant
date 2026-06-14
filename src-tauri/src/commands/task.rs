@@ -1,6 +1,5 @@
 use crate::db::DbState;
 use crate::models::*;
-use rusqlite::params;
 use tauri::State;
 
 #[tauri::command]

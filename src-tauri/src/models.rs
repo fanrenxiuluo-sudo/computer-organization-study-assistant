@@ -45,6 +45,7 @@ pub struct TaskRequirement {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[allow(dead_code)]
 pub struct TaskKnowledgePoint {
     pub task_id: String,
     pub knowledge_point_id: String,
@@ -128,6 +129,7 @@ pub struct ImportResult {
 // ─── Seed data types (match seed.json) ─────────────────
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(non_snake_case)]
 pub struct SeedCourseOutcome {
     pub id: String,
     pub code: String,
@@ -136,6 +138,7 @@ pub struct SeedCourseOutcome {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(non_snake_case)]
 pub struct SeedChapter {
     pub id: String,
     pub title: String,
@@ -145,6 +148,7 @@ pub struct SeedChapter {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(non_snake_case)]
 pub struct SeedKnowledgePoint {
     pub id: String,
     pub chapterId: String,
@@ -153,6 +157,7 @@ pub struct SeedKnowledgePoint {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(non_snake_case)]
 pub struct SeedTaskSource {
     pub university: String,
     #[serde(default)]
@@ -165,6 +170,7 @@ pub struct SeedTaskSource {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(non_snake_case)]
 pub struct SeedTask {
     pub id: String,
     pub chapterId: String,
@@ -179,6 +185,7 @@ pub struct SeedTask {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(non_snake_case)]
 pub struct SeedData {
     pub courseOutcomes: Vec<SeedCourseOutcome>,
     pub chapters: Vec<SeedChapter>,
