@@ -1,0 +1,933 @@
+{
+  "courseOutcomes": [
+    {
+      "id": "co1",
+      "code": "课程目标1",
+      "description": "能够解释计算机系统的基本组成，并说明各部件在程序执行过程中的作用",
+      "orderIndex": 1
+    },
+    {
+      "id": "co2",
+      "code": "课程目标2",
+      "description": "能够使用补码解释带符号整数的机器表示和加减运算过程",
+      "orderIndex": 2
+    },
+    {
+      "id": "co3",
+      "code": "课程目标3",
+      "description": "能够分析Cache和虚拟存储器的工作原理，计算地址映射与命中率",
+      "orderIndex": 3
+    },
+    {
+      "id": "co4",
+      "code": "课程目标4",
+      "description": "能够设计指令格式并对比CISC与RISC的设计思想",
+      "orderIndex": 4
+    },
+    {
+      "id": "co5",
+      "code": "课程目标5",
+      "description": "能够识别流水线冲突并设计解决方案",
+      "orderIndex": 5
+    },
+    {
+      "id": "co6",
+      "code": "课程目标6",
+      "description": "能够比较不同I/O控制方式的工作原理和适用场景",
+      "orderIndex": 6
+    }
+  ],
+  "chapters": [
+    {
+      "id": "overview",
+      "title": "计算机系统概述",
+      "description": "冯诺依曼体系结构、硬件组成、性能指标与发展历程",
+      "orderIndex": 1,
+      "courseOutcomeId": "co1"
+    },
+    {
+      "id": "data-representation",
+      "title": "数据表示与运算",
+      "description": "数制转换、定点/浮点数表示、补码运算、IEEE 754、校验码",
+      "orderIndex": 2,
+      "courseOutcomeId": "co2"
+    },
+    {
+      "id": "storage",
+      "title": "存储系统",
+      "description": "存储层次、Cache映射与替换、虚拟存储器、地址转换、RAID",
+      "orderIndex": 3,
+      "courseOutcomeId": "co3"
+    },
+    {
+      "id": "instruction-system",
+      "title": "指令系统",
+      "description": "指令格式、操作码扩展、寻址方式、CISC与RISC、指令集设计",
+      "orderIndex": 4,
+      "courseOutcomeId": "co4"
+    },
+    {
+      "id": "cpu",
+      "title": "中央处理器",
+      "description": "数据通路、控制器设计、微程序/硬布线、流水线、冲突与冒险",
+      "orderIndex": 5,
+      "courseOutcomeId": "co5"
+    },
+    {
+      "id": "bus-io",
+      "title": "总线与输入输出系统",
+      "description": "总线仲裁、I/O接口、程序查询/中断/DMA、通道、I/O性能",
+      "orderIndex": 6,
+      "courseOutcomeId": "co6"
+    }
+  ],
+  "knowledgePoints": [
+    {
+      "id": "kp-arch-von",
+      "chapterId": "overview",
+      "name": "冯诺依曼体系结构特点",
+      "orderIndex": 1
+    },
+    {
+      "id": "kp-arch-compare",
+      "chapterId": "overview",
+      "name": "冯诺依曼与哈佛结构对比",
+      "orderIndex": 2
+    },
+    {
+      "id": "kp-component",
+      "chapterId": "overview",
+      "name": "运算器/控制器/存储器/IO功能",
+      "orderIndex": 3
+    },
+    {
+      "id": "kp-performance",
+      "chapterId": "overview",
+      "name": "性能指标计算（CPU时间、CPI、MIPS）",
+      "orderIndex": 4
+    },
+    {
+      "id": "kp-mips-cpi",
+      "chapterId": "overview",
+      "name": "MIPS/CPI/主频关系推导",
+      "orderIndex": 5
+    },
+    {
+      "id": "kp-evolution",
+      "chapterId": "overview",
+      "name": "计算机发展史与分类",
+      "orderIndex": 6
+    },
+
+    {
+      "id": "kp-radix",
+      "chapterId": "data-representation",
+      "name": "进制转换",
+      "orderIndex": 1
+    },
+    {
+      "id": "kp-complement",
+      "chapterId": "data-representation",
+      "name": "补码表示与加减运算",
+      "orderIndex": 2
+    },
+    {
+      "id": "kp-overflow",
+      "chapterId": "data-representation",
+      "name": "溢出判断（双符号位/进位法）",
+      "orderIndex": 3
+    },
+    {
+      "id": "kp-float",
+      "chapterId": "data-representation",
+      "name": "IEEE 754浮点数表示",
+      "orderIndex": 4
+    },
+    {
+      "id": "kp-float-arithmetic",
+      "chapterId": "data-representation",
+      "name": "浮点数加减运算（对阶/尾数运算/规格化）",
+      "orderIndex": 5
+    },
+    {
+      "id": "kp-parity",
+      "chapterId": "data-representation",
+      "name": "校验码（奇偶校验/海明码/CRC）",
+      "orderIndex": 6
+    },
+    {
+      "id": "kp-shift",
+      "chapterId": "data-representation",
+      "name": "移码表示与特殊值",
+      "orderIndex": 7
+    },
+
+    {
+      "id": "kp-cache-mapping",
+      "chapterId": "storage",
+      "name": "Cache映射方式计算（直接/组相联/全相联）",
+      "orderIndex": 1
+    },
+    {
+      "id": "kp-cache-replace",
+      "chapterId": "storage",
+      "name": "Cache替换算法（LRU/FIFO/LFU）",
+      "orderIndex": 2
+    },
+    {
+      "id": "kp-cache-hit",
+      "chapterId": "storage",
+      "name": "Cache命中率计算",
+      "orderIndex": 3
+    },
+    {
+      "id": "kp-virtual-mem",
+      "chapterId": "storage",
+      "name": "虚拟存储器原理",
+      "orderIndex": 4
+    },
+    {
+      "id": "kp-page-table",
+      "chapterId": "storage",
+      "name": "页表结构/TLB",
+      "orderIndex": 5
+    },
+    {
+      "id": "kp-address-calc",
+      "chapterId": "storage",
+      "name": "地址转换计算",
+      "orderIndex": 6
+    },
+    {
+      "id": "kp-page-replace",
+      "chapterId": "storage",
+      "name": "页面替换算法（LRU/FIFO/OPT）",
+      "orderIndex": 7
+    },
+    {
+      "id": "kp-raid",
+      "chapterId": "storage",
+      "name": "RAID级别与特征",
+      "orderIndex": 8
+    },
+    {
+      "id": "kp-memory-hierarchy",
+      "chapterId": "storage",
+      "name": "存储层次结构与命中率计算",
+      "orderIndex": 9
+    },
+
+    {
+      "id": "kp-instruction-format",
+      "chapterId": "instruction-system",
+      "name": "指令格式设计",
+      "orderIndex": 1
+    },
+    {
+      "id": "kp-opcode-extension",
+      "chapterId": "instruction-system",
+      "name": "操作码扩展技术",
+      "orderIndex": 2
+    },
+    {
+      "id": "kp-addressing",
+      "chapterId": "instruction-system",
+      "name": "寻址方式原理与比较",
+      "orderIndex": 3
+    },
+    {
+      "id": "kp-addressing-calc",
+      "chapterId": "instruction-system",
+      "name": "寻址方式有效地址计算",
+      "orderIndex": 4
+    },
+    {
+      "id": "kp-cisc-risc",
+      "chapterId": "instruction-system",
+      "name": "CISC vs RISC对比",
+      "orderIndex": 5
+    },
+    {
+      "id": "kp-risc-pipeline",
+      "chapterId": "instruction-system",
+      "name": "RISC对流水线的支持",
+      "orderIndex": 6
+    },
+
+    {
+      "id": "kp-datapath",
+      "chapterId": "cpu",
+      "name": "数据通路分析",
+      "orderIndex": 1
+    },
+    {
+      "id": "kp-controller",
+      "chapterId": "cpu",
+      "name": "控制器设计（硬布线/微程序）",
+      "orderIndex": 2
+    },
+    {
+      "id": "kp-microprogram",
+      "chapterId": "cpu",
+      "name": "微指令编码与微程序设计",
+      "orderIndex": 3
+    },
+    {
+      "id": "kp-pipeline-conflict",
+      "chapterId": "cpu",
+      "name": "流水线冲突识别（结构/数据/控制）",
+      "orderIndex": 4
+    },
+    {
+      "id": "kp-forwarding",
+      "chapterId": "cpu",
+      "name": "数据前推解决数据冲突",
+      "orderIndex": 5
+    },
+    {
+      "id": "kp-stall",
+      "chapterId": "cpu",
+      "name": "插入气泡解决冲突",
+      "orderIndex": 6
+    },
+    {
+      "id": "kp-pipeline-calc",
+      "chapterId": "cpu",
+      "name": "流水线性能计算（加速比/吞吐率/效率）",
+      "orderIndex": 7
+    },
+    {
+      "id": "kp-branch",
+      "chapterId": "cpu",
+      "name": "分支预测",
+      "orderIndex": 8
+    },
+
+    {
+      "id": "kp-bus-arbitration",
+      "chapterId": "bus-io",
+      "name": "总线仲裁方式",
+      "orderIndex": 1
+    },
+    {
+      "id": "kp-bus-bandwidth",
+      "chapterId": "bus-io",
+      "name": "总线带宽计算",
+      "orderIndex": 2
+    },
+    {
+      "id": "kp-programmed-io",
+      "chapterId": "bus-io",
+      "name": "程序查询方式",
+      "orderIndex": 3
+    },
+    {
+      "id": "kp-interrupt",
+      "chapterId": "bus-io",
+      "name": "程序中断方式",
+      "orderIndex": 4
+    },
+    {
+      "id": "kp-dma",
+      "chapterId": "bus-io",
+      "name": "DMA方式原理与计算",
+      "orderIndex": 5
+    },
+    {
+      "id": "kp-dma-calc",
+      "chapterId": "bus-io",
+      "name": "DMA传输时间计算",
+      "orderIndex": 6
+    },
+    {
+      "id": "kp-channel",
+      "chapterId": "bus-io",
+      "name": "通道方式",
+      "orderIndex": 7
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-overview-001",
+      "chapterId": "overview",
+      "courseOutcomeId": "co1",
+      "knowledgePointIds": ["kp-arch-von", "kp-component"],
+      "difficulty": "foundation",
+      "scenario": "学校采用OBE模式考核。请以"执行一条加法指令"为例，说明计算机硬件系统中运算器、控制器、存储器、输入输出系统之间的协作关系。",
+      "requirements": [
+        "说明指令和数据存放位置",
+        "说明控制器取指、译码、发出控制信号的过程",
+        "说明运算器完成算术运算的作用",
+        "说明存储器和I/O在系统中的地位"
+      ],
+      "reference": "程序和数据存放在存储器中。CPU中的控制器按程序计数器给出的地址取出指令，完成译码后发出控制信号；运算器根据控制信号对操作数进行加法运算；运算结果写回寄存器或存储器。输入输出系统负责外部设备与主机之间的数据交换。该过程体现了存储程序和程序控制思想。",
+      "sources": [
+        {
+          "university": "哈尔滨工业大学",
+          "year": "2023",
+          "examType": "final",
+          "originalText": "简述冯诺依曼体系结构中各部件的功能及其工作方式。",
+          "note": "原题为简答题，改编为OBE综合任务，增加了执行加法指令的具体场景"
+        }
+      ]
+    },
+    {
+      "id": "task-overview-002",
+      "chapterId": "overview",
+      "courseOutcomeId": "co1",
+      "knowledgePointIds": ["kp-arch-von"],
+      "difficulty": "foundation",
+      "scenario": "冯诺依曼体系结构的核心思想是什么？请说明其"存储程序"思想如何体现在指令执行过程中，并指出该体系结构的主要特征和局限性。",
+      "requirements": [
+        "说明存储程序和程序控制两个核心概念",
+        "描述指令执行过程中如何体现存储程序思想",
+        "列举冯诺依曼体系的至少三个主要特征",
+        "指出该体系结构的至少一个局限性"
+      ],
+      "reference": "冯诺依曼体系结构的核心思想是存储程序和程序控制。存储程序指将程序和数据事先存入存储器，程序控制指计算机按程序中指令的顺序自动执行。在指令执行过程中，控制器按程序计数器地址取出指令，译码后发出控制信号，自动完成操作，全过程无需人工干预，体现了存储程序思想。主要特征包括：指令和数据以二进制形式存放在存储器中、指令由操作码和地址码组成、以运算器为中心、按地址顺序执行。局限性包括：以运算器为中心导致I/O成为瓶颈、指令串行执行效率低。",
+      "sources": [
+        {
+          "university": "华中科技大学",
+          "year": "2022",
+          "examType": "final",
+          "originalText": "简述冯诺依曼体系结构的基本思想，指出其主要特征和不足。",
+          "note": "增加局限性分析要求"
+        }
+      ]
+    },
+    {
+      "id": "task-overview-003",
+      "chapterId": "overview",
+      "courseOutcomeId": "co1",
+      "knowledgePointIds": ["kp-performance", "kp-mips-cpi"],
+      "difficulty": "applied",
+      "scenario": "某计算机主频为800MHz，执行某程序共运行了2×10⁸条指令，其中浮动点运算占20%。已知浮点运算CPI为4，其余指令CPI为2。请计算：该程序的执行时间、平均CPI和MIPS值。",
+      "requirements": [
+        "列出CPI加权平均的计算公式",
+        "计算平均CPI的数值结果",
+        "计算程序执行时间",
+        "计算MIPS值并解释其含义"
+      ],
+      "reference": "平均CPI = 4×0.2 + 2×0.8 = 0.8 + 1.6 = 2.4。程序执行时间 = 指令条数 × CPI / 主频 = 2×10⁸ × 2.4 / (800×10⁶) = 0.6秒。MIPS = 指令条数 / (执行时间 × 10⁶) = 2×10⁸ / (0.6 × 10⁶) = 333.3 MIPS。MIPS表示每秒执行的百万条指令数，反映了计算机执行指令的速度，但不同指令集之间的MIPS不可直接比较。",
+      "sources": [
+        {
+          "university": "西安电子科技大学",
+          "year": "2022",
+          "examType": "postgraduate",
+          "originalText": "某计算机主频800MHz，执行某程序运行2×10⁸条指令，浮点运算占20%，浮点CPI为4，其余CPI为2。求执行时间和MIPS。",
+          "note": "增加了平均CPI计算步骤的解释要求"
+        }
+      ]
+    },
+    {
+      "id": "task-overview-004",
+      "chapterId": "overview",
+      "courseOutcomeId": "co1",
+      "knowledgePointIds": ["kp-arch-compare", "kp-component"],
+      "difficulty": "applied",
+      "scenario": "对比冯诺依曼结构和哈佛结构在指令和数据存储方式上的差异，并说明各自的适用场景。现代处理器为什么常采用改进的哈佛结构？",
+      "requirements": [
+        "说明冯诺依曼结构中指令和数据共用存储器的特点",
+        "说明哈佛结构中指令和数据分开存储的特点",
+        "对比两种结构的优缺点",
+        "说明现代处理器采用改进哈佛结构的原因"
+      ],
+      "reference": "冯诺依曼结构中指令和数据共享同一个存储器，通过同一总线传输，优点是结构简单、成本低，缺点是指令和数据不能同时读取，形成瓶颈。哈佛结构中指令和数据分别存储在独立存储器中，有独立总线，优点是取指和取数可并行，效率高，缺点是硬件复杂、成本高。现代处理器采用改进的哈佛结构：在Cache层级采用哈佛结构（指令Cache和数据Cache分离），在主存层级仍采用冯诺依曼结构（统一编址），兼顾了性能和灵活性。",
+      "sources": [
+        {
+          "university": "北京航空航天大学",
+          "year": "2021",
+          "examType": "final",
+          "originalText": "比较冯诺依曼结构和哈佛结构的特点，说明各自优缺点。",
+          "note": "增加了改进哈佛结构的扩展要求"
+        }
+      ]
+    },
+
+    {
+      "id": "task-data-001",
+      "chapterId": "data-representation",
+      "courseOutcomeId": "co2",
+      "knowledgePointIds": ["kp-complement"],
+      "difficulty": "foundation",
+      "scenario": "请说明为什么计算机中带符号整数主要使用补码表示，并以8位机器数计算7-3为例，写出计算过程。",
+      "requirements": [
+        "说明补码只有一个零的原理",
+        "说明补码可以把减法转化为加法",
+        "写出+7和-3的8位补码",
+        "给出二进制相加结果和十进制结果"
+      ],
+      "reference": "+7的8位补码是00000111。+3的补码是00000011，-3的补码是11111101（3的原码00000011，取反11111100，加1得11111101）。7-3转化为7+(-3)，即00000111+11111101=00000100，最高位进位1舍去，结果为十进制4。补码的优势：统一了零的表示（+0和-0的补码都是00000000），减法可转化为加法，简化了运算器设计。",
+      "sources": [
+        {
+          "university": "哈尔滨工业大学",
+          "year": "2023",
+          "examType": "obe",
+          "originalText": "说明补码的原理并用8位补码计算7-3。",
+          "note": "OBE原题"
+        }
+      ]
+    },
+    {
+      "id": "task-data-002",
+      "chapterId": "data-representation",
+      "courseOutcomeId": "co2",
+      "knowledgePointIds": ["kp-complement", "kp-overflow"],
+      "difficulty": "applied",
+      "scenario": "设x=+127，y=-125，用8位补码计算x+y和x-y，并用双符号位法判断是否溢出。",
+      "requirements": [
+        "写出x和y的8位补码",
+        "用补码计算x+y的结果并判断是否溢出",
+        "用补码计算x-y的结果并判断是否溢出",
+        "说明双符号位法判断溢出的规则"
+      ],
+      "reference": "x=+127，8位补码为01111111。y=-125，8位补码为10000011。x+y：01111111+10000011=00000010，双符号位观察：无溢出（进位0⊕进位0=0）。x-y即x+(-y)：01111111+01111101=11111100，双符号位观察：01⊗01发生正溢出（双符号位为01）。双符号位法规则：运算结果双符号位为00表示正数未溢出，01表示正溢出，10表示负溢出，11表示负数未溢出。",
+      "sources": [
+        {
+          "university": "浙江大学",
+          "year": "2022",
+          "examType": "final",
+          "originalText": "用8位补码计算x+y和x-y，并判断溢出。",
+          "note": "改编数据，具体数值不同"
+        }
+      ]
+    },
+    {
+      "id": "task-data-003",
+      "chapterId": "data-representation",
+      "courseOutcomeId": "co2",
+      "knowledgePointIds": ["kp-float"],
+      "difficulty": "applied",
+      "scenario": "将十进制数-12.5表示为IEEE 754单精度浮点数的二进制格式，并说明IEEE 754单精度浮点数的三个组成部分。",
+      "requirements": [
+        "将12.5转换为二进制表示",
+        "将二进制数规格化为1.M的形式",
+        "计算阶码（偏移量127）",
+        "写出完整的32位IEEE 754编码"
+      ],
+      "reference": "12.5的二进制为1100.1。规格化：1.1001×2³。阶码 E=3+127=130=10000010。尾数M=1001000…0（23位，省略隐含的1）。符号位 S=1（负数）。完整编码：1 10000010 10010000000000000000000，十六进制为C1480000H。IEEE 754单精度浮点数由三部分组成：1位符号位S（0正1负）、8位阶码E（偏移量127）、23位尾数M（隐含1，实际精度24位）。",
+      "sources": [
+        {
+          "university": "电子科技大学",
+          "year": "2023",
+          "examType": "final",
+          "originalText": "将-12.5表示为IEEE 754单精度浮点数。",
+          "note": "基本原题"
+        }
+      ]
+    },
+    {
+      "id": "task-data-004",
+      "chapterId": "data-representation",
+      "courseOutcomeId": "co2",
+      "knowledgePointIds": ["kp-float-arithmetic"],
+      "difficulty": "advanced",
+      "scenario": "用IEEE 754单精度浮点数格式计算x=0.5和y=0.25的加法运算，详细写出浮点加法的五个步骤：对阶、尾数相加、规格化、舍入、判溢出。",
+      "requirements": [
+        "写出x和y的IEEE 754浮点数表示",
+        "执行对阶操作（小阶向大阶对齐）",
+        "完成尾数相加",
+        "对结果进行规格化处理",
+        "判断结果是否溢出，写出最终结果"
+      ],
+      "reference": "x=0.5=1.0×2⁻¹，浮点表示：0 01111110 00000000000000000000000。y=0.25=1.0×2⁻²，浮点表示：0 01111101 00000000000000000000000。对阶：y的阶码小，尾数右移1位，阶码+1：y'=0.1×2⁻¹。尾数相加：1.0+0.1=1.1（二进制）。规格化：结果1.1已经是规格化形式，无需调整。舍入：无多余位，不需要舍入。判溢出：阶码-1未超出范围，无溢出。最终结果：1.1×2⁻¹=0.75，即3/4。浮点表示：0 01111110 10000000000000000000000。",
+      "sources": [
+        {
+          "university": "清华大学",
+          "year": "2021",
+          "examType": "postgraduate",
+          "originalText": "用IEEE 754单精度浮点数计算两个浮点数的加法。",
+          "note": "简化了数据以便于手动计算演示"
+        }
+      ]
+    },
+    {
+      "id": "task-data-005",
+      "chapterId": "data-representation",
+      "courseOutcomeId": "co2",
+      "knowledgePointIds": ["kp-parity"],
+      "difficulty": "applied",
+      "scenario": "对于8位数据11010010，分别设计：①奇校验码；②偶校验码；③海明码（能纠正1位错误，指出校验位的位置和值）。并说明海明码与奇偶校验的本质区别。",
+      "requirements": [
+        "计算奇校验码和偶校验码",
+        "确定海明码的校验位数量和位置",
+        "计算各校验位的值",
+        "说明海明码能纠错而奇偶校验只能检错的原理差异"
+      ],
+      "reference": "数据D=11010010（共8位，D1~D8）。（1）奇校验码：1|11010010（最前面加1，使1的个数为奇数=5）。偶校验码：0|11010010（最前面加0，使1的个数为偶数=4）。（2）海明码：8位数据需满足2^k≥8+k+1，k=4校验位。数据位放在3,5,6,7,9,10,11,12位置，校验位放在1,2,4,8位置。P1=D3⊕D5⊕D7⊕D9⊕D11=0⊕1⊕0⊕1⊕1=1。P2=D3⊕D6⊕D7⊕D10⊕D11=0⊕0⊕0⊕0⊕1=1。P4=D5⊕D6⊕D7⊕D12⊕=1⊕0⊕0⊕0=1。P8=D9⊕D10⊕D11⊕D12=1⊕0⊕1⊕0=0。海明码：1 1 0 1 1 0 0 0 1 0 1 0（12位）。（3）区别：奇偶校验只能检测奇数个错误，不能定位和纠正；海明码通过多个校验位的不同组合来定位错误位，实现1位纠错。",
+      "sources": [
+        {
+          "university": "华中科技大学",
+          "year": "2023",
+          "examType": "final",
+          "originalText": "对给定数据设计奇偶校验码和海明码。",
+          "note": "增加了校验原理对比的要求"
+        }
+      ]
+    },
+
+    {
+      "id": "task-storage-001",
+      "chapterId": "storage",
+      "courseOutcomeId": "co3",
+      "knowledgePointIds": ["kp-cache-mapping", "kp-cache-replace"],
+      "difficulty": "foundation",
+      "scenario": "某计算机主存容量为64KB，Cache容量为4KB，块大小为64B。假设采用2路组相联映射方式，请：1）分析Cache的地址映射过程；2）比较LRU和FIFO两种替换策略的优缺点。",
+      "requirements": [
+        "说明主存地址如何划分为标记、组号和块内地址",
+        "计算Cache的组数和每组的块数",
+        "说明组相联映射的查找过程",
+        "比较LRU和FIFO替换策略的实现复杂度与命中率"
+      ],
+      "reference": "主存64KB需16位地址。块大小64B需6位块内地址。Cache 4KB/64B=64块。2路组相联，组数=64/2=32组，组号占5位。标记=16-5-6=5位。地址划分：[标记5位][组号5位][块内地址6位]。查找过程：用组号定位到对应组，比较组内两块的标记是否匹配且有效位为1。LRU替换最近最少使用的块，命中率较高但需要记录访问顺序（每块需额外2位计数器）。FIFO替换最早进入的块，实现简单（只需一位入序标记）但可能将频繁使用的块替换出去（Belady异常）。",
+      "sources": [
+        {
+          "university": "哈尔滨工业大学",
+          "year": "2023",
+          "examType": "obe",
+          "originalText": "某计算机主存64KB，Cache 4KB，块64B，采用组相联映射。分析映射过程并比较LRU和FIFO。",
+          "note": "OBE原题，指定2路组相联"
+        }
+      ]
+    },
+    {
+      "id": "task-storage-002",
+      "chapterId": "storage",
+      "courseOutcomeId": "co3",
+      "knowledgePointIds": ["kp-virtual-mem", "kp-address-calc"],
+      "difficulty": "applied",
+      "scenario": "某系统采用页式虚拟存储器，页面大小为4KB，逻辑地址32位，物理地址32位。当CPU访问虚地址00008A12H时，页表中相应的页表项有效位为1，物理页号为0030H。请：1）说明从逻辑地址到物理地址的完整转换过程；2）如果有效位为0，说明缺页中断的处理流程。",
+      "requirements": [
+        "说明逻辑地址如何拆分为虚页号和页内偏移",
+        "计算虚页号并查页表",
+        "将物理页号与页内偏移拼接得到物理地址",
+        "说明缺页中断的触发条件和处理流程"
+      ],
+      "reference": "页面4KB，页内偏移占低12位。逻辑地址00008A12H：低12位=A12H为页内偏移，高20位=00008H为虚页号。查页表，虚页号00008H对应页表项有效位为1，物理页号为0030H。物理地址=0030H×1000H+A12H=00300A12H。若有效位为0，硬件触发缺页中断，操作系统从磁盘将缺失页面调入主存空闲页框（若无空闲则按替换算法选择一页换出），更新页表项（填入物理页号、置有效位为1），重新执行引发缺页的指令。",
+      "sources": [
+        {
+          "university": "西安电子科技大学",
+          "year": "2022",
+          "examType": "postgraduate",
+          "originalText": "某系统页式虚拟存储器，页面4KB，给出虚地址和页表项，求物理地址。",
+          "note": "增加了缺页中断处理流程的要求"
+        }
+      ]
+    },
+    {
+      "id": "task-storage-003",
+      "chapterId": "storage",
+      "courseOutcomeId": "co3",
+      "knowledgePointIds": ["kp-page-replace", "kp-virtual-mem"],
+      "difficulty": "advanced",
+      "scenario": "某虚拟存储器系统，分配给某进程3个物理页框，页面访问序列为：2, 3, 2, 1, 5, 2, 4, 5, 3, 2, 5, 2。请分别用FIFO和LRU两种替换算法计算缺页次数和缺页率，并说明FIFO是否存在Belady异常的可能。",
+      "requirements": [
+        "用FIFO算法逐步模拟页面置换过程，标出每次命中或缺页",
+        "用LRU算法逐步模拟页面置换过程，标出每次命中或缺页",
+        "计算两种算法的缺页次数和缺页率",
+        "说明FIFO可能出现Belady异常的原理"
+      ],
+      "reference": "FIFO过程（3个页框）：访问2→缺页[2]；3→缺页[2,3]；2→命中；1→缺页[2,3,1]；5→替换2→缺页[5,3,1]；2→替换3→缺页[5,2,1]；4→替换1→缺页[5,2,4]；5→命中；3→替换5→缺页[3,2,4]；2→命中；5→替换4→缺页[3,2,5]；2→命中。FIFO缺页9次，缺页率9/12=75%。LRU过程（3个页框）：访问2→缺页[2]；3→缺页[2,3]；2→命中[3,2]；1→缺页[3,2,1]；5→替换3→缺页[2,1,5]；2→命中[1,5,2]；4→替换1→缺页[5,2,4]；5→命中[2,4,5]；3→替换2→缺页[4,5,3]；2→替换4→缺页[5,3,2]；5→命中[3,2,5]；2→命中[3,5,2]。LRU缺页7次，缺页率7/12≈58.3%。FIFO存在Belady异常：增加物理页框数反而可能导致缺页次数增加，而LRU不会出现此现象。",
+      "sources": [
+        {
+          "university": "408统考",
+          "year": "2016",
+          "examType": "postgraduate",
+          "originalText": "给定页面访问序列，用FIFO和LRU计算缺页率。",
+          "note": "改编了访问序列数据"
+        }
+      ]
+    },
+    {
+      "id": "task-storage-004",
+      "chapterId": "storage",
+      "courseOutcomeId": "co3",
+      "knowledgePointIds": ["kp-cache-hit", "kp-memory-hierarchy"],
+      "difficulty": "applied",
+      "scenario": "某计算机存储系统由Cache、主存和磁盘三级构成。Cache存取时间为2ns，主存存取时间为20ns，磁盘存取时间为10ms。Cache命中率为95%，主存命中率为99%（Cache未命中时）。求：1）平均存取时间；2）如果Cache命中率提升到98%，平均存取时间变为多少？",
+      "requirements": [
+        "列出三级存储系统的平均存取时间计算公式",
+        "计算Cache命中率95%时的平均存取时间",
+        "计算Cache命中率98%时的平均存取时间",
+        "分析Cache命中率对系统性能的影响程度"
+      ],
+      "reference": "平均存取时间T = Tc×hc + (1-hc)×(Tm×hm + (1-hm)×Td)。当hc=95%时：T = 2×0.95 + 0.05×(20×0.99 + 0.01×10000000) = 1.9 + 0.05×(19.8 + 100000) = 1.9 + 5000.09 ≈ 5002ns。当hc=98%时：T = 2×0.98 + 0.02×(20×0.99 + 0.01×10000000) = 1.96 + 0.02×(19.8 + 100000) = 1.96 + 2000.396 ≈ 2002.4ns。Cache命中率从95%提升到98%，平均存取时间从5002ns降到2002ns，下降60%，说明Cache命中率对系统性能影响极大，提升命中率是优化的关键。",
+      "sources": [
+        {
+          "university": "北京航空航天大学",
+          "year": "2022",
+          "examType": "final",
+          "originalText": "三级存储系统平均访问时间计算。",
+          "note": "增加了不同命中率对比分析的要求"
+        }
+      ]
+    },
+
+    {
+      "id": "task-instruction-001",
+      "chapterId": "instruction-system",
+      "courseOutcomeId": "co4",
+      "knowledgePointIds": ["kp-instruction-format", "kp-addressing"],
+      "difficulty": "foundation",
+      "scenario": "某16位计算机采用定长指令格式，指令包含操作码和地址码两部分。请设计一条能支持8种操作的指令格式，并说明立即寻址、直接寻址、间接寻址和寄存器寻址四种方式的工作原理和适用场景。",
+      "requirements": [
+        "说明操作码位数与可支持指令数量的关系",
+        "描述指令格式的位域划分",
+        "分别说明四种寻址方式的操作过程",
+        "比较不同寻址方式在灵活性和执行速度上的差异"
+      ],
+      "reference": "8种操作需要3位操作码（2³=8），剩余13位为地址码。立即寻址：地址码字段本身就是操作数，速度快但范围受限（13位立即数范围0~8191），适用于赋初值。直接寻址：地址码给出操作数的有效地址，需访存一次取操作数，简单但寻址空间受限（13位地址8KB空间）。间接寻址：地址码指向的单元中存放有效地址，需访存两次，灵活性高但速度慢，适用于指针操作。寄存器寻址：操作数在寄存器中，无需访存，速度最快，适用于频繁使用的数据。速度排序：寄存器>立即>直接>间接。灵活性排序：间接>直接>寄存器>立即。",
+      "sources": [
+        {
+          "university": "哈尔滨工业大学",
+          "year": "2023",
+          "examType": "obe",
+          "originalText": "设计支持8种操作的16位指令格式，说明四种寻址方式。",
+          "note": "OBE原题"
+        }
+      ]
+    },
+    {
+      "id": "task-instruction-002",
+      "chapterId": "instruction-system",
+      "courseOutcomeId": "co4",
+      "knowledgePointIds": ["kp-opcode-extension"],
+      "difficulty": "applied",
+      "scenario": "某计算机指令字长16位，每个地址码占4位。采用扩展操作码技术设计指令系统：15条三地址指令、12条二地址指令、62条一地址指令、尽可能多的零地址指令。请写出操作码的编码方案并说明扩展操作码的设计原则。",
+      "requirements": [
+        "写出三地址指令的操作码范围和数量",
+        "写出二地址指令的操作码范围和数量",
+        "写出一地址指令的操作码范围和数量",
+        "计算零地址指令的最大数量并说明扩展原则"
+      ],
+      "reference": "三地址指令：操作码4位（0000~1110），共15条（1111留作扩展前缀）。二地址指令：操作码4+4=8位，其中前4位为1111，后4位为0000~1011，共12条（1111 1100~1111 1111留作扩展前缀）。一地址指令：操作码8+4=12位，其中前8位为1111 1100~1111 1111（4个前缀），后4位为0000~1111，但需扣除扩展前缀，实际62条（1111 1111 1111留作扩展前缀）。零地址指令：操作码12+4=16位，前12位为1111 1111 1111，后4位为0000~1111，共16条。扩展原则：短操作码不能是长操作码的前缀；各指令操作码不能重复；留出足够的扩展窗口。",
+      "sources": [
+        {
+          "university": "408统考",
+          "year": "2015",
+          "examType": "postgraduate",
+          "originalText": "设计扩展操作码：15条三地址、12条二地址、62条一地址指令。",
+          "note": "基本原题，增加了零地址指令计算"
+        }
+      ]
+    },
+    {
+      "id": "task-instruction-003",
+      "chapterId": "instruction-system",
+      "courseOutcomeId": "co4",
+      "knowledgePointIds": ["kp-cisc-risc", "kp-risc-pipeline"],
+      "difficulty": "applied",
+      "scenario": "请从指令数量、指令长度、寻址方式、访存策略和流水线支持五个维度，对比CISC和RISC的设计思想，并说明为什么现代处理器倾向于RISC思想。",
+      "requirements": [
+        "说明CISC和RISC在指令数量与复杂度上的差异",
+        "说明指令长度的差异（变长vs定长）对译码的影响",
+        "说明RISC的Load/Store结构如何简化流水线",
+        "说明现代高性能处理器采用RISC核心+CISC译码前端的原因"
+      ],
+      "reference": "CISC指令数量多（数百条）、功能复杂，单条指令可完成访存+运算+写回，但指令长度不固定导致译码困难，不利于流水线。RISC指令数量少（约100条）、格式规整、长度固定（通常32位），译码简单高效。RISC采用Load/Store结构，只有这两条指令访问内存，运算指令只操作寄存器，使流水线设计简单且不易产生访存冲突。现代处理器（如Intel Core）采用RISC微内核设计：前端将CISC指令译码为类RISC的微操作（μops），后端用RISC流水线执行，兼顾了软件兼容性（继续运行x86软件）和硬件效率。",
+      "sources": [
+        {
+          "university": "电子科技大学",
+          "year": "2021",
+          "examType": "final",
+          "originalText": "对比CISC和RISC的设计思想。",
+          "note": "增加了现代处理器设计思想的解释要求"
+        }
+      ]
+    },
+
+    {
+      "id": "task-cpu-001",
+      "chapterId": "cpu",
+      "courseOutcomeId": "co5",
+      "knowledgePointIds": ["kp-pipeline-conflict", "kp-forwarding"],
+      "difficulty": "applied",
+      "scenario": "某五级流水线CPU（IF、ID、EX、MEM、WB）连续执行以下指令序列：ADD R1, R2, R3 / SUB R4, R1, R5 / AND R6, R1, R7。请分析是否存在数据冲突，说明冲突类型，并给出至少两种解决方案。",
+      "requirements": [
+        "画出或描述指令在流水线中的执行时间图",
+        "识别RAW（写后读）冲突的具体位置",
+        "说明数据前推（forwarding）技术的原理",
+        "说明插入气泡（stall）的方案及其性能代价"
+      ],
+      "reference": "ADD指令在EX阶段产生R1的结果，但SUB在下一周期进入ID就需要读R1，产生RAW数据冲突。AND指令同样依赖R1。时间图如下：T1:ADD-IF, T2:ADD-ID, T3:ADD-EX, T4:ADD-MEM, T5:ADD-WB；T2:SUB-IF, T3:SUB-ID（此时ADD在EX，R1未写回）。解决方案一：数据前推——将ADD的EX阶段结果直接旁路到SUB的ALU输入端，无需等待WB写回寄存器堆，零气泡，最优方案。方案二：插入一个气泡（流水线暂停一拍），让SUB等到ADD完成WB后再读R1，代价是1个时钟周期的性能损失。实际系统通常组合使用前推+少量气泡解决所有冲突。",
+      "sources": [
+        {
+          "university": "哈尔滨工业大学",
+          "year": "2023",
+          "examType": "obe",
+          "originalText": "分析给定指令序列的数据冲突并给出解决方案。",
+          "note": "OBE原题"
+        }
+      ]
+    },
+    {
+      "id": "task-cpu-002",
+      "chapterId": "cpu",
+      "courseOutcomeId": "co5",
+      "knowledgePointIds": ["kp-pipeline-calc"],
+      "difficulty": "applied",
+      "scenario": "某处理器采用5段流水线（IF、ID、EX、MEM、WB），每段耗时均为1个时钟周期。假设连续执行100条指令，其中20%的指令发生数据冲突需要插入1个气泡，5%的指令是条件跳转指令，每次跳转导致3个周期的损失。求：1）理想情况下执行100条指令所需的时钟周期数；2）考虑冲突后的实际时钟周期数；3）流水线的实际吞吐率和加速比。",
+      "requirements": [
+        "计算理想情况下5段流水线执行100条指令的周期数",
+        "计算数据冲突导致的额外周期数",
+        "计算控制冲突导致的额外周期数",
+        "计算实际吞吐率和相对非流水线的加速比"
+      ],
+      "reference": "理想情况下，5段流水线执行100条指令需要5+（100-1）=104个周期。数据冲突：100×20%×1=20个额外周期。控制冲突：100×5%×3=15个额外周期（假设无延迟分支技术）。实际周期数=104+20+15=139个周期。吞吐率=100/139≈0.72条/周期。非流水线执行100条指令需要100×5=500个周期。加速比=500/139≈3.6倍。",
+      "sources": [
+        {
+          "university": "华中科技大学",
+          "year": "2022",
+          "examType": "final",
+          "originalText": "给定流水线参数和冲突概率，计算性能指标。",
+          "note": "改编了具体数值"
+        }
+      ]
+    },
+    {
+      "id": "task-cpu-003",
+      "chapterId": "cpu",
+      "courseOutcomeId": "co5",
+      "knowledgePointIds": ["kp-datapath"],
+      "difficulty": "advanced",
+      "scenario": "某单总线结构的CPU，包含通用寄存器组R0~R3、ALU、IR、MAR、MDR、PC等部件。请说明指令ADD R1, (R2)（将R1的值与R2间接寻址得到的操作数相加，结果存入R1）在单总线结构中的执行过程，写出每个微操作步骤。",
+      "requirements": [
+        "画出或描述单总线数据通路的关键部件连接关系",
+        "写出取指阶段的微操作步骤",
+        "写出间接寻址的微操作步骤",
+        "写出执行加法运算并写回的微操作步骤"
+      ],
+      "reference": "单总线数据通路：所有部件共享一条内部总线，同一时刻只能有一个部件向总线输出数据。取指阶段：PC→MAR（PC内容送MAR）；Read-M（读主存，数据→MDR）；MDR→IR（指令送IR）；PC+1→PC。间接寻址：R2→MAR（R2内容送MAR，R2中存的是操作数地址）；Read-M（读主存，数据→MDR，得到操作数的有效地址）；MDR→MAR（间接地址再访存）；Read-M（得到操作数→MDR）。执行阶段：R1→Y（R1送ALU的Y输入）；MDR+Y→Z（操作数与R1相加）；Z→R1（结果写回R1）。单总线的限制：每个微操作需要一个时钟周期，且同一周期内不能有两个部件向总线输出。",
+      "sources": [
+        {
+          "university": "408统考",
+          "year": "2018",
+          "examType": "postgraduate",
+          "originalText": "在单总线结构中执行含间接寻址的加法指令。",
+          "note": "增加了微操作步骤的详细要求"
+        }
+      ]
+    },
+    {
+      "id": "task-cpu-004",
+      "chapterId": "cpu",
+      "courseOutcomeId": "co5",
+      "knowledgePointIds": ["kp-microprogram"],
+      "difficulty": "advanced",
+      "scenario": "某微程序控制器中，微指令格式为：操作控制字段（采用直接编码）+下地址字段。已知控制存储器容量为256×48位，微操作控制信号共20个。请：1）设计微指令格式（指出各字段位数）；2）说明水平型微指令和垂直型微指令的本质区别；3）比较微程序控制器和硬布线控制器的优缺点。",
+      "requirements": [
+        "计算操作控制字段和下地址字段的位数",
+        "写出完整的微指令格式",
+        "说明水平型和垂直型微指令的本质区别",
+        "对比微程序和硬布线控制器的优缺点"
+      ],
+      "reference": "微指令格式：操作控制字段采用直接编码，20个微操作信号需要20位。控制存储器256个单元，下地址字段需要8位（2⁸=256）。微指令总长度=20+8=28位（但控制存储器字长为48位，剩余20位可预留或他用）。格式：[操作控制20位][下地址8位]。水平型微指令：一条微指令可以定义多个并行操作的微命令，编码效率高、执行速度快，但微指令字较长。垂直型微指令：一条微指令只能定义一个微操作，类似机器指令格式，微指令字短但效率低、需要更多微指令。微程序控制器：灵活性好、易修改、设计周期短，但速度较慢（需要访问控存）。硬布线控制器：速度快（纯组合逻辑），但设计复杂、不易修改、扩展性差。",
+      "sources": [
+        {
+          "university": "西安电子科技大学",
+          "year": "2021",
+          "examType": "postgraduate",
+          "originalText": "设计微指令格式，比较水平型和垂直型微指令。",
+          "note": "增加了硬布线与微程序的对比"
+        }
+      ]
+    },
+
+    {
+      "id": "task-busio-001",
+      "chapterId": "bus-io",
+      "courseOutcomeId": "co6",
+      "knowledgePointIds": ["kp-programmed-io", "kp-interrupt", "kp-dma"],
+      "difficulty": "foundation",
+      "scenario": "某系统需要从磁盘读取1MB数据到内存。请分别说明程序查询方式、程序中断方式和DMA方式中CPU的参与程度，并比较三种方式的效率差异。",
+      "requirements": [
+        "说明程序查询方式中CPU的角色和忙等待问题",
+        "说明程序中断方式如何让CPU在等待期间执行其他任务",
+        "说明DMA控制器如何接管总线并独立完成数据传输",
+        "比较三种方式的CPU占用率和传输效率"
+      ],
+      "reference": "程序查询方式：CPU在循环中不断查询设备状态寄存器，设备未就绪时CPU一直忙等待，无法执行其他任务，CPU利用率极低，适用于低速简单设备。程序中断方式：CPU发出I/O命令后继续执行其他程序，设备就绪后通过中断通知CPU，CPU每次中断传输一个字或字块，适用于中低速设备，1MB数据需产生大量中断。DMA方式：CPU向DMA控制器设置传输参数（源地址、目标地址、字节数），DMA控制器直接接管系统总线，以周期窃取方式完成整个数据块的传输，传输结束后向CPU发中断，CPU仅在开始和结束时参与，适用于高速批量传输，1MB数据应优先采用DMA方式。",
+      "sources": [
+        {
+          "university": "哈尔滨工业大学",
+          "year": "2023",
+          "examType": "obe",
+          "originalText": "比较程序查询、中断和DMA三种I/O方式。",
+          "note": "OBE原题"
+        }
+      ]
+    },
+    {
+      "id": "task-busio-002",
+      "chapterId": "bus-io",
+      "courseOutcomeId": "co6",
+      "knowledgePointIds": ["kp-dma-calc"],
+      "difficulty": "applied",
+      "scenario": "某计算机主频为50MHz，采用DMA方式从磁盘传输一个4KB的数据块。磁盘传输速率为2MB/s，DMA预处理和后处理各需500个时钟周期。求：1）DMA数据传输的总时间；2）DMA传输期间CPU被占用的时间占总时间的百分比。",
+      "requirements": [
+        "计算DMA传输4KB数据所需的时间",
+        "计算DMA预处理和后处理所需的时间",
+        "计算CPU被占用的总时间",
+        "计算CPU占用率"
+      ],
+      "reference": "DMA传输数据时间=数据量/传输速率=4KB/2MB/s=4×1024/(2×1024×1024)s=2ms=2000μs。DMA预处理时间=500/50M=10μs。DMA后处理（中断响应等）时间=500/50M=10μs。DMA传输期间CPU被占用时间=预处理+后处理+周期窃取占用。周期窃取：DMA每传一个字窃取一个周期，4KB=4096字节，若数据总线宽度4字节则1024次窃取。实际上4KB数据量相对于传输速率很小，周期窃取占用时间可忽略。CPU被占用总时间≈10+10=20μs。总时间=2000μs。CPU占用率=20/2000=1%。可见DMA方式CPU占用率极低。",
+      "sources": [
+        {
+          "university": "浙江大学",
+          "year": "2022",
+          "examType": "final",
+          "originalText": "DMA传输计算题。",
+          "note": "改编了数据参数"
+        }
+      ]
+    },
+    {
+      "id": "task-busio-003",
+      "chapterId": "bus-io",
+      "courseOutcomeId": "co6",
+      "knowledgePointIds": ["kp-interrupt"],
+      "difficulty": "applied",
+      "scenario": "某计算机系统采用多重中断方式，有四个中断源A、B、C、D，其中断优先级从高到低为A>B>C>D。请说明：1）多重中断的处理流程；2）当CPU正在为C服务时，A和B同时发出中断请求的处理过程；3）中断屏蔽字如何实现中断优先级的动态调整。",
+      "requirements": [
+        "说明多重中断的响应和处理流程",
+        "分析给定场景下中断的嵌套处理过程",
+        "说明中断屏蔽字的作用和设置方法",
+        "说明如何通过屏蔽字调整中断优先级"
+      ],
+      "reference": "多重中断处理流程：CPU每条指令执行结束时检测中断请求→若有中断且中断允许标志IF=1，则保存断点（PC和PSW入栈）→根据中断向量找到中断服务程序入口→执行中断服务程序→中断返回（IRET恢复断点）。场景分析：CPU正在为C服务时，A和B同时请求。A优先级高于C，CPU响应A中断，暂停C的服务转去执行A的服务程序。A处理完后返回到C，但B的优先级也高于C（B>C），此时B仍然挂起，CPU响应B中断。B处理完后再次返回C，C处理完后返回原程序。中断屏蔽字：每个中断源对应一个屏蔽位，1表示屏蔽该中断源。通过设置中断屏蔽字可以动态调整优先级：若要使C的优先级高于A，则设置C的屏蔽字中A对应的位为1，A对应的位中C对应的位为0。",
+      "sources": [
+        {
+          "university": "408统考",
+          "year": "2019",
+          "examType": "postgraduate",
+          "originalText": "多重中断处理流程和优先级分析。",
+          "note": "增加了屏蔽字动态调整的要求"
+        }
+      ]
+    },
+    {
+      "id": "task-busio-004",
+      "chapterId": "bus-io",
+      "courseOutcomeId": "co6",
+      "knowledgePointIds": ["kp-bus-arbitration", "kp-bus-bandwidth"],
+      "difficulty": "applied",
+      "scenario": "某同步总线时钟频率为33MHz，总线宽度为32位，每个时钟周期传输一次数据。请计算：1）总线的数据传输率（带宽）；2）若改为异步方式，每次握手需要4次信号传输，每次信号传输需30ns，计算异步方式下的总线带宽；3）说明同步和异步总线各自的优缺点。",
+      "requirements": [
+        "计算同步总线的数据传输率",
+        "计算异步总线的数据传输率",
+        "比较同步和异步总线的优缺点",
+        "说明各自适用的场景"
+      ],
+      "reference": "同步总线：每个时钟周期传输4字节（32位），时钟频率33MHz，数据传输率=33×10⁶×4=132MB/s。异步总线：每次握手4次信号传输，每次30ns，一次握手总时间=4×30ns=120ns，一个数据传输周期=120ns，数据传输率=4B/120ns≈33.3MB/s。同步总线优点：控制简单、传输率高；缺点：所有设备必须用同一时钟，时钟频率受最慢设备限制，不适合长距离传输。异步总线优点：没有时钟频率限制，适应不同速度设备，适合长距离传输；缺点：每次传输需要握手信号，控制复杂，传输率低于同步方式。",
+      "sources": [
+        {
+          "university": "电子科技大学",
+          "year": "2023",
+          "examType": "final",
+          "originalText": "计算同步和异步总线带宽。",
+          "note": "增加了优劣对比"
+        }
+      ]
+    }
+  ]
+}
