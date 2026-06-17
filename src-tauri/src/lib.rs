@@ -5,7 +5,7 @@ mod models;
 
 use db::DbState;
 use std::path::{Path, PathBuf};
-use std::sync::RwLock;
+use std::sync::Mutex;
 use tauri::Manager;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
@@ -30,7 +30,7 @@ ensure_not_on_desktop(app, &study_data_dir)?;
 
             let conn = db::init_db(&study_data_dir)?;
             app.manage(DbState {
-                conn: RwLock::new(conn),
+                conn: Mutex::new(conn),
             });
             Ok(())
         })

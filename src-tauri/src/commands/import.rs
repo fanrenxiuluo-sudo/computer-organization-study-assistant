@@ -10,7 +10,7 @@ pub fn import_tasks(
     let seed: crate::models::SeedData =
         serde_json::from_str(&json_string).map_err(|e| e.to_string())?;
 
-    let mut conn = state.conn.write().map_err(|e| e.to_string())?;
+    let mut conn = state.conn.lock().map_err(|e| e.to_string())?;
     let tx = conn.transaction().map_err(|e| e.to_string())?;
 
     // Insert prerequisite data first (course outcomes, chapters, knowledge points)

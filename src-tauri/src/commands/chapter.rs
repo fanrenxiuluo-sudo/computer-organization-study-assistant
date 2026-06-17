@@ -4,7 +4,7 @@ use tauri::State;
 
 #[tauri::command]
 pub fn list_chapters(state: State<DbState>) -> Result<Vec<Chapter>, String> {
-    let conn = state.conn.read().map_err(|e| e.to_string())?;
+    let conn = state.conn.lock().map_err(|e| e.to_string())?;
     let mut stmt = conn
         .prepare("SELECT id, title, description, order_index, course_outcome_id FROM chapters ORDER BY order_index")
         .map_err(|e| e.to_string())?;
@@ -30,7 +30,7 @@ pub fn list_chapters(state: State<DbState>) -> Result<Vec<Chapter>, String> {
 
 #[tauri::command]
 pub fn list_course_outcomes(state: State<DbState>) -> Result<Vec<CourseOutcome>, String> {
-    let conn = state.conn.read().map_err(|e| e.to_string())?;
+    let conn = state.conn.lock().map_err(|e| e.to_string())?;
     let mut stmt = conn
         .prepare("SELECT id, code, description, order_index FROM course_outcomes ORDER BY order_index")
         .map_err(|e| e.to_string())?;

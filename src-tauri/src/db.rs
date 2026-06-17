@@ -1,12 +1,15 @@
 use rusqlite::Connection;
 use std::path::PathBuf;
-use std::sync::RwLock;
+use std::sync::Mutex;
 
 use crate::models::*;
 
 pub struct DbState {
-    pub conn: RwLock<Connection>,
+    pub conn: Mutex<Connection>,
 }
+
+unsafe impl Send for DbState {}
+unsafe impl Sync for DbState {}
 
 const SCHEMA_VERSION: i64 = 1;
 

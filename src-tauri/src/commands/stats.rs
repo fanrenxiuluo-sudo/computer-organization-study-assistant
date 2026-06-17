@@ -17,7 +17,7 @@ pub fn get_chapter_progress(
     state: State<DbState>,
     chapter_id: String,
 ) -> Result<ChapterProgress, String> {
-    let conn = state.conn.read().map_err(|e| e.to_string())?;
+    let conn = state.conn.lock().map_err(|e| e.to_string())?;
 
     let total_tasks: i64 = conn
         .query_row(
@@ -141,7 +141,7 @@ pub fn get_chapter_progress(
 
 #[tauri::command]
 pub fn get_overall_progress(state: State<DbState>) -> Result<OverallProgress, String> {
-    let conn = state.conn.read().map_err(|e| e.to_string())?;
+    let conn = state.conn.lock().map_err(|e| e.to_string())?;
 
     let total_tasks: i64 = conn
         .query_row("SELECT COUNT(*) FROM tasks", [], |row| row.get(0))
