@@ -49,7 +49,7 @@ function AppContent() {
     assessWholeTask,
   } = useTaskDetail(currentTaskId);
 
-  const { chapter: chapterProgress } = useStats(activeChapterId);
+  const { chapter: chapterProgress, refresh: refreshStats } = useStats(activeChapterId);
 
   const handleSwitchChapter = useCallback(
     async (chapterId: string) => {
