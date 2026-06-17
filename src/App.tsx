@@ -15,7 +15,7 @@ function AppContent() {
   const {
     activeChapterId, setActiveChapterId,
     practiceMode: mode, switchMode, selectKnowledgePoint, selectedKnowledgePointId,
-    chapters, outcomes, chaptersLoading, chaptersError,
+    chapters, outcomes, chaptersError,
     overall, overallLoading, overallError, refreshOverall,
   } = useAppContext();
 

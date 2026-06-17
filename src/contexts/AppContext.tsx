@@ -99,7 +99,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const setActiveChapterId = useCallback((id: string) => {
     setActiveChapterIdState(id);
-    try { localStorage.setItem(STORAGE_KEY_CHAPTER, id); } catch {}
+    try { localStorage.setItem(STORAGE_KEY_CHAPTER, id); } catch { /* localStorage unavailable */ }
   }, []);
 
   const switchMode = useCallback((newMode: PracticeMode) => {

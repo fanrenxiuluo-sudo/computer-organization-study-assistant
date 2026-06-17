@@ -9,7 +9,7 @@ function loadMode(): PracticeMode {
     if (stored === "sequential" || stored === "weak" || stored === "random" || stored === "knowledge-point") {
       return stored;
     }
-  } catch {}
+  } catch { /* localStorage unavailable */ }
   return "sequential";
 }
 
@@ -20,13 +20,13 @@ export function usePracticeMode() {
   const switchMode = useCallback((newMode: PracticeMode) => {
     setMode(newMode);
     setSelectedKnowledgePointId(null);
-    try { localStorage.setItem(STORAGE_KEY_MODE, newMode); } catch {}
+    try { localStorage.setItem(STORAGE_KEY_MODE, newMode); } catch { /* localStorage unavailable */ }
   }, []);
 
   const selectKnowledgePoint = useCallback((kpId: string) => {
     setMode("knowledge-point");
     setSelectedKnowledgePointId(kpId);
-    try { localStorage.setItem(STORAGE_KEY_MODE, "knowledge-point"); } catch {}
+    try { localStorage.setItem(STORAGE_KEY_MODE, "knowledge-point"); } catch { /* localStorage unavailable */ }
   }, []);
 
   return {
