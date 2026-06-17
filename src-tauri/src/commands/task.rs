@@ -11,9 +11,9 @@ pub fn list_tasks(
     offset: i64,
     limit: i64,
 ) -> Result<TaskPage, String> {
-    let conn = state.conn.lock().map_err(|e| e.to_string())?;
+    let conn = state.conn.read().map_err(|e| e.to_string())?;
 
-    let limit = limit.clamp(1, 50);
+    let limit = limit.clamp(1, 500);
     let offset = offset.max(0);
 
     let mut where_clauses = vec!["t.chapter_id = ?1".to_string()];
@@ -79,7 +79,7 @@ pub fn list_tasks(
 
 #[tauri::command]
 pub fn get_task_detail(state: State<DbState>, task_id: String) -> Result<TaskDetail, String> {
-    let conn = state.conn.lock().map_err(|e| e.to_string())?;
+    let conn = state.conn.read().map_err(|e| e.to_string())?;
 
     let task = conn.query_row(
         "SELECT id, chapter_id, course_outcome_id, difficulty, scenario, reference, source FROM tasks WHERE id = ?1",
@@ -108,7 +108,7 @@ pub fn get_random_tasks(
     count: i64,
     only_weak: bool,
 ) -> Result<Vec<TaskDetail>, String> {
-    let conn = state.conn.lock().map_err(|e| e.to_string())?;
+    let conn = state.conn.read().map_err(|e| e.to_string())?;
     let count = count.clamp(1, 20);
 
     let mut conditions = vec![];
@@ -182,7 +182,7 @@ pub fn list_knowledge_points(
     state: State<DbState>,
     chapter_id: Option<String>,
 ) -> Result<Vec<KnowledgePoint>, String> {
-    let conn = state.conn.lock().map_err(|e| e.to_string())?;
+    let conn = state.conn.read().map_err(|e| e.to_string())?;
     let mut result = Vec::new();
 
     if let Some(ch_id) = chapter_id {

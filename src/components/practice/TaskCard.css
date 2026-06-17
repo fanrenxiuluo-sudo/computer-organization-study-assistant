@@ -171,6 +171,11 @@
   background: #b8ee4a;
 }
 
+.assess-mastered.is-selected {
+  outline: 3px solid #167a3d;
+  outline-offset: 2px;
+}
+
 .assess-needs-work {
   color: #92400e;
   background: #fde68a;
@@ -178,6 +183,11 @@
 
 .assess-needs-work:hover {
   background: #fcd34d;
+}
+
+.assess-needs-work.is-selected {
+  outline: 3px solid #92400e;
+  outline-offset: 2px;
 }
 
 .req-assess-list {

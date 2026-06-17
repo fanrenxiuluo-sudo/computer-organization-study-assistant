@@ -1,1 +1,118 @@
-aW1wb3J0IHR5cGUgeyBDaGFwdGVyLCBDb3Vyc2VPdXRjb21lLCBQcmFjdGljZU1vZGUgfSBmcm9tICIuLi8uLi90eXBlcyI7Cgp0eXBlIFByb3BzID0gewogIGNoYXB0ZXJzOiBDaGFwdGVyW107CiAgb3V0Y29tZXM6IENvdXJzZU91dGNvbWVbXTsKICBhY3RpdmVDaGFwdGVySWQ6IHN0cmluZzsKICBwcmFjdGljZU1vZGU6IFByYWN0aWNlTW9kZTsKICBvdmVyYWxsTWFzdGVyZWQ6IG51bWJlcjsKICBvdmVyYWxsVG90YWw6IG51bWJlcjsKICBvdXRjb21lUHJvZ3Jlc3M6IHsgb3V0Y29tZUlkOiBzdHJpbmc7IGNvZGU6IHN0cmluZzsgZGVzY3JpcHRpb246IHN0cmluZzsgbWFzdGVyeVBlcmNlbnQ6IG51bWJlciB9W107CiAgb25Td2l0Y2hDaGFwdGVyOiAoY2hhcHRlcklkOiBzdHJpbmcpID0+IHZvaWQ7CiAgb25Td2l0Y2hNb2RlOiAobW9kZTogUHJhY3RpY2VNb2RlKSA9PiB2b2lkOwp9OwoKY29uc3QgTU9ERVM6IHsgdmFsdWU6IFByYWN0aWNlTW9kZTsgbGFiZWw6IHN0cmluZyB9W10gPSBbCiAgeyB2YWx1ZTogInNlcXVlbnRpYWwiLCBsYWJlbDogIumhuuW6j+e7g+S5oCIgfSwKICB7IHZhbHVlOiAid2VhayIsIGxhYmVsOiAi6JaE5byx5LiT57uDIiB9LAogIHsgdmFsdWU6ICJyYW5kb20iLCBsYWJlbDogIumaj+acuuWIt+mimCIgfSwKICB7IHZhbHVlOiAia25vd2xlZGdlLXBvaW50IiwgbGFiZWw6ICLogIPngrnlrprlkJEiIH0sCl07CgpleHBvcnQgZnVuY3Rpb24gU2lkZWJhcih7CiAgY2hhcHRlcnMsCiAgb3V0Y29tZXMsCiAgYWN0aXZlQ2hhcHRlcklkLAogIHByYWN0aWNlTW9kZSwKICBvdmVyYWxsTWFzdGVyZWQsCiAgb3ZlcmFsbFRvdGFsLAogIG91dGNvbWVQcm9ncmVzcywKICBvblN3aXRjaENoYXB0ZXIsCiAgb25Td2l0Y2hNb2RlLAp9OiBQcm9wcykgewogIHJldHVybiAoCiAgICA8YXNpZGUgY2xhc3NOYW1lPSJzaWRlLXBhbmVsIj4KICAgICAgPGRpdiBjbGFzc05hbWU9ImJyYW5kLWJsb2NrIj4KICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImJyYW5kLW1hcmsiPkNPPC9zcGFuPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8cCBjbGFzc05hbWU9ImV5ZWJyb3ciPk9CRSDlpIfogIPns7vnu588L3A+CiAgICAgICAgICA8aDE+6K6h57uE5aSH6ICD5Yqp5omLPC9oMT4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CgogICAgICA8c2VjdGlvbiBjbGFzc05hbWU9Im1vZGUtc2VjdGlvbiI+CiAgICAgICAgPHAgY2xhc3NOYW1lPSJleWVicm93Ij7nu4PkuaDmqKHlvI88L3A+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1vZGUtbGlzdCI+CiAgICAgICAgICB7TU9ERVMubWFwKChtKSA9PiAoCiAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICBrZXk9e20udmFsdWV9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgbW9kZS1idXR0b24gJHtwcmFjdGljZU1vZGUgPT09IG0udmFsdWUgPyAiaXMtYWN0aXZlIiA6ICIifWB9CiAgICAgICAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IG9uU3dpdGNoTW9kZShtLnZhbHVlKX0KICAgICAgICAgICAgPgogICAgICAgICAgICAgIHttLmxhYmVsfQogICAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgICkpfQogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CgogICAgICA8bmF2IGNsYXNzTmFtZT0iY2hhcHRlci1saXN0IiBhcmlhLWxhYmVsPSLnq6DoioLliJfooagiPgogICAgICAgIDxwIGNsYXNzTmFtZT0iZXllYnJvdyI+56ug6IqCPC9wPgogICAgICAgIHtjaGFwdGVycy5tYXAoKGNoKSA9PiAoCiAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgIGtleT17Y2guaWR9CiAgICAgICAgICAgIGNsYXNzTmFtZT17YGNoYXB0ZXItYnV0dG9uICR7Y2guaWQgPT09IGFjdGl2ZUNoYXB0ZXJJZCA/ICJpcy1hY3RpdmUiIDogIiJ9YH0KICAgICAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBvblN3aXRjaENoYXB0ZXIoY2guaWQpfQogICAgICAgICAgPgogICAgICAgICAgICA8c3Bhbj57Y2gub3JkZXJJbmRleC50b1N0cmluZygpLnBhZFN0YXJ0KDIsICIwIil9PC9zcGFuPgogICAgICAgICAgICB7Y2gudGl0bGV9CiAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICApKX0KICAgICAgPC9uYXY+CgogICAgICA8c2VjdGlvbiBjbGFzc05hbWU9Im91dGNvbWUtc2VjdGlvbiI+CiAgICAgICAgPHAgY2xhc3NOYW1lPSJleWVicm93Ij7or77nqIvnm67moIfovr7miJA8L3A+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im91dGNvbWUtbGlzdCI+CiAgICAgICAgICB7b3V0Y29tZVByb2dyZXNzLm1hcCgob3ApID0+IHsKICAgICAgICAgICAgY29uc3Qgb3V0Y29tZSA9IG91dGNvbWVzLmZpbmQoKGl0ZW0pID0+IGl0ZW0uaWQgPT09IG9wLm91dGNvbWVJZCk7CiAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgPGRpdgogICAgICAgICAgICAgICAga2V5PXtvcC5vdXRjb21lSWR9CiAgICAgICAgICAgICAgICBjbGFzc05hbWU9Im91dGNvbWUtcm93IgogICAgICAgICAgICAgICAgdGl0bGU9e291dGNvbWU/LmRlc2NyaXB0aW9uID8/IG9wLmRlc2NyaXB0aW9ufQogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0ib3V0Y29tZS1jb2RlIj57b3AuY29kZX08L3NwYW4+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ib3V0Y29tZS1iYXItdHJhY2siPgogICAgICAgICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJvdXRjb21lLWJhci1maWxsIgogICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7IHdpZHRoOiBgJHtNYXRoLm1pbihvcC5tYXN0ZXJ5UGVyY2VudCwgMTAwKX0lYCB9fQogICAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9Im91dGNvbWUtcGN0Ij57TWF0aC5yb3VuZChvcC5tYXN0ZXJ5UGVyY2VudCl9JTwvc3Bhbj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgKTsKICAgICAgICAgIH0pfQogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CgogICAgICA8ZGl2IGNsYXNzTmFtZT0icHJvZ3Jlc3Mtc3VtbWFyeSI+CiAgICAgICAg5bey5o6M5o+hIHtvdmVyYWxsTWFzdGVyZWR9IC8ge292ZXJhbGxUb3RhbH0KICAgICAgPC9kaXY+CiAgICA8L2FzaWRlPgogICk7Cn0=
+import type { Chapter, CourseOutcome, PracticeMode } from "../../types";
+
+type Props = {
+  chapters: Chapter[];
+  outcomes: CourseOutcome[];
+  activeChapterId: string;
+  practiceMode: PracticeMode;
+  overallMastered: number;
+  overallTotal: number;
+  outcomeProgress: { outcomeId: string; code: string; description: string; masteryPercent: number }[];
+  onSwitchChapter: (chapterId: string) => void;
+  onSwitchMode: (mode: PracticeMode) => void;
+  onResetProgress: () => void;
+};
+
+const MODES: { value: PracticeMode; label: string }[] = [
+  { value: "sequential", label: "顺序练习" },
+  { value: "weak", label: "薄弱专练" },
+  { value: "random", label: "随机抽查" },
+  { value: "knowledge-point", label: "考点定向" },
+];
+
+export function Sidebar({
+  chapters,
+  outcomes,
+  activeChapterId,
+  practiceMode,
+  overallMastered,
+  overallTotal,
+  outcomeProgress,
+  onSwitchChapter,
+  onSwitchMode,
+  onResetProgress,
+}: Props) {
+  return (
+    <aside className="side-panel">
+      <div className="brand-block">
+        <span className="brand-mark">CO</span>
+        <div>
+          <p className="eyebrow">OBE 课程目标</p>
+          <h1>计组备考助手</h1>
+        </div>
+      </div>
+
+      <section className="mode-section">
+        <p className="eyebrow">练习模式</p>
+        <div className="mode-list">
+          {MODES.map((m) => (
+            <button
+              key={m.value}
+              className={`mode-button ${practiceMode === m.value ? "is-active" : ""}`}
+              type="button"
+              onClick={() => onSwitchMode(m.value)}
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <nav className="chapter-list" aria-label="章节列表">
+        <p className="eyebrow">章节</p>
+        {chapters.map((ch) => (
+          <button
+            key={ch.id}
+            className={`chapter-button ${ch.id === activeChapterId ? "is-active" : ""}`}
+            type="button"
+            onClick={() => onSwitchChapter(ch.id)}
+          >
+            <span>{ch.orderIndex.toString().padStart(2, "0")}</span>
+            {ch.title}
+          </button>
+        ))}
+      </nav>
+
+      <section className="outcome-section">
+        <p className="eyebrow">课程目标达成</p>
+        <div className="outcome-list">
+          {outcomeProgress.map((op) => {
+            const outcome = outcomes.find((item) => item.id === op.outcomeId);
+            return (
+              <div
+                key={op.outcomeId}
+                className="outcome-row"
+                title={outcome?.description ?? op.description}
+              >
+                <span className="outcome-code">{op.code}</span>
+                <div className="outcome-bar-track">
+                  <div
+                    className="outcome-bar-fill"
+                    style={{ width: `${Math.min(op.masteryPercent, 100)}%` }}
+                  />
+                </div>
+                <span className="outcome-pct">{Math.round(op.masteryPercent)}%</span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="progress-summary">
+        总掌握 {overallMastered} / {overallTotal}
+      </div>
+
+      <button
+        className="reset-button"
+        type="button"
+        onClick={() => {
+          if (window.confirm("确定要重置所有学习进度吗？此操作不可撤销。")) {
+            onResetProgress();
+          }
+        }}
+      >
+        重置学习进度
+      </button>
+    </aside>
+  );
+}

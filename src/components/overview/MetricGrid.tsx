@@ -48,7 +48,7 @@ export function MetricGrid({ overall, chapterCount, loading, error }: Props) {
       </div>
       <div className="metric-card">
         <span>当前版本</span>
-        <strong>v0.2</strong>
+        <strong>v{__APP_VERSION__}</strong>
       </div>
     </section>
   );

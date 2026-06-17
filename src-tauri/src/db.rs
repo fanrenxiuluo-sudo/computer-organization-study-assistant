@@ -1,16 +1,14 @@
 use rusqlite::Connection;
 use std::path::PathBuf;
-use std::sync::Mutex;
+use std::sync::RwLock;
 
 use crate::models::*;
 
 pub struct DbState {
-    pub conn: Mutex<Connection>,
+    pub conn: RwLock<Connection>,
 }
 
 const SCHEMA_VERSION: i64 = 1;
-
-const SEED_JSON: &str = include_str!("../../data/seed.json");
 
 pub fn init_db(study_data_dir: &PathBuf) -> Result<Connection, String> {
     let db_path = study_data_dir.join("study.db");
@@ -24,7 +22,14 @@ pub fn init_db(study_data_dir: &PathBuf) -> Result<Connection, String> {
     create_tables(&conn)?;
 
     if is_new {
-        import_seed_data(&mut conn)?;
+        let seed_path = study_data_dir.join("seed.json");
+        if seed_path.exists() {
+            let json = std::fs::read_to_string(&seed_path).map_err(|e| e.to_string())?;
+            import_seed_data_from_json(&mut conn, &json)?;
+        } else {
+            let embedded_seed: &str = include_str!("../../data/seed.json");
+            import_seed_data_from_json(&mut conn, embedded_seed)?;
+        }
     } else {
         run_migrations(&conn)?;
     }
@@ -156,7 +161,7 @@ fn run_migrations(conn: &Connection) -> Result<(), String> {
     Ok(())
 }
 
-fn import_seed_data(conn: &mut Connection) -> Result<(), String> {
+fn import_seed_data_from_json(conn: &mut Connection, json: &str) -> Result<(), String> {
     let count: i64 = conn
         .query_row("SELECT COUNT(*) FROM tasks", [], |row| row.get(0))
         .unwrap_or(0);
@@ -165,7 +170,7 @@ fn import_seed_data(conn: &mut Connection) -> Result<(), String> {
         return Ok(());
     }
 
-    let seed: SeedData = serde_json::from_str(SEED_JSON).map_err(|e| e.to_string())?;
+    let seed: SeedData = serde_json::from_str(json).map_err(|e| e.to_string())?;
 
     let tx = conn.transaction().map_err(|e| e.to_string())?;
 
@@ -242,4 +247,57 @@ fn import_seed_data(conn: &mut Connection) -> Result<(), String> {
     tx.commit().map_err(|e| e.to_string())?;
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use rusqlite::Connection;
+
+    fn test_conn() -> Connection {
+        let conn = Connection::open_in_memory().unwrap();
+        conn.execute_batch("PRAGMA foreign_keys=ON;").unwrap();
+        create_tables(&conn).unwrap();
+        conn
+    }
+
+    #[test]
+    fn test_create_tables() {
+        let conn = test_conn();
+        let count: i64 = conn
+            .query_row(
+                "SELECT COUNT(*) FROM sqlite_master WHERE type='table'",
+                [],
+                |row| row.get(0),
+            )
+            .unwrap();
+        assert!(count >= 5, "Should create at least 5 tables");
+    }
+
+    #[test]
+    fn test_seed_import_empty_db() {
+        let mut conn = test_conn();
+        let embedded_seed: &str = include_str!("../../data/seed.json");
+        let result = import_seed_data_from_json(&mut conn, embedded_seed);
+        assert!(result.is_ok(), "Seed import should succeed on empty db");
+        let task_count: i64 = conn
+            .query_row("SELECT COUNT(*) FROM tasks", [], |row| row.get(0))
+            .unwrap();
+        assert!(task_count > 0, "Should have tasks after seed import");
+    }
+
+    #[test]
+    fn test_seed_import_idempotent() {
+        let mut conn = test_conn();
+        let embedded_seed: &str = include_str!("../../data/seed.json");
+        import_seed_data_from_json(&mut conn, embedded_seed).unwrap();
+        let first_count: i64 = conn
+            .query_row("SELECT COUNT(*) FROM tasks", [], |row| row.get(0))
+            .unwrap();
+        import_seed_data_from_json(&mut conn, embedded_seed).unwrap();
+        let second_count: i64 = conn
+            .query_row("SELECT COUNT(*) FROM tasks", [], |row| row.get(0))
+            .unwrap();
+        assert_eq!(first_count, second_count, "Second import should not duplicate data");
+    }
 }

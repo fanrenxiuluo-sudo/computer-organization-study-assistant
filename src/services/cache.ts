@@ -1,1 +1,42 @@
-aW1wb3J0IHsgYXBpIH0gZnJvbSAiLi9hcGkiOwppbXBvcnQgdHlwZSB7IENoYXB0ZXIsIEtub3dsZWRnZVBvaW50IH0gZnJvbSAiLi4vdHlwZXMiOwoKbGV0IGNoYXB0ZXJzQ2FjaGU6IENoYXB0ZXJbXSB8IG51bGwgPSBudWxsOwpjb25zdCBrbm93bGVkZ2VQb2ludHNDYWNoZSA9IG5ldyBNYXA8c3RyaW5nLCBLbm93bGVkZ2VQb2ludFtdPigpOwoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldENoYXB0ZXJzKCk6IFByb21pc2U8Q2hhcHRlcltdPiB7CiAgaWYgKCFjaGFwdGVyc0NhY2hlKSB7CiAgICBjaGFwdGVyc0NhY2hlID0gYXdhaXQgYXBpLmxpc3RDaGFwdGVycygpOwogIH0KICByZXR1cm4gY2hhcHRlcnNDYWNoZTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldEtub3dsZWRnZVBvaW50cyhjaGFwdGVySWQ6IHN0cmluZyk6IFByb21pc2U8S25vd2xlZGdlUG9pbnRbXT4gewogIGlmICgha25vd2xlZGdlUG9pbnRzQ2FjaGUuaGFzKGNoYXB0ZXJJZCkpIHsKICAgIGNvbnN0IGtwcyA9IGF3YWl0IGFwaS5saXN0S25vd2xlZGdlUG9pbnRzKHsgY2hhcHRlcklkIH0pOwogICAga25vd2xlZGdlUG9pbnRzQ2FjaGUuc2V0KGNoYXB0ZXJJZCwga3BzKTsKICB9CiAgcmV0dXJuIGtub3dsZWRnZVBvaW50c0NhY2hlLmdldChjaGFwdGVySWQpITsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldEFsbEtub3dsZWRnZVBvaW50cygpOiBQcm9taXNlPEtub3dsZWRnZVBvaW50W10+IHsKICBjb25zdCBhbGwgPSBhd2FpdCBhcGkubGlzdEtub3dsZWRnZVBvaW50cyh7fSk7CiAgcmV0dXJuIGFsbDsKfQoKZXhwb3J0IGZ1bmN0aW9uIGludmFsaWRhdGVDYWNoZSgpOiB2b2lkIHsKICBjaGFwdGVyc0NhY2hlID0gbnVsbDsKICBrbm93bGVkZ2VQb2ludHNDYWNoZS5jbGVhcigpOwp9
+import { api } from "./api";
+import type { Chapter, KnowledgePoint } from "../types";
+
+const CACHE_TTL = 5 * 60 * 1000;
+
+interface CacheEntry<T> {
+  data: T;
+  timestamp: number;
+}
+
+let chaptersCache: CacheEntry<Chapter[]> | null = null;
+const knowledgePointsCache = new Map<string, CacheEntry<KnowledgePoint[]>>();
+
+function isExpired<T>(entry: CacheEntry<T> | null): boolean {
+  return !entry || Date.now() - entry.timestamp > CACHE_TTL;
+}
+
+export async function getChapters(): Promise<Chapter[]> {
+  if (isExpired(chaptersCache)) {
+    const data = await api.listChapters();
+    chaptersCache = { data, timestamp: Date.now() };
+  }
+  return chaptersCache!.data;
+}
+
+export async function getKnowledgePoints(chapterId: string): Promise<KnowledgePoint[]> {
+  if (isExpired(knowledgePointsCache.get(chapterId) ?? null)) {
+    const kps = await api.listKnowledgePoints({ chapterId });
+    knowledgePointsCache.set(chapterId, { data: kps, timestamp: Date.now() });
+  }
+  return knowledgePointsCache.get(chapterId)!.data;
+}
+
+export async function getAllKnowledgePoints(): Promise<KnowledgePoint[]> {
+  const all = await api.listKnowledgePoints({});
+  return all;
+}
+
+export function invalidateCache(): void {
+  chaptersCache = null;
+  knowledgePointsCache.clear();
+}

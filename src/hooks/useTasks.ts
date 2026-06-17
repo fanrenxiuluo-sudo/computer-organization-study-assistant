@@ -45,16 +45,22 @@ export function useTasks(
           setTasks(items);
           setTotal(items.length);
         }
-      } else if (practiceMode === "knowledge-point" && selectedKnowledgePointId) {
-        const page = await api.listTasks({
-          chapterId,
-          knowledgePointId: selectedKnowledgePointId,
-          offset,
-          limit,
-        });
-        if (!signal?.aborted) {
-          setTasks(page.items);
-          setTotal(page.total);
+      } else if (practiceMode === "knowledge-point") {
+        if (!selectedKnowledgePointId) {
+          setTasks([]);
+          setTotal(0);
+          setLoading(false);
+        } else {
+          const page = await api.listTasks({
+            chapterId,
+            knowledgePointId: selectedKnowledgePointId,
+            offset,
+            limit,
+          });
+          if (!signal?.aborted) {
+            setTasks(page.items);
+            setTotal(page.total);
+          }
         }
       } else {
         // sequential mode

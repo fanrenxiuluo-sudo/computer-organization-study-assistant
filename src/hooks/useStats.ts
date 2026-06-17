@@ -8,15 +8,15 @@ export function useStats(chapterId?: string) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Exposed for manual refresh (called after task assessment)
-  const refresh = useCallback(async () => {
+  const refresh = useCallback(async (targetChapterId?: string) => {
     setLoading(true);
     setError(null);
     try {
       const o = await api.getOverallProgress();
       setOverall(o);
-      if (chapterId) {
-        const c = await api.getChapterProgress({ chapterId });
+      const cid = targetChapterId ?? chapterId;
+      if (cid) {
+        const c = await api.getChapterProgress({ chapterId: cid });
         setChapter(c);
       } else {
         setChapter(null);
@@ -31,7 +31,6 @@ export function useStats(chapterId?: string) {
     }
   }, [chapterId]);
 
-  // Auto-load on chapterId change with cancellation guard
   useEffect(() => {
     let cancelled = false;
     setLoading(true);

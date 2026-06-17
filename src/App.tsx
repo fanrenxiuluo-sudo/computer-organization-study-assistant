@@ -4,33 +4,30 @@ import { Sidebar } from "./components/layout/Sidebar";
 import { MetricGrid } from "./components/overview/MetricGrid";
 import { TaskCard } from "./components/practice/TaskCard";
 import { ChapterProgressPanel } from "./components/overview/ChapterProgress";
-import { useChapters } from "./hooks/useChapters";
 import { useTasks } from "./hooks/useTasks";
 import { useTaskDetail } from "./hooks/useTaskDetail";
 import { useStats } from "./hooks/useStats";
-import { usePracticeMode } from "./hooks/usePracticeMode";
+import { api } from "./services/api";
+import { AppProvider, useAppContext } from "./contexts/AppContext";
 import type { TaskDetail, Assessment } from "./types";
 
-function App() {
+function AppContent() {
+  const {
+    activeChapterId, setActiveChapterId,
+    practiceMode: mode, switchMode, selectKnowledgePoint, selectedKnowledgePointId,
+    chapters, outcomes, chaptersLoading, chaptersError,
+    overall, overallLoading, overallError, refreshOverall,
+  } = useAppContext();
+
   const workspaceRef = useRef<HTMLElement>(null);
-  const { chapters, outcomes, loading: chaptersLoading, error: chaptersError } = useChapters();
-  const { mode, selectedKnowledgePointId, switchMode, selectKnowledgePoint } = usePracticeMode();
-
-  const [activeChapterId, setActiveChapterId] = useState("");
   const [activeTaskIndex, setActiveTaskIndex] = useState(0);
-
-  useEffect(() => {
-    if (chapters.length > 0 && !activeChapterId) {
-      setActiveChapterId(chapters[0].id);
-    }
-  }, [chapters, activeChapterId]);
 
   const { tasks, total, loading: tasksLoading, error: tasksError } = useTasks(
     activeChapterId,
     mode,
     selectedKnowledgePointId,
     0,
-    200
+    500
   );
 
   const currentTaskId: string | null =
@@ -52,16 +49,19 @@ function App() {
     assessWholeTask,
   } = useTaskDetail(currentTaskId);
 
-  const { overall, chapter: chapterProgress, error: statsError, refresh: refreshStats } = useStats(activeChapterId);
+  const { chapter: chapterProgress } = useStats(activeChapterId);
 
   const handleSwitchChapter = useCallback(
-    (chapterId: string) => {
-      saveCurrentAnswer();
+    async (chapterId: string) => {
+      await saveCurrentAnswer();
       setActiveChapterId(chapterId);
       setActiveTaskIndex(0);
+      if (mode === "knowledge-point") {
+        switchMode("sequential");
+      }
       workspaceRef.current?.scrollTo({ top: 0, behavior: "smooth" });
     },
-    [saveCurrentAnswer]
+    [saveCurrentAnswer, setActiveChapterId, mode, switchMode]
   );
 
   const handleSwitchMode = useCallback(
@@ -75,12 +75,28 @@ function App() {
   const handleAssessTask = useCallback(
     async (assessment: Assessment) => {
       await assessWholeTask(assessment);
-      refreshStats();
+      refreshOverall();
+      refreshStats(activeChapterId);
     },
-    [assessWholeTask, refreshStats]
+    [assessWholeTask, refreshOverall, refreshStats, activeChapterId]
   );
 
   const currentDetail: TaskDetail | null = detail;
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLTextAreaElement || e.target instanceof HTMLInputElement) return;
+      if (e.key === "ArrowLeft") {
+        saveCurrentAnswer();
+        setActiveTaskIndex((i) => Math.max(i - 1, 0));
+      } else if (e.key === "ArrowRight") {
+        saveCurrentAnswer();
+        setActiveTaskIndex((i) => Math.min(i + 1, tasks.length - 1));
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [saveCurrentAnswer, tasks.length]);
 
   return (
     <ErrorBoundary>
@@ -95,13 +111,18 @@ function App() {
           outcomeProgress={overall?.outcomes ?? []}
           onSwitchChapter={handleSwitchChapter}
           onSwitchMode={handleSwitchMode}
+          onResetProgress={async () => {
+            await api.resetProgress();
+            refreshOverall();
+            refreshStats(activeChapterId);
+          }}
         />
         {chaptersError && <div className="error-banner">{chaptersError}</div>}
 
         <section className="workspace" ref={workspaceRef}>
           <header className="top-bar">
             <div>
-              <p className="eyebrow">v0.2 多模式练习版</p>
+              <p className="eyebrow">v0.2.1 多模式练习版</p>
               <h2>按课程目标完成综合作答，逐条自评掌握程度</h2>
             </div>
             <div className="exam-chip">期末通过优先</div>
@@ -110,8 +131,8 @@ function App() {
           <MetricGrid
             overall={overall}
             chapterCount={chapters.length}
-            loading={chaptersLoading}
-            error={statsError}
+            loading={overallLoading}
+            error={overallError}
           />
 
           <section className="content-grid">
@@ -145,7 +166,7 @@ function App() {
                 {tasksLoading || detailLoading ? "加载中…" :
                   mode === "weak" ? '当前章节暂无薄弱题目，请先完成一些练习并标记"需加强"。' :
                   mode === "random" ? "当前章节暂无题目，后续会继续补充题库。" :
-                  mode === "knowledge-point" ? "当前考点暂无关联题目，后续会继续补充。" :
+                  mode === "knowledge-point" ? "请先在学习路线面板选择一个考点。" :
                   "当前章节暂无题目，后续会继续补充题库。"}
               </div>
             )}
@@ -170,6 +191,14 @@ function App() {
         </section>
       </main>
     </ErrorBoundary>
+  );
+}
+
+function App() {
+  return (
+    <AppProvider>
+      <AppContent />
+    </AppProvider>
   );
 }
 

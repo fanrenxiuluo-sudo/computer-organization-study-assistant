@@ -1,10 +1,11 @@
 mod commands;
 mod db;
+mod errors;
 mod models;
 
 use db::DbState;
 use std::path::{Path, PathBuf};
-use std::sync::Mutex;
+use std::sync::RwLock;
 use tauri::Manager;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
@@ -18,15 +19,18 @@ pub fn run() {
                 .map_err(|e| e.to_string())?
                 .join("study-data");
 
-            ensure_not_on_desktop(app, &study_data_dir)?;
-            std::fs::create_dir_all(&study_data_dir).map_err(|e| e.to_string())?;
-            migrate_legacy_desktop_db(app, &study_data_dir)?;
-            #[cfg(debug_assertions)]
-            write_path_diagnostics(app, &study_data_dir);
+ensure_not_on_desktop(app, &study_data_dir)?;
+    std::fs::create_dir_all(&study_data_dir).map_err(|e| e.to_string())?;
+    let migrated = migrate_legacy_desktop_db(app, &study_data_dir)?;
+    if migrated {
+        eprintln!("[迁移] 已将桌面旧版数据复制到新目录，可手动删除桌面上的「计组备考助手」文件夹。");
+    }
+    #[cfg(debug_assertions)]
+    write_path_diagnostics(app, &study_data_dir);
 
             let conn = db::init_db(&study_data_dir)?;
             app.manage(DbState {
-                conn: Mutex::new(conn),
+                conn: RwLock::new(conn),
             });
             Ok(())
         })
@@ -43,6 +47,7 @@ pub fn run() {
             commands::stats::get_chapter_progress,
             commands::stats::get_overall_progress,
             commands::import::import_tasks,
+            commands::reset::reset_progress,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
@@ -51,6 +56,11 @@ pub fn run() {
 fn ensure_not_on_desktop(app: &tauri::App, path: &Path) -> Result<(), String> {
     if let Ok(desktop_dir) = app.path().desktop_dir() {
         if path.starts_with(&desktop_dir) {
+            eprintln!(
+                "[严重] 数据目录 {} 位于桌面 {} 下，已拒绝启动",
+                path.display(),
+                desktop_dir.display()
+            );
             return Err(format!(
                 "应用数据目录异常：{} 位于桌面目录 {} 下，已拒绝启动以避免污染桌面。",
                 path.display(),
@@ -61,20 +71,20 @@ fn ensure_not_on_desktop(app: &tauri::App, path: &Path) -> Result<(), String> {
     Ok(())
 }
 
-fn migrate_legacy_desktop_db(app: &tauri::App, study_data_dir: &Path) -> Result<(), String> {
+fn migrate_legacy_desktop_db(app: &tauri::App, study_data_dir: &Path) -> Result<bool, String> {
     let new_db = study_data_dir.join("study.db");
     if new_db.exists() {
-        return Ok(());
+        return Ok(false);
     }
 
     let desktop_dir = match app.path().desktop_dir() {
         Ok(path) => path,
-        Err(_) => return Ok(()),
+        Err(_) => return Ok(false),
     };
     let legacy_dir = desktop_dir.join("计组备考助手");
     let legacy_db = legacy_dir.join("study.db");
     if !legacy_db.exists() {
-        return Ok(());
+        return Ok(false);
     }
 
     std::fs::create_dir_all(study_data_dir).map_err(|e| e.to_string())?;
@@ -87,7 +97,7 @@ fn migrate_legacy_desktop_db(app: &tauri::App, study_data_dir: &Path) -> Result<
         }
     }
 
-    Ok(())
+    Ok(true)
 }
 
 fn write_path_diagnostics(app: &tauri::App, study_data_dir: &Path) {

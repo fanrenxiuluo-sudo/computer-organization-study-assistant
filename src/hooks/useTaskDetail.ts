@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { api } from "../services/api";
 import type { TaskDetail, RequirementStatus, Assessment } from "../types";
 
+const MAX_CACHED_ANSWERS = 30;
+
 export function useTaskDetail(taskId: string | null) {
   const [detail, setDetail] = useState<TaskDetail | null>(null);
   const [loading, setLoading] = useState(true);
@@ -57,6 +59,10 @@ export function useTaskDetail(taskId: string | null) {
       if (!taskId) return;
       setAnswers((prev) => {
         const next = { ...prev, [taskId]: value };
+        const keys = Object.keys(next);
+        if (keys.length > MAX_CACHED_ANSWERS) {
+          delete next[keys[0]];
+        }
         answersRef.current = next;
         return next;
       });
@@ -66,14 +72,13 @@ export function useTaskDetail(taskId: string | null) {
 
   const saveCurrentAnswer = useCallback(async () => {
     if (!taskId || !detail) return;
-    const answer = answersRef.current[taskId] ?? "";
-    if (answer.trim().length > 0) {
-      await api.saveAnswer({
-        taskId,
-        chapterId: detail.task.chapterId,
-        answerText: answer,
-      });
-    }
+    const answer = answersRef.current[taskId];
+    if (answer === undefined) return;
+    await api.saveAnswer({
+      taskId,
+      chapterId: detail.task.chapterId,
+      answerText: answer,
+    });
   }, [taskId, detail]);
 
   const revealReference = useCallback(() => {

@@ -1,19 +1,33 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import type { PracticeMode } from "../types";
 
+const STORAGE_KEY_MODE = "jizubeikao_practiceMode";
+
+function loadMode(): PracticeMode {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY_MODE);
+    if (stored === "sequential" || stored === "weak" || stored === "random" || stored === "knowledge-point") {
+      return stored;
+    }
+  } catch {}
+  return "sequential";
+}
+
 export function usePracticeMode() {
-  const [mode, setMode] = useState<PracticeMode>("sequential");
+  const [mode, setMode] = useState<PracticeMode>(loadMode);
   const [selectedKnowledgePointId, setSelectedKnowledgePointId] = useState<string | null>(null);
 
-  const switchMode = (newMode: PracticeMode) => {
+  const switchMode = useCallback((newMode: PracticeMode) => {
     setMode(newMode);
     setSelectedKnowledgePointId(null);
-  };
+    try { localStorage.setItem(STORAGE_KEY_MODE, newMode); } catch {}
+  }, []);
 
-  const selectKnowledgePoint = (kpId: string) => {
+  const selectKnowledgePoint = useCallback((kpId: string) => {
     setMode("knowledge-point");
     setSelectedKnowledgePointId(kpId);
-  };
+    try { localStorage.setItem(STORAGE_KEY_MODE, "knowledge-point"); } catch {}
+  }, []);
 
   return {
     mode,

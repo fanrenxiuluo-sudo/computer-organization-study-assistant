@@ -148,26 +148,22 @@ export function TaskCard({
                     <span className="req-assess-label">
                       要求 {req.reqIndex + 1}: {status === "mastered" ? "已掌握 ✓" : status === "needs_work" ? "需加强 ✗" : "未评"}
                     </span>
-                    {status !== "mastered" && (
-                      <button
-                        className="assess-button assess-mastered"
-                        type="button"
-                        disabled={assessing}
-                        onClick={() => onAssessReq(req.reqIndex, "mastered")}
-                      >
-                        ✓ 掌握
-                      </button>
-                    )}
-                    {status !== "needs_work" && (
-                      <button
-                        className="assess-button assess-needs-work"
-                        type="button"
-                        disabled={assessing}
-                        onClick={() => onAssessReq(req.reqIndex, "needs_work")}
-                      >
-                        ✗ 需加强
-                      </button>
-                    )}
+                    <button
+                      className={`assess-button assess-mastered${status === "mastered" ? " is-selected" : ""}`}
+                      type="button"
+                      disabled={assessing}
+                      onClick={() => onAssessReq(req.reqIndex, "mastered")}
+                    >
+                      ✓ 掌握
+                    </button>
+                    <button
+                      className={`assess-button assess-needs-work${status === "needs_work" ? " is-selected" : ""}`}
+                      type="button"
+                      disabled={assessing}
+                      onClick={() => onAssessReq(req.reqIndex, "needs_work")}
+                    >
+                      ✗ 需加强
+                    </button>
                   </div>
                 );
               })}
