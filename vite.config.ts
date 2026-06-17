@@ -9,7 +9,7 @@ export default defineConfig({
     strictPort: true
   },
   define: {
-    __APP_VERSION__: JSON.stringify("0.2.1"),
+    __APP_VERSION__: JSON.stringify("0.3.0"),
   }
 });
 
