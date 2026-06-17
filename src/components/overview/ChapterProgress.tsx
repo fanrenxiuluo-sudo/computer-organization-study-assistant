@@ -1,1 +1,84 @@
-aW1wb3J0IHR5cGUgeyBDaGFwdGVyLCBDaGFwdGVyUHJvZ3Jlc3MgfSBmcm9tICIuLi8uLi90eXBlcyI7Cgp0eXBlIFByb3BzID0gewogIGNoYXB0ZXJzOiBDaGFwdGVyW107CiAgYWN0aXZlQ2hhcHRlcklkOiBzdHJpbmc7CiAgY2hhcHRlclByb2dyZXNzOiBDaGFwdGVyUHJvZ3Jlc3MgfCBudWxsOwogIG9uU2VsZWN0S25vd2xlZGdlUG9pbnQ6IChrcElkOiBzdHJpbmcpID0+IHZvaWQ7Cn07CgpleHBvcnQgZnVuY3Rpb24gQ2hhcHRlclByb2dyZXNzUGFuZWwoewogIGNoYXB0ZXJzLAogIGFjdGl2ZUNoYXB0ZXJJZCwKICBjaGFwdGVyUHJvZ3Jlc3MsCiAgb25TZWxlY3RLbm93bGVkZ2VQb2ludCwKfTogUHJvcHMpIHsKICBjb25zdCBhY3RpdmVDaGFwdGVyID0gY2hhcHRlcnMuZmluZCgoYykgPT4gYy5pZCA9PT0gYWN0aXZlQ2hhcHRlcklkKTsKCiAgcmV0dXJuICgKICAgIDxhcnRpY2xlIGNsYXNzTmFtZT0icm9hZG1hcC1wYW5lbCI+CiAgICAgIDxwIGNsYXNzTmFtZT0iZXllYnJvdyI+5a2m5Lmg6L+b5bqmPC9wPgogICAgICA8aDM+e2FjdGl2ZUNoYXB0ZXI/LnRpdGxlID8/ICLnq6DoioIifeaOjOaPoeaDheWGtTwvaDM+CgogICAgICB7Y2hhcHRlclByb2dyZXNzICYmICgKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icHJvZ3Jlc3Mtc3VtbWFyeS1yb3ciPgogICAgICAgICAgPHNwYW4+5oC76aKY5pWwOiB7Y2hhcHRlclByb2dyZXNzLnRvdGFsVGFza3N9PC9zcGFuPgogICAgICAgICAgPHNwYW4+5bey5o6M5o+hOiB7Y2hhcHRlclByb2dyZXNzLm1hc3RlcmVkfTwvc3Bhbj4KICAgICAgICAgIDxzcGFuPumcgOWKoOW8ujoge2NoYXB0ZXJQcm9ncmVzcy5uZWVkc1dvcmt9PC9zcGFuPgogICAgICAgIDwvZGl2PgogICAgICApfQoKICAgICAge2NoYXB0ZXJQcm9ncmVzcyAmJiBjaGFwdGVyUHJvZ3Jlc3Mua25vd2xlZGdlUG9pbnRzLmxlbmd0aCA+IDAgJiYgKAogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJrcC1wcm9ncmVzcy1saXN0Ij4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0iZXllYnJvdyIgc3R5bGU9e3sgbWFyZ2luVG9wOiAxNiB9fT7ogIPngrnmjozmj6HluqY8L3A+CiAgICAgICAgICB7Y2hhcHRlclByb2dyZXNzLmtub3dsZWRnZVBvaW50cy5tYXAoKGtwKSA9PiAoCiAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICBrZXk9e2twLmtub3dsZWRnZVBvaW50SWR9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJrcC1wcm9ncmVzcy1pdGVtIgogICAgICAgICAgICAgIHR5cGU9ImJ1dHRvbiIKICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBvblNlbGVjdEtub3dsZWRnZVBvaW50KGtwLmtub3dsZWRnZVBvaW50SWQpfQogICAgICAgICAgICA+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJrcC1uYW1lIj57a3AubmFtZX08L3NwYW4+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImtwLWJhci10cmFjayI+CiAgICAgICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0ia3AtYmFyLWZpbGwiCiAgICAgICAgICAgICAgICAgIHN0eWxlPXt7IHdpZHRoOiBgJHtNYXRoLm1pbihrcC5tYXN0ZXJ5UGVyY2VudCwgMTAwKX0lYCB9fQogICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImtwLXBjdCI+e01hdGgucm91bmQoa3AubWFzdGVyeVBlcmNlbnQpfSU8L3NwYW4+CiAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgKSl9CiAgICAgICAgPC9kaXY+CiAgICAgICl9CgogICAgICA8ZGl2IGNsYXNzTmFtZT0icm9hZG1hcC1saXN0IiBzdHlsZT17eyBtYXJnaW5Ub3A6IDE2IH19PgogICAgICAgIHtjaGFwdGVycy5tYXAoKGNoYXB0ZXIpID0+IHsKICAgICAgICAgIGNvbnN0IHBjdCA9IGNoYXB0ZXJQcm9ncmVzcyAmJiBjaGFwdGVyLmlkID09PSBhY3RpdmVDaGFwdGVySWQKICAgICAgICAgICAgPyAoY2hhcHRlclByb2dyZXNzLnRvdGFsVGFza3MgPiAwCiAgICAgICAgICAgICAgPyAoY2hhcHRlclByb2dyZXNzLm1hc3RlcmVkIC8gY2hhcHRlclByb2dyZXNzLnRvdGFsVGFza3MpICogMTAwCiAgICAgICAgICAgICAgOiAwKQogICAgICAgICAgICA6IDA7CiAgICAgICAgICByZXR1cm4gKAogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icm9hZG1hcC1pdGVtIiBrZXk9e2NoYXB0ZXIuaWR9PgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJyb2FkbWFwLXJvdyI+CiAgICAgICAgICAgICAgICA8c3Bhbj4KICAgICAgICAgICAgICAgICAge2NoYXB0ZXIub3JkZXJJbmRleC50b1N0cmluZygpLnBhZFN0YXJ0KDIsICIwIil9IHtjaGFwdGVyLnRpdGxlfQogICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgPGVtPgogICAgICAgICAgICAgICAgICB7Y2hhcHRlci5pZCA9PT0gYWN0aXZlQ2hhcHRlcklkICYmIGNoYXB0ZXJQcm9ncmVzcwogICAgICAgICAgICAgICAgICAgID8gYCR7Y2hhcHRlclByb2dyZXNzLm1hc3RlcmVkfS8ke2NoYXB0ZXJQcm9ncmVzcy50b3RhbFRhc2tzfWAKICAgICAgICAgICAgICAgICAgICA6ICIifQogICAgICAgICAgICAgICAgPC9lbT4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICB7Y2hhcHRlci5pZCA9PT0gYWN0aXZlQ2hhcHRlcklkICYmIGNoYXB0ZXJQcm9ncmVzcyAmJiAoCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icHJvZ3Jlc3MtdHJhY2siPgogICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXt7IHdpZHRoOiBgJHtwY3R9JWAgfX0gLz4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICl9CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgKTsKICAgICAgICB9KX0KICAgICAgPC9kaXY+CiAgICA8L2FydGljbGU+CiAgKTsKfQ==
+﻿import type { Chapter, ChapterProgress } from "../../types";
+
+type Props = {
+  chapters: Chapter[];
+  activeChapterId: string;
+  chapterProgress: ChapterProgress | null;
+  onSelectKnowledgePoint: (kpId: string) => void;
+};
+
+export function ChapterProgressPanel({
+  chapters,
+  activeChapterId,
+  chapterProgress,
+  onSelectKnowledgePoint,
+}: Props) {
+  const activeChapter = chapters.find((c) => c.id === activeChapterId);
+
+  return (
+    <article className="roadmap-panel">
+      <p className="eyebrow">学习进度</p>
+      <h3>{activeChapter?.title ?? "章节"}掌握情况</h3>
+
+      {chapterProgress && (
+        <div className="progress-summary-row">
+          <span>总题数: {chapterProgress.totalTasks}</span>
+          <span>已掌握: {chapterProgress.mastered}</span>
+          <span>需加强: {chapterProgress.needsWork}</span>
+        </div>
+      )}
+
+      {chapterProgress && chapterProgress.knowledgePoints.length > 0 && (
+        <div className="kp-progress-list">
+          <p className="eyebrow" style={{ marginTop: 16 }}>考点掌握度</p>
+          {chapterProgress.knowledgePoints.map((kp) => (
+            <button
+              key={kp.knowledgePointId}
+              className="kp-progress-item"
+              type="button"
+              onClick={() => onSelectKnowledgePoint(kp.knowledgePointId)}
+            >
+              <span className="kp-name">{kp.name}</span>
+              <div className="kp-bar-track">
+                <div
+                  className="kp-bar-fill"
+                  style={{ width: `${Math.min(kp.masteryPercent, 100)}%` }}
+                />
+              </div>
+              <span className="kp-pct">{Math.round(kp.masteryPercent)}%</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div className="roadmap-list" style={{ marginTop: 16 }}>
+        {chapters.map((chapter) => {
+          const pct = chapterProgress && chapter.id === activeChapterId
+            ? (chapterProgress.totalTasks > 0
+              ? (chapterProgress.mastered / chapterProgress.totalTasks) * 100
+              : 0)
+            : 0;
+          return (
+            <div className="roadmap-item" key={chapter.id}>
+              <div className="roadmap-row">
+                <span>
+                  {chapter.orderIndex.toString().padStart(2, "0")} {chapter.title}
+                </span>
+                <em>
+                  {chapter.id === activeChapterId && chapterProgress
+                    ? `${chapterProgress.mastered}/${chapterProgress.totalTasks}`
+                    : ""}
+                </em>
+              </div>
+              {chapter.id === activeChapterId && chapterProgress && (
+                <div className="progress-track">
+                  <div style={{ width: `${pct}%` }} />
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </article>
+  );
+}
