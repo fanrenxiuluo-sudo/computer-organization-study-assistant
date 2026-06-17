@@ -45,13 +45,6 @@ pub struct TaskRequirement {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[allow(dead_code)]
-pub struct TaskKnowledgePoint {
-    pub task_id: String,
-    pub knowledge_point_id: String,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TaskSource {
     pub id: i64,
     pub task_id: String,

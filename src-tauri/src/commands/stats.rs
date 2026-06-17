@@ -1,1 +1,246 @@
-dXNlIGNyYXRlOjpkYjo6RGJTdGF0ZTsKdXNlIGNyYXRlOjptb2RlbHM6Oio7CnVzZSB0YXVyaTo6U3RhdGU7Cgpjb25zdCBMQVRFU1RfVEFTS19BU1NFU1NNRU5UU19TUUw6ICZzdHIgPSAiCiAgICBTRUxFQ1QgdGEudGFza19pZCwgdGEuY2hhcHRlcl9pZCwgdGEuYXNzZXNzbWVudAogICAgRlJPTSB0YXNrX2Fzc2Vzc21lbnRzIHRhCiAgICBJTk5FUiBKT0lOICgKICAgICAgICBTRUxFQ1QgdGFza19pZCwgTUFYKGlkKSBBUyBtYXhfaWQKICAgICAgICBGUk9NIHRhc2tfYXNzZXNzbWVudHMKICAgICAgICBHUk9VUCBCWSB0YXNrX2lkCiAgICApIGxhdGVzdCBPTiBsYXRlc3QubWF4X2lkID0gdGEuaWQKIjsKCiNbdGF1cmk6OmNvbW1hbmRdCnB1YiBmbiBnZXRfY2hhcHRlcl9wcm9ncmVzcygKICAgIHN0YXRlOiBTdGF0ZTxEYlN0YXRlPiwKICAgIGNoYXB0ZXJfaWQ6IFN0cmluZywKKSAtPiBSZXN1bHQ8Q2hhcHRlclByb2dyZXNzLCBTdHJpbmc+IHsKICAgIGxldCBjb25uID0gc3RhdGUuY29ubi5sb2NrKCkubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwoKICAgIGxldCB0b3RhbF90YXNrczogaTY0ID0gY29ubgogICAgICAgIC5xdWVyeV9yb3coCiAgICAgICAgICAgICJTRUxFQ1QgQ09VTlQoKikgRlJPTSB0YXNrcyBXSEVSRSBjaGFwdGVyX2lkID0gPzEiLAogICAgICAgICAgICBbJmNoYXB0ZXJfaWRdLAogICAgICAgICAgICB8cm93fCByb3cuZ2V0KDApLAogICAgICAgICkKICAgICAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwoKICAgIGxldCBhc3Nlc3NlZDogaTY0ID0gY29ubgogICAgICAgIC5xdWVyeV9yb3coCiAgICAgICAgICAgICZmb3JtYXQhKCJTRUxFQ1QgQ09VTlQoKikgRlJPTSAoe0xBVEVTVF9UQVNLX0FTU0VTU01FTlRTX1NRTH0pIGxhdGVzdCBXSEVSRSBsYXRlc3QuY2hhcHRlcl9pZCA9ID8xIiksCiAgICAgICAgICAgIFsmY2hhcHRlcl9pZF0sCiAgICAgICAgICAgIHxyb3d8IHJvdy5nZXQoMCksCiAgICAgICAgKQogICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgbGV0IG1hc3RlcmVkOiBpNjQgPSBjb25uCiAgICAgICAgLnF1ZXJ5X3JvdygKICAgICAgICAgICAgJmZvcm1hdCEoIlNFTEVDVCBDT1VOVCgqKSBGUk9NICh7TEFURVNUX1RBU0tfQVNTRVNTTUVOVFNfU1FMfSkgbGF0ZXN0IFdIRVJFIGxhdGVzdC5jaGFwdGVyX2lkID0gPzEgQU5EIGxhdGVzdC5hc3Nlc3NtZW50ID0gJ21hc3RlcmVkJyIpLAogICAgICAgICAgICBbJmNoYXB0ZXJfaWRdLAogICAgICAgICAgICB8cm93fCByb3cuZ2V0KDApLAogICAgICAgICkKICAgICAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwoKICAgIGxldCBuZWVkc193b3JrOiBpNjQgPSBjb25uCiAgICAgICAgLnF1ZXJ5X3JvdygKICAgICAgICAgICAgJmZvcm1hdCEoIlNFTEVDVCBDT1VOVCgqKSBGUk9NICh7TEFURVNUX1RBU0tfQVNTRVNTTUVOVFNfU1FMfSkgbGF0ZXN0IFdIRVJFIGxhdGVzdC5jaGFwdGVyX2lkID0gPzEgQU5EIGxhdGVzdC5hc3Nlc3NtZW50ID0gJ25lZWRzX3dvcmsnIiksCiAgICAgICAgICAgIFsmY2hhcHRlcl9pZF0sCiAgICAgICAgICAgIHxyb3d8IHJvdy5nZXQoMCksCiAgICAgICAgKQogICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgbGV0IG11dCBrcF9zdG10ID0gY29ubgogICAgICAgIC5wcmVwYXJlKCJTRUxFQ1Qga3AuaWQsIGtwLm5hbWUgRlJPTSBrbm93bGVkZ2VfcG9pbnRzIGtwIFdIRVJFIGtwLmNoYXB0ZXJfaWQgPSA/MSBPUkRFUiBCWSBrcC5vcmRlcl9pbmRleCIpCiAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKICAgIGxldCBrcF9yb3dzID0ga3Bfc3RtdAogICAgICAgIC5xdWVyeV9tYXAoWyZjaGFwdGVyX2lkXSwgfHJvd3wgewogICAgICAgICAgICBPaygocm93LmdldDo6PF8sIFN0cmluZz4oMCk/LCByb3cuZ2V0Ojo8XywgU3RyaW5nPigxKT8pKQogICAgICAgIH0pCiAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKCiAgICBsZXQgbXV0IGtub3dsZWRnZV9wb2ludHMgPSBWZWM6Om5ldygpOwogICAgZm9yIGtwX3JvdyBpbiBrcF9yb3dzIHsKICAgICAgICBsZXQgKGtwX2lkLCBrcF9uYW1lKSA9IGtwX3Jvdy5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CiAgICAgICAgbGV0IHRvdGFsOiBpNjQgPSBjb25uCiAgICAgICAgICAgIC5xdWVyeV9yb3coCiAgICAgICAgICAgICAgICAiU0VMRUNUIENPVU5UKCopIEZST00gdGFza19rbm93bGVkZ2VfcG9pbnRzIFdIRVJFIGtub3dsZWRnZV9wb2ludF9pZCA9ID8xIiwKICAgICAgICAgICAgICAgIFsma3BfaWRdLAogICAgICAgICAgICAgICAgfHJvd3wgcm93LmdldCgwKSwKICAgICAgICAgICAgKQogICAgICAgICAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwoKICAgICAgICBsZXQga3BfbWFzdGVyZWQ6IGk2NCA9IGNvbm4KICAgICAgICAgICAgLnF1ZXJ5X3JvdygKICAgICAgICAgICAgICAgICZmb3JtYXQhKAogICAgICAgICAgICAgICAgICAgICJTRUxFQ1QgQ09VTlQoKikKICAgICAgICAgICAgICAgICAgICAgRlJPTSAoe0xBVEVTVF9UQVNLX0FTU0VTU01FTlRTX1NRTH0pIGxhdGVzdAogICAgICAgICAgICAgICAgICAgICBJTk5FUiBKT0lOIHRhc2tfa25vd2xlZGdlX3BvaW50cyB0a3AgT04gbGF0ZXN0LnRhc2tfaWQgPSB0a3AudGFza19pZAogICAgICAgICAgICAgICAgICAgICBXSEVSRSB0a3Aua25vd2xlZGdlX3BvaW50X2lkID0gPzEgQU5EIGxhdGVzdC5hc3Nlc3NtZW50ID0gJ21hc3RlcmVkJyIKICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICBbJmtwX2lkXSwKICAgICAgICAgICAgICAgIHxyb3d8IHJvdy5nZXQoMCksCiAgICAgICAgICAgICkKICAgICAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKCiAgICAgICAgbGV0IHBjdCA9IGlmIHRvdGFsID4gMCB7CiAgICAgICAgICAgIChrcF9tYXN0ZXJlZCBhcyBmNjQgLyB0b3RhbCBhcyBmNjQpICogMTAwLjAKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAwLjAKICAgICAgICB9OwoKICAgICAgICBrbm93bGVkZ2VfcG9pbnRzLnB1c2goS25vd2xlZGdlUG9pbnRQcm9ncmVzcyB7CiAgICAgICAgICAgIGtub3dsZWRnZV9wb2ludF9pZDoga3BfaWQsCiAgICAgICAgICAgIG5hbWU6IGtwX25hbWUsCiAgICAgICAgICAgIHRvdGFsX3Rhc2tzOiB0b3RhbCwKICAgICAgICAgICAgbWFzdGVyZWQ6IGtwX21hc3RlcmVkLAogICAgICAgICAgICBtYXN0ZXJ5X3BlcmNlbnQ6IHBjdCwKICAgICAgICB9KTsKICAgIH0KCiAgICBPayhDaGFwdGVyUHJvZ3Jlc3MgewogICAgICAgIHRvdGFsX3Rhc2tzLAogICAgICAgIGFzc2Vzc2VkLAogICAgICAgIG1hc3RlcmVkLAogICAgICAgIG5lZWRzX3dvcmssCiAgICAgICAga25vd2xlZGdlX3BvaW50cywKICAgIH0pCn0KCiNbdGF1cmk6OmNvbW1hbmRdCnB1YiBmbiBnZXRfb3ZlcmFsbF9wcm9ncmVzcyhzdGF0ZTogU3RhdGU8RGJTdGF0ZT4pIC0+IFJlc3VsdDxPdmVyYWxsUHJvZ3Jlc3MsIFN0cmluZz4gewogICAgbGV0IGNvbm4gPSBzdGF0ZS5jb25uLmxvY2soKS5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgbGV0IHRvdGFsX3Rhc2tzOiBpNjQgPSBjb25uCiAgICAgICAgLnF1ZXJ5X3JvdygiU0VMRUNUIENPVU5UKCopIEZST00gdGFza3MiLCBbXSwgfHJvd3wgcm93LmdldCgwKSkKICAgICAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwogICAgbGV0IG1hc3RlcmVkOiBpNjQgPSBjb25uCiAgICAgICAgLnF1ZXJ5X3JvdygKICAgICAgICAgICAgJmZvcm1hdCEoIlNFTEVDVCBDT1VOVCgqKSBGUk9NICh7TEFURVNUX1RBU0tfQVNTRVNTTUVOVFNfU1FMfSkgbGF0ZXN0IFdIRVJFIGxhdGVzdC5hc3Nlc3NtZW50ID0gJ21hc3RlcmVkJyIpLAogICAgICAgICAgICBbXSwKICAgICAgICAgICAgfHJvd3wgcm93LmdldCgwKSwKICAgICAgICApCiAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKICAgIGxldCBuZWVkc193b3JrOiBpNjQgPSBjb25uCiAgICAgICAgLnF1ZXJ5X3JvdygKICAgICAgICAgICAgJmZvcm1hdCEoIlNFTEVDVCBDT1VOVCgqKSBGUk9NICh7TEFURVNUX1RBU0tfQVNTRVNTTUVOVFNfU1FMfSkgbGF0ZXN0IFdIRVJFIGxhdGVzdC5hc3Nlc3NtZW50ID0gJ25lZWRzX3dvcmsnIiksCiAgICAgICAgICAgIFtdLAogICAgICAgICAgICB8cm93fCByb3cuZ2V0KDApLAogICAgICAgICkKICAgICAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwoKICAgIGxldCBtdXQgb3V0Y29tZV9zdG10ID0gY29ubgogICAgICAgIC5wcmVwYXJlKCJTRUxFQ1QgaWQsIGNvZGUsIGRlc2NyaXB0aW9uIEZST00gY291cnNlX291dGNvbWVzIE9SREVSIEJZIG9yZGVyX2luZGV4IikKICAgICAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwogICAgbGV0IG91dGNvbWVfcm93cyA9IG91dGNvbWVfc3RtdAogICAgICAgIC5xdWVyeV9tYXAoW10sIHxyb3d8IHsKICAgICAgICAgICAgT2soT3V0Y29tZVByb2dyZXNzIHsKICAgICAgICAgICAgICAgIG91dGNvbWVfaWQ6IHJvdy5nZXQoMCk/LAogICAgICAgICAgICAgICAgY29kZTogcm93LmdldCgxKT8sCiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjogcm93LmdldCgyKT8sCiAgICAgICAgICAgICAgICBtYXN0ZXJ5X3BlcmNlbnQ6IDAuMCwKICAgICAgICAgICAgfSkKICAgICAgICB9KQogICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgbGV0IG11dCBvdXRjb21lcyA9IFZlYzo6bmV3KCk7CiAgICBmb3Igcm93IGluIG91dGNvbWVfcm93cyB7CiAgICAgICAgbGV0IG11dCBvcCA9IHJvdy5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CiAgICAgICAgbGV0IGNvX3RvdGFsOiBpNjQgPSBjb25uCiAgICAgICAgICAgIC5xdWVyeV9yb3coCiAgICAgICAgICAgICAgICAiU0VMRUNUIENPVU5UKCopIEZST00gdGFza3MgV0hFUkUgY291cnNlX291dGNvbWVfaWQgPSA/MSIsCiAgICAgICAgICAgICAgICBbJm9wLm91dGNvbWVfaWRdLAogICAgICAgICAgICAgICAgfHJvd3wgcm93LmdldCgwKSwKICAgICAgICAgICAgKQogICAgICAgICAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwogICAgICAgIGxldCBjb19tYXN0ZXJlZDogaTY0ID0gY29ubgogICAgICAgICAgICAucXVlcnlfcm93KAogICAgICAgICAgICAgICAgJmZvcm1hdCEoCiAgICAgICAgICAgICAgICAgICAgIlNFTEVDVCBDT1VOVCgqKQogICAgICAgICAgICAgICAgICAgICBGUk9NICh7TEFURVNUX1RBU0tfQVNTRVNTTUVOVFNfU1FMfSkgbGF0ZXN0CiAgICAgICAgICAgICAgICAgICAgIElOTkVSIEpPSU4gdGFza3MgdCBPTiBsYXRlc3QudGFza19pZCA9IHQuaWQKICAgICAgICAgICAgICAgICAgICAgV0hFUkUgdC5jb3Vyc2Vfb3V0Y29tZV9pZCA9ID8xIEFORCBsYXRlc3QuYXNzZXNzbWVudCA9ICdtYXN0ZXJlZCciCiAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgWyZvcC5vdXRjb21lX2lkXSwKICAgICAgICAgICAgICAgIHxyb3d8IHJvdy5nZXQoMCksCiAgICAgICAgICAgICkKICAgICAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKICAgICAgICBvcC5tYXN0ZXJ5X3BlcmNlbnQgPSBpZiBjb190b3RhbCA+IDAgewogICAgICAgICAgICAoY29fbWFzdGVyZWQgYXMgZjY0IC8gY29fdG90YWwgYXMgZjY0KSAqIDEwMC4wCiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgMC4wCiAgICAgICAgfTsKICAgICAgICBvdXRjb21lcy5wdXNoKG9wKTsKICAgIH0KCiAgICBPayhPdmVyYWxsUHJvZ3Jlc3MgewogICAgICAgIHRvdGFsX3Rhc2tzLAogICAgICAgIG1hc3RlcmVkLAogICAgICAgIG5lZWRzX3dvcmssCiAgICAgICAgb3V0Y29tZXMsCiAgICB9KQp9Cg==
+use crate::db::DbState;
+use crate::models::*;
+use tauri::State;
+
+const LATEST_TASK_ASSESSMENTS_SQL: &str = "
+    SELECT ta.task_id, ta.chapter_id, ta.assessment
+    FROM task_assessments ta
+    INNER JOIN (
+        SELECT task_id, MAX(id) AS max_id
+        FROM task_assessments
+        GROUP BY task_id
+    ) latest ON latest.max_id = ta.id
+";
+
+#[tauri::command]
+pub fn get_chapter_progress(
+    state: State<DbState>,
+    chapter_id: String,
+) -> Result<ChapterProgress, String> {
+    let conn = state.conn.lock().map_err(|e| e.to_string())?;
+
+    let total_tasks: i64 = conn
+        .query_row(
+            "SELECT COUNT(*) FROM tasks WHERE chapter_id = ?1",
+            [&chapter_id],
+            |row| row.get(0),
+        )
+        .map_err(|e| e.to_string())?;
+
+    let assessed: i64 = conn
+        .query_row(
+            &format!("SELECT COUNT(*) FROM ({LATEST_TASK_ASSESSMENTS_SQL}) latest WHERE latest.chapter_id = ?1"),
+            [&chapter_id],
+            |row| row.get(0),
+        )
+        .map_err(|e| e.to_string())?;
+
+    let mastered: i64 = conn
+        .query_row(
+            &format!("SELECT COUNT(*) FROM ({LATEST_TASK_ASSESSMENTS_SQL}) latest WHERE latest.chapter_id = ?1 AND latest.assessment = 'mastered'"),
+            [&chapter_id],
+            |row| row.get(0),
+        )
+        .map_err(|e| e.to_string())?;
+
+    let needs_work: i64 = conn
+        .query_row(
+            &format!("SELECT COUNT(*) FROM ({LATEST_TASK_ASSESSMENTS_SQL}) latest WHERE latest.chapter_id = ?1 AND latest.assessment = 'needs_work'"),
+            [&chapter_id],
+            |row| row.get(0),
+        )
+        .map_err(|e| e.to_string())?;
+
+    // Batch query: all knowledge points + their task counts + mastered counts in one go
+    let mut kp_stmt = conn
+        .prepare(
+            "SELECT kp.id, kp.name FROM knowledge_points kp WHERE kp.chapter_id = ?1 ORDER BY kp.order_index"
+        )
+        .map_err(|e| e.to_string())?;
+    let kp_rows: Vec<(String, String)> = kp_stmt
+        .query_map([&chapter_id], |row| {
+            Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?))
+        })
+        .map_err(|e| e.to_string())?
+        .collect::<Result<_, _>>()
+        .map_err(|e| e.to_string())?;
+
+    if kp_rows.is_empty() {
+        return Ok(ChapterProgress {
+            total_tasks,
+            assessed,
+            mastered,
+            needs_work,
+            knowledge_points: vec![],
+        });
+    }
+
+    // Build IN clause for batch querying all KPs at once
+    let placeholders: Vec<String> = (0..kp_rows.len()).map(|i| format!("?{}", i + 1)).collect();
+    let in_clause = placeholders.join(", ");
+    let kp_ids: Vec<&str> = kp_rows.iter().map(|(id, _)| id.as_str()).collect();
+    let params: Vec<&dyn rusqlite::types::ToSql> = kp_ids.iter().map(|id| id as &dyn rusqlite::types::ToSql).collect();
+
+    // Batch: total tasks and mastered count per knowledge point
+    let batch_sql = format!(
+        "SELECT tkp.knowledge_point_id,
+                COUNT(tkp.task_id) AS total,
+                SUM(CASE WHEN latest.assessment = 'mastered' THEN 1 ELSE 0 END) AS mastered
+         FROM task_knowledge_points tkp
+         LEFT JOIN ({LATEST_TASK_ASSESSMENTS_SQL}) latest ON latest.task_id = tkp.task_id
+         WHERE tkp.knowledge_point_id IN ({in_clause})
+         GROUP BY tkp.knowledge_point_id"
+    );
+
+    let mut batch_stmt = conn.prepare(&batch_sql).map_err(|e| e.to_string())?;
+    let batch_results: Vec<(String, i64, i64)> = batch_stmt
+        .query_map(params.as_slice(), |row| {
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, i64>(1)?,
+                row.get::<_, i64>(2)?,
+            ))
+        })
+        .map_err(|e| e.to_string())?
+        .collect::<Result<_, _>>()
+        .map_err(|e| e.to_string())?;
+
+    // Build lookup map from batch results
+    let mut lookup: std::collections::HashMap<String, (i64, i64)> = std::collections::HashMap::new();
+    for (kp_id, total, mastered) in &batch_results {
+        lookup.insert(kp_id.clone(), (*total, *mastered));
+    }
+
+    let knowledge_points: Vec<KnowledgePointProgress> = kp_rows
+        .into_iter()
+        .map(|(kp_id, kp_name)| {
+            let (total, kp_mastered) = lookup.remove(&kp_id).unwrap_or((0, 0));
+            let pct = if total > 0 {
+                (kp_mastered as f64 / total as f64) * 100.0
+            } else {
+                0.0
+            };
+            KnowledgePointProgress {
+                knowledge_point_id: kp_id,
+                name: kp_name,
+                total_tasks: total,
+                mastered: kp_mastered,
+                mastery_percent: pct,
+            }
+        })
+        .collect();
+
+    Ok(ChapterProgress {
+        total_tasks,
+        assessed,
+        mastered,
+        needs_work,
+        knowledge_points,
+    })
+}
+
+#[tauri::command]
+pub fn get_overall_progress(state: State<DbState>) -> Result<OverallProgress, String> {
+    let conn = state.conn.lock().map_err(|e| e.to_string())?;
+
+    let total_tasks: i64 = conn
+        .query_row("SELECT COUNT(*) FROM tasks", [], |row| row.get(0))
+        .map_err(|e| e.to_string())?;
+    let mastered: i64 = conn
+        .query_row(
+            &format!("SELECT COUNT(*) FROM ({LATEST_TASK_ASSESSMENTS_SQL}) latest WHERE latest.assessment = 'mastered'"),
+            [],
+            |row| row.get(0),
+        )
+        .map_err(|e| e.to_string())?;
+    let needs_work: i64 = conn
+        .query_row(
+            &format!("SELECT COUNT(*) FROM ({LATEST_TASK_ASSESSMENTS_SQL}) latest WHERE latest.assessment = 'needs_work'"),
+            [],
+            |row| row.get(0),
+        )
+        .map_err(|e| e.to_string())?;
+
+    let mut outcome_stmt = conn
+        .prepare("SELECT id, code, description FROM course_outcomes ORDER BY order_index")
+        .map_err(|e| e.to_string())?;
+    let outcome_rows: Vec<(String, String, String)> = outcome_stmt
+        .query_map([], |row| {
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, String>(1)?,
+                row.get::<_, String>(2)?,
+            ))
+        })
+        .map_err(|e| e.to_string())?
+        .collect::<Result<_, _>>()
+        .map_err(|e| e.to_string())?;
+
+    if outcome_rows.is_empty() {
+        return Ok(OverallProgress {
+            total_tasks,
+            mastered,
+            needs_work,
+            outcomes: vec![],
+        });
+    }
+
+    // Batch query: total and mastered per course outcome
+    let placeholders: Vec<String> = (0..outcome_rows.len()).map(|i| format!("?{}", i + 1)).collect();
+    let in_clause = placeholders.join(", ");
+    let outcome_ids: Vec<&str> = outcome_rows.iter().map(|(id, _, _)| id.as_str()).collect();
+    let params: Vec<&dyn rusqlite::types::ToSql> = outcome_ids.iter().map(|id| id as &dyn rusqlite::types::ToSql).collect();
+
+    let batch_sql = format!(
+        "SELECT t.course_outcome_id,
+                COUNT(t.id) AS total,
+                SUM(CASE WHEN latest.assessment = 'mastered' THEN 1 ELSE 0 END) AS mastered
+         FROM tasks t
+         LEFT JOIN ({LATEST_TASK_ASSESSMENTS_SQL}) latest ON latest.task_id = t.id
+         WHERE t.course_outcome_id IN ({in_clause})
+         GROUP BY t.course_outcome_id"
+    );
+
+    let mut batch_stmt = conn.prepare(&batch_sql).map_err(|e| e.to_string())?;
+    let batch_results: Vec<(String, i64, i64)> = batch_stmt
+        .query_map(params.as_slice(), |row| {
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, i64>(1)?,
+                row.get::<_, i64>(2)?,
+            ))
+        })
+        .map_err(|e| e.to_string())?
+        .collect::<Result<_, _>>()
+        .map_err(|e| e.to_string())?;
+
+    let mut lookup: std::collections::HashMap<String, (i64, i64)> = std::collections::HashMap::new();
+    for (oid, total, mastered) in &batch_results {
+        lookup.insert(oid.clone(), (*total, *mastered));
+    }
+
+    let outcomes: Vec<OutcomeProgress> = outcome_rows
+        .into_iter()
+        .map(|(outcome_id, code, description)| {
+            let (co_total, co_mastered) = lookup.remove(&outcome_id).unwrap_or((0, 0));
+            let pct = if co_total > 0 {
+                (co_mastered as f64 / co_total as f64) * 100.0
+            } else {
+                0.0
+            };
+            OutcomeProgress {
+                outcome_id,
+                code,
+                description,
+                mastery_percent: pct,
+            }
+        })
+        .collect();
+
+    Ok(OverallProgress {
+        total_tasks,
+        mastered,
+        needs_work,
+        outcomes,
+    })
+}

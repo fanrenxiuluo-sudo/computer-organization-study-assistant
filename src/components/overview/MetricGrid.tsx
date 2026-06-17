@@ -4,9 +4,20 @@ type Props = {
   overall: OverallProgress | null;
   chapterCount: number;
   loading: boolean;
+  error?: string | null;
 };
 
-export function MetricGrid({ overall, chapterCount, loading }: Props) {
+export function MetricGrid({ overall, chapterCount, loading, error }: Props) {
+  if (error) {
+    return (
+      <section className="metric-grid" aria-label="项目状态">
+        <div className="metric-card metric-card--error">
+          <span>{error}</span>
+        </div>
+      </section>
+    );
+  }
+
   if (loading || !overall) {
     return (
       <section className="metric-grid" aria-label="项目状态">

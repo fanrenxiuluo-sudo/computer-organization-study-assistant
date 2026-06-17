@@ -1,1 +1,125 @@
-bW9kIGNvbW1hbmRzOwptb2QgZGI7Cm1vZCBtb2RlbHM7Cgp1c2UgZGI6OkRiU3RhdGU7CnVzZSBzdGQ6OnBhdGg6OntQYXRoLCBQYXRoQnVmfTsKdXNlIHN0ZDo6c3luYzo6TXV0ZXg7CnVzZSB0YXVyaTo6TWFuYWdlcjsKCiNbY2ZnX2F0dHIobW9iaWxlLCB0YXVyaTo6bW9iaWxlX2VudHJ5X3BvaW50KV0KcHViIGZuIHJ1bigpIHsKICAgIHRhdXJpOjpCdWlsZGVyOjpkZWZhdWx0KCkKICAgICAgICAucGx1Z2luKHRhdXJpX3BsdWdpbl9vcGVuZXI6OmluaXQoKSkKICAgICAgICAuc2V0dXAofGFwcHwgewogICAgICAgICAgICBsZXQgc3R1ZHlfZGF0YV9kaXIgPSBhcHAKICAgICAgICAgICAgICAgIC5wYXRoKCkKICAgICAgICAgICAgICAgIC5hcHBfbG9jYWxfZGF0YV9kaXIoKQogICAgICAgICAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPwogICAgICAgICAgICAgICAgLmpvaW4oInN0dWR5LWRhdGEiKTsKCiAgICAgICAgICAgIGVuc3VyZV9ub3Rfb25fZGVza3RvcChhcHAsICZzdHVkeV9kYXRhX2Rpcik/OwogICAgICAgICAgICBzdGQ6OmZzOjpjcmVhdGVfZGlyX2FsbCgmc3R1ZHlfZGF0YV9kaXIpLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKICAgICAgICAgICAgbWlncmF0ZV9sZWdhY3lfZGVza3RvcF9kYihhcHAsICZzdHVkeV9kYXRhX2Rpcik/OwogICAgICAgICAgICB3cml0ZV9wYXRoX2RpYWdub3N0aWNzKGFwcCwgJnN0dWR5X2RhdGFfZGlyKTsKCiAgICAgICAgICAgIGxldCBjb25uID0gZGI6OmluaXRfZGIoJnN0dWR5X2RhdGFfZGlyKT87CiAgICAgICAgICAgIGFwcC5tYW5hZ2UoRGJTdGF0ZSB7CiAgICAgICAgICAgICAgICBjb25uOiBNdXRleDo6bmV3KGNvbm4pLAogICAgICAgICAgICB9KTsKICAgICAgICAgICAgT2soKCkpCiAgICAgICAgfSkKICAgICAgICAuaW52b2tlX2hhbmRsZXIodGF1cmk6OmdlbmVyYXRlX2hhbmRsZXIhWwogICAgICAgICAgICBjb21tYW5kczo6Y2hhcHRlcjo6bGlzdF9jaGFwdGVycywKICAgICAgICAgICAgY29tbWFuZHM6OmNoYXB0ZXI6Omxpc3RfY291cnNlX291dGNvbWVzLAogICAgICAgICAgICBjb21tYW5kczo6dGFzazo6bGlzdF90YXNrcywKICAgICAgICAgICAgY29tbWFuZHM6OnRhc2s6OmdldF90YXNrX2RldGFpbCwKICAgICAgICAgICAgY29tbWFuZHM6OnRhc2s6OmdldF9yYW5kb21fdGFza3MsCiAgICAgICAgICAgIGNvbW1hbmRzOjp0YXNrOjpsaXN0X2tub3dsZWRnZV9wb2ludHMsCiAgICAgICAgICAgIGNvbW1hbmRzOjpwcmFjdGljZTo6c2F2ZV9hbnN3ZXIsCiAgICAgICAgICAgIGNvbW1hbmRzOjpwcmFjdGljZTo6YXNzZXNzX3JlcXVpcmVtZW50LAogICAgICAgICAgICBjb21tYW5kczo6cHJhY3RpY2U6OmFzc2Vzc190YXNrLAogICAgICAgICAgICBjb21tYW5kczo6c3RhdHM6OmdldF9jaGFwdGVyX3Byb2dyZXNzLAogICAgICAgICAgICBjb21tYW5kczo6c3RhdHM6OmdldF9vdmVyYWxsX3Byb2dyZXNzLAogICAgICAgICAgICBjb21tYW5kczo6aW1wb3J0OjppbXBvcnRfdGFza3MsCiAgICAgICAgXSkKICAgICAgICAucnVuKHRhdXJpOjpnZW5lcmF0ZV9jb250ZXh0ISgpKQogICAgICAgIC5leHBlY3QoImVycm9yIHdoaWxlIHJ1bm5pbmcgdGF1cmkgYXBwbGljYXRpb24iKTsKfQoKZm4gZW5zdXJlX25vdF9vbl9kZXNrdG9wKGFwcDogJnRhdXJpOjpBcHAsIHBhdGg6ICZQYXRoKSAtPiBSZXN1bHQ8KCksIFN0cmluZz4gewogICAgaWYgbGV0IE9rKGRlc2t0b3BfZGlyKSA9IGFwcC5wYXRoKCkuZGVza3RvcF9kaXIoKSB7CiAgICAgICAgaWYgcGF0aC5zdGFydHNfd2l0aCgmZGVza3RvcF9kaXIpIHsKICAgICAgICAgICAgcmV0dXJuIEVycihmb3JtYXQhKAogICAgICAgICAgICAgICAgIuW6lOeUqOaVsOaNruebruW9leW8guW4uO+8mnt9IOS9jeS6juahjOmdouebruW9lSB7fSDkuIvvvIzlt7Lmi5Lnu53lkK/liqjku6Xpgb/lhY3msaHmn5PmoYzpnaLjgIIiLAogICAgICAgICAgICAgICAgcGF0aC5kaXNwbGF5KCksCiAgICAgICAgICAgICAgICBkZXNrdG9wX2Rpci5kaXNwbGF5KCkKICAgICAgICAgICAgKSk7CiAgICAgICAgfQogICAgfQogICAgT2soKCkpCn0KCmZuIG1pZ3JhdGVfbGVnYWN5X2Rlc2t0b3BfZGIoYXBwOiAmdGF1cmk6OkFwcCwgc3R1ZHlfZGF0YV9kaXI6ICZQYXRoKSAtPiBSZXN1bHQ8KCksIFN0cmluZz4gewogICAgbGV0IG5ld19kYiA9IHN0dWR5X2RhdGFfZGlyLmpvaW4oInN0dWR5LmRiIik7CiAgICBpZiBuZXdfZGIuZXhpc3RzKCkgewogICAgICAgIHJldHVybiBPaygoKSk7CiAgICB9CgogICAgbGV0IGRlc2t0b3BfZGlyID0gbWF0Y2ggYXBwLnBhdGgoKS5kZXNrdG9wX2RpcigpIHsKICAgICAgICBPayhwYXRoKSA9PiBwYXRoLAogICAgICAgIEVycihfKSA9PiByZXR1cm4gT2soKCkpLAogICAgfTsKICAgIGxldCBsZWdhY3lfZGlyID0gZGVza3RvcF9kaXIuam9pbigi6K6h57uE5aSH6ICD5Yqp5omLIik7CiAgICBsZXQgbGVnYWN5X2RiID0gbGVnYWN5X2Rpci5qb2luKCJzdHVkeS5kYiIpOwogICAgaWYgIWxlZ2FjeV9kYi5leGlzdHMoKSB7CiAgICAgICAgcmV0dXJuIE9rKCgpKTsKICAgIH0KCiAgICBzdGQ6OmZzOjpjcmVhdGVfZGlyX2FsbChzdHVkeV9kYXRhX2RpcikubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwogICAgc3RkOjpmczo6Y29weSgmbGVnYWN5X2RiLCAmbmV3X2RiKS5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgZm9yIHN1ZmZpeCBpbiBbInN0dWR5LmRiLXdhbCIsICJzdHVkeS5kYi1zaG0iXSB7CiAgICAgICAgbGV0IG9sZF9maWxlID0gbGVnYWN5X2Rpci5qb2luKHN1ZmZpeCk7CiAgICAgICAgaWYgb2xkX2ZpbGUuZXhpc3RzKCkgewogICAgICAgICAgICBsZXQgXyA9IHN0ZDo6ZnM6OmNvcHkoJm9sZF9maWxlLCBzdHVkeV9kYXRhX2Rpci5qb2luKHN1ZmZpeCkpOwogICAgICAgIH0KICAgIH0KCiAgICBPaygoKSkKfQoKZm4gd3JpdGVfcGF0aF9kaWFnbm9zdGljcyhhcHA6ICZ0YXVyaTo6QXBwLCBzdHVkeV9kYXRhX2RpcjogJlBhdGgpIHsKICAgIGxldCBsb2dfcGF0aCA9IHN0ZDo6ZW52Ojp0ZW1wX2RpcigpLmpvaW4oImppenViZWlrYW8tcGF0aC1kZWJ1Zy5sb2ciKTsKICAgIGxldCBhcHBfZGF0YV9kaXIgPSBhcHAKICAgICAgICAucGF0aCgpCiAgICAgICAgLmFwcF9kYXRhX2RpcigpCiAgICAgICAgLm1hcChwYXRoX3RvX3N0cmluZykKICAgICAgICAudW53cmFwX29yX2Vsc2UofGV8IGZvcm1hdCEoIjxlcnJvcjoge2V9PiIpKTsKICAgIGxldCBhcHBfbG9jYWxfZGF0YV9kaXIgPSBhcHAKICAgICAgICAucGF0aCgpCiAgICAgICAgLmFwcF9sb2NhbF9kYXRhX2RpcigpCiAgICAgICAgLm1hcChwYXRoX3RvX3N0cmluZykKICAgICAgICAudW53cmFwX29yX2Vsc2UofGV8IGZvcm1hdCEoIjxlcnJvcjoge2V9PiIpKTsKICAgIGxldCBkZXNrdG9wX2RpciA9IGFwcAogICAgICAgIC5wYXRoKCkKICAgICAgICAuZGVza3RvcF9kaXIoKQogICAgICAgIC5tYXAocGF0aF90b19zdHJpbmcpCiAgICAgICAgLnVud3JhcF9vcl9lbHNlKHxlfCBmb3JtYXQhKCI8ZXJyb3I6IHtlfT4iKSk7CiAgICBsZXQgY3VycmVudF9kaXIgPSBzdGQ6OmVudjo6Y3VycmVudF9kaXIoKQogICAgICAgIC5tYXAocGF0aF90b19zdHJpbmcpCiAgICAgICAgLnVud3JhcF9vcl9lbHNlKHxlfCBmb3JtYXQhKCI8ZXJyb3I6IHtlfT4iKSk7CgogICAgbGV0IGNvbnRlbnQgPSBmb3JtYXQhKAogICAgICAgICJwcm9kdWN0X25hbWU96K6h57uE5aSH6ICD5Yqp5omLXG5pZGVudGlmaWVyPWNvbS5mYW5yZW54aXVsdW8uY29tcHV0ZXItb3JnYW5pemF0aW9uLXN0dWR5LWFzc2lzdGFudFxuYXBwX2RhdGFfZGlyPXthcHBfZGF0YV9kaXJ9XG5hcHBfbG9jYWxfZGF0YV9kaXI9e2FwcF9sb2NhbF9kYXRhX2Rpcn1cbmRlc2t0b3BfZGlyPXtkZXNrdG9wX2Rpcn1cbmN1cnJlbnRfZGlyPXtjdXJyZW50X2Rpcn1cbnN0dWR5X2RhdGFfZGlyPXt9XG5kYl9wYXRoPXt9XG4iLAogICAgICAgIHN0dWR5X2RhdGFfZGlyLmRpc3BsYXkoKSwKICAgICAgICBzdHVkeV9kYXRhX2Rpci5qb2luKCJzdHVkeS5kYiIpLmRpc3BsYXkoKSwKICAgICk7CgogICAgbGV0IF8gPSBzdGQ6OmZzOjp3cml0ZShsb2dfcGF0aCwgY29udGVudCk7Cn0KCmZuIHBhdGhfdG9fc3RyaW5nKHBhdGg6IFBhdGhCdWYpIC0+IFN0cmluZyB7CiAgICBwYXRoLnRvX3N0cmluZ19sb3NzeSgpLnRvX3N0cmluZygpCn0K
+mod commands;
+mod db;
+mod models;
+
+use db::DbState;
+use std::path::{Path, PathBuf};
+use std::sync::Mutex;
+use tauri::Manager;
+
+#[cfg_attr(mobile, tauri::mobile_entry_point)]
+pub fn run() {
+    tauri::Builder::default()
+        .plugin(tauri_plugin_opener::init())
+        .setup(|app| {
+            let study_data_dir = app
+                .path()
+                .app_local_data_dir()
+                .map_err(|e| e.to_string())?
+                .join("study-data");
+
+            ensure_not_on_desktop(app, &study_data_dir)?;
+            std::fs::create_dir_all(&study_data_dir).map_err(|e| e.to_string())?;
+            migrate_legacy_desktop_db(app, &study_data_dir)?;
+            #[cfg(debug_assertions)]
+            write_path_diagnostics(app, &study_data_dir);
+
+            let conn = db::init_db(&study_data_dir)?;
+            app.manage(DbState {
+                conn: Mutex::new(conn),
+            });
+            Ok(())
+        })
+        .invoke_handler(tauri::generate_handler![
+            commands::chapter::list_chapters,
+            commands::chapter::list_course_outcomes,
+            commands::task::list_tasks,
+            commands::task::get_task_detail,
+            commands::task::get_random_tasks,
+            commands::task::list_knowledge_points,
+            commands::practice::save_answer,
+            commands::practice::assess_requirement,
+            commands::practice::assess_task,
+            commands::stats::get_chapter_progress,
+            commands::stats::get_overall_progress,
+            commands::import::import_tasks,
+        ])
+        .run(tauri::generate_context!())
+        .expect("error while running tauri application");
+}
+
+fn ensure_not_on_desktop(app: &tauri::App, path: &Path) -> Result<(), String> {
+    if let Ok(desktop_dir) = app.path().desktop_dir() {
+        if path.starts_with(&desktop_dir) {
+            return Err(format!(
+                "应用数据目录异常：{} 位于桌面目录 {} 下，已拒绝启动以避免污染桌面。",
+                path.display(),
+                desktop_dir.display()
+            ));
+        }
+    }
+    Ok(())
+}
+
+fn migrate_legacy_desktop_db(app: &tauri::App, study_data_dir: &Path) -> Result<(), String> {
+    let new_db = study_data_dir.join("study.db");
+    if new_db.exists() {
+        return Ok(());
+    }
+
+    let desktop_dir = match app.path().desktop_dir() {
+        Ok(path) => path,
+        Err(_) => return Ok(()),
+    };
+    let legacy_dir = desktop_dir.join("计组备考助手");
+    let legacy_db = legacy_dir.join("study.db");
+    if !legacy_db.exists() {
+        return Ok(());
+    }
+
+    std::fs::create_dir_all(study_data_dir).map_err(|e| e.to_string())?;
+    std::fs::copy(&legacy_db, &new_db).map_err(|e| e.to_string())?;
+
+    for suffix in ["study.db-wal", "study.db-shm"] {
+        let old_file = legacy_dir.join(suffix);
+        if old_file.exists() {
+            let _ = std::fs::copy(&old_file, study_data_dir.join(suffix));
+        }
+    }
+
+    Ok(())
+}
+
+fn write_path_diagnostics(app: &tauri::App, study_data_dir: &Path) {
+    let log_path = std::env::temp_dir().join("jizubeikao-path-debug.log");
+    let app_data_dir = app
+        .path()
+        .app_data_dir()
+        .map(path_to_string)
+        .unwrap_or_else(|e| format!("<error: {e}>"));
+    let app_local_data_dir = app
+        .path()
+        .app_local_data_dir()
+        .map(path_to_string)
+        .unwrap_or_else(|e| format!("<error: {e}>"));
+    let desktop_dir = app
+        .path()
+        .desktop_dir()
+        .map(path_to_string)
+        .unwrap_or_else(|e| format!("<error: {e}>"));
+    let current_dir = std::env::current_dir()
+        .map(path_to_string)
+        .unwrap_or_else(|e| format!("<error: {e}>"));
+
+    let content = format!(
+        "product_name=计组备考助手\nidentifier=com.fanrenxiuluo.computer-organization-study-assistant\napp_data_dir={app_data_dir}\napp_local_data_dir={app_local_data_dir}\ndesktop_dir={desktop_dir}\ncurrent_dir={current_dir}\nstudy_data_dir={}\ndb_path={}\n",
+        study_data_dir.display(),
+        study_data_dir.join("study.db").display(),
+    );
+
+    let _ = std::fs::write(log_path, content);
+}
+
+fn path_to_string(path: PathBuf) -> String {
+    path.to_string_lossy().to_string()
+}

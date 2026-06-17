@@ -10,6 +10,9 @@ target/
 
 # Database files (user data)
 *.db
+*.db-wal
+*.db-shm
+*.db-journal
 *.sqlite
 
 # Environment files

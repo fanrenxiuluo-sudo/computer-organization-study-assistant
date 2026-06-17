@@ -1,1 +1,21 @@
-W3BhY2thZ2VdCm5hbWUgPSAiY29tcHV0ZXItb3JnYW5pemF0aW9uLXN0dWR5LWFzc2lzdGFudCIKdmVyc2lvbiA9ICIwLjIuMSIKZGVzY3JpcHRpb24gPSAi6Z2i5ZCR6K6h566X5py657uE5oiQ5Y6f55CG6K++56iL55qEIFdpbmRvd3Mg5qGM6Z2i5a2m5Lmg5LiO6K6t57uD57O757ufIgphdXRob3JzID0gWyJmYW5yZW54aXVsdW8tc3VkbyJdCmVkaXRpb24gPSAiMjAyMSIKCltsaWJdCm5hbWUgPSAiY29tcHV0ZXJfb3JnYW5pemF0aW9uX3N0dWR5X2Fzc2lzdGFudF9saWIiCmNyYXRlLXR5cGUgPSBbInN0YXRpY2xpYiIsICJjZHlsaWIiLCAicmxpYiJdCgpbYnVpbGQtZGVwZW5kZW5jaWVzXQp0YXVyaS1idWlsZCA9IHsgdmVyc2lvbiA9ICIyIiwgZmVhdHVyZXMgPSBbXSB9CgpbZGVwZW5kZW5jaWVzXQp0YXVyaSA9IHsgdmVyc2lvbiA9ICIyIiwgZGVmYXVsdC1mZWF0dXJlcyA9IGZhbHNlLCBmZWF0dXJlcyA9IFsid3J5Il0gfQp0YXVyaS1wbHVnaW4tb3BlbmVyID0gIjIiCnNlcmRlID0geyB2ZXJzaW9uID0gIjEiLCBmZWF0dXJlcyA9IFsiZGVyaXZlIl0gfQpzZXJkZV9qc29uID0gIjEiCnJ1c3FsaXRlID0geyB2ZXJzaW9uID0gIjAuMzEiLCBmZWF0dXJlcyA9IFsiYnVuZGxlZCJdIH0KdGhpc2Vycm9yID0gIjIiCgo=
+[package]
+name = "computer-organization-study-assistant"
+version = "0.2.1"
+description = "面向计算机组成原理课程的 Windows 桌面学习与训练系统"
+authors = ["fanrenxiuluo-sudo"]
+edition = "2021"
+
+[lib]
+name = "computer_organization_study_assistant_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", default-features = false, features = ["wry"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.31", features = ["bundled"] }
+

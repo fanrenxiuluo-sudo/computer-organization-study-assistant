@@ -1,1 +1,176 @@
-aW1wb3J0IHsgdXNlU3RhdGUsIHVzZUNhbGxiYWNrLCB1c2VSZWYsIHVzZUVmZmVjdCB9IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgRXJyb3JCb3VuZGFyeSB9IGZyb20gIi4vY29tcG9uZW50cy9FcnJvckJvdW5kYXJ5IjsKaW1wb3J0IHsgU2lkZWJhciB9IGZyb20gIi4vY29tcG9uZW50cy9sYXlvdXQvU2lkZWJhciI7CmltcG9ydCB7IE1ldHJpY0dyaWQgfSBmcm9tICIuL2NvbXBvbmVudHMvb3ZlcnZpZXcvTWV0cmljR3JpZCI7CmltcG9ydCB7IFRhc2tDYXJkIH0gZnJvbSAiLi9jb21wb25lbnRzL3ByYWN0aWNlL1Rhc2tDYXJkIjsKaW1wb3J0IHsgQ2hhcHRlclByb2dyZXNzUGFuZWwgfSBmcm9tICIuL2NvbXBvbmVudHMvb3ZlcnZpZXcvQ2hhcHRlclByb2dyZXNzIjsKaW1wb3J0IHsgdXNlQ2hhcHRlcnMgfSBmcm9tICIuL2hvb2tzL3VzZUNoYXB0ZXJzIjsKaW1wb3J0IHsgdXNlVGFza3MgfSBmcm9tICIuL2hvb2tzL3VzZVRhc2tzIjsKaW1wb3J0IHsgdXNlVGFza0RldGFpbCB9IGZyb20gIi4vaG9va3MvdXNlVGFza0RldGFpbCI7CmltcG9ydCB7IHVzZVN0YXRzIH0gZnJvbSAiLi9ob29rcy91c2VTdGF0cyI7CmltcG9ydCB7IHVzZVByYWN0aWNlTW9kZSB9IGZyb20gIi4vaG9va3MvdXNlUHJhY3RpY2VNb2RlIjsKaW1wb3J0IHR5cGUgeyBUYXNrRGV0YWlsLCBBc3Nlc3NtZW50IH0gZnJvbSAiLi90eXBlcyI7CgpmdW5jdGlvbiBBcHAoKSB7CiAgY29uc3Qgd29ya3NwYWNlUmVmID0gdXNlUmVmPEhUTUxFbGVtZW50PihudWxsKTsKICBjb25zdCB7IGNoYXB0ZXJzLCBvdXRjb21lcywgbG9hZGluZzogY2hhcHRlcnNMb2FkaW5nIH0gPSB1c2VDaGFwdGVycygpOwogIGNvbnN0IHsgbW9kZSwgc2VsZWN0ZWRLbm93bGVkZ2VQb2ludElkLCBzd2l0Y2hNb2RlLCBzZWxlY3RLbm93bGVkZ2VQb2ludCB9ID0gdXNlUHJhY3RpY2VNb2RlKCk7CgogIGNvbnN0IFthY3RpdmVDaGFwdGVySWQsIHNldEFjdGl2ZUNoYXB0ZXJJZF0gPSB1c2VTdGF0ZSgiIik7CiAgY29uc3QgW2FjdGl2ZVRhc2tJbmRleCwgc2V0QWN0aXZlVGFza0luZGV4XSA9IHVzZVN0YXRlKDApOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgaWYgKGNoYXB0ZXJzLmxlbmd0aCA+IDAgJiYgIWFjdGl2ZUNoYXB0ZXJJZCkgewogICAgICBzZXRBY3RpdmVDaGFwdGVySWQoY2hhcHRlcnNbMF0uaWQpOwogICAgfQogIH0sIFtjaGFwdGVycywgYWN0aXZlQ2hhcHRlcklkXSk7CgogIGNvbnN0IHsgdGFza3MsIHRvdGFsLCBsb2FkaW5nOiB0YXNrc0xvYWRpbmcgfSA9IHVzZVRhc2tzKAogICAgYWN0aXZlQ2hhcHRlcklkLAogICAgbW9kZSwKICAgIHNlbGVjdGVkS25vd2xlZGdlUG9pbnRJZCwKICAgIDAsCiAgICAyMDAKICApOwoKICBjb25zdCBjdXJyZW50VGFza0lkOiBzdHJpbmcgfCBudWxsID0KICAgIHRhc2tzLmxlbmd0aCA+IDAgJiYgYWN0aXZlVGFza0luZGV4IDwgdGFza3MubGVuZ3RoCiAgICAgID8gdGFza3NbYWN0aXZlVGFza0luZGV4XS50YXNrLmlkCiAgICAgIDogbnVsbDsKCiAgY29uc3QgewogICAgZGV0YWlsLAogICAgbG9hZGluZzogZGV0YWlsTG9hZGluZywKICAgIGN1cnJlbnRBbnN3ZXIsCiAgICByZXZlYWxlZCwKICAgIHJlcVN0YXR1c2VzLAogICAgdXBkYXRlQW5zd2VyLAogICAgc2F2ZUN1cnJlbnRBbnN3ZXIsCiAgICByZXZlYWxSZWZlcmVuY2UsCiAgICBhc3Nlc3NSZXEsCiAgICBhc3Nlc3NXaG9sZVRhc2ssCiAgfSA9IHVzZVRhc2tEZXRhaWwoY3VycmVudFRhc2tJZCk7CgogIGNvbnN0IHsgb3ZlcmFsbCwgY2hhcHRlcjogY2hhcHRlclByb2dyZXNzLCByZWZyZXNoOiByZWZyZXNoU3RhdHMgfSA9IHVzZVN0YXRzKGFjdGl2ZUNoYXB0ZXJJZCk7CgogIGNvbnN0IGhhbmRsZVN3aXRjaENoYXB0ZXIgPSB1c2VDYWxsYmFjaygKICAgIChjaGFwdGVySWQ6IHN0cmluZykgPT4gewogICAgICBzYXZlQ3VycmVudEFuc3dlcigpOwogICAgICBzZXRBY3RpdmVDaGFwdGVySWQoY2hhcHRlcklkKTsKICAgICAgc2V0QWN0aXZlVGFza0luZGV4KDApOwogICAgICB3b3Jrc3BhY2VSZWYuY3VycmVudD8uc2Nyb2xsVG8oeyB0b3A6IDAsIGJlaGF2aW9yOiAic21vb3RoIiB9KTsKICAgIH0sCiAgICBbc2F2ZUN1cnJlbnRBbnN3ZXJdCiAgKTsKCiAgY29uc3QgaGFuZGxlU3dpdGNoTW9kZSA9IHVzZUNhbGxiYWNrKAogICAgKG5ld01vZGU6IHR5cGVvZiBtb2RlKSA9PiB7CiAgICAgIHN3aXRjaE1vZGUobmV3TW9kZSk7CiAgICAgIHNldEFjdGl2ZVRhc2tJbmRleCgwKTsKICAgIH0sCiAgICBbc3dpdGNoTW9kZV0KICApOwoKICBjb25zdCBoYW5kbGVBc3Nlc3NUYXNrID0gdXNlQ2FsbGJhY2soCiAgICBhc3luYyAoYXNzZXNzbWVudDogQXNzZXNzbWVudCkgPT4gewogICAgICBhd2FpdCBhc3Nlc3NXaG9sZVRhc2soYXNzZXNzbWVudCk7CiAgICAgIHJlZnJlc2hTdGF0cygpOwogICAgfSwKICAgIFthc3Nlc3NXaG9sZVRhc2ssIHJlZnJlc2hTdGF0c10KICApOwoKICBjb25zdCBjdXJyZW50RGV0YWlsOiBUYXNrRGV0YWlsIHwgbnVsbCA9IGRldGFpbDsKCiAgcmV0dXJuICgKICAgIDxFcnJvckJvdW5kYXJ5PgogICAgICA8bWFpbiBjbGFzc05hbWU9ImFwcC1zaGVsbCI+CiAgICAgICAgPFNpZGViYXIKICAgICAgICAgIGNoYXB0ZXJzPXtjaGFwdGVyc30KICAgICAgICAgIG91dGNvbWVzPXtvdXRjb21lc30KICAgICAgICAgIGFjdGl2ZUNoYXB0ZXJJZD17YWN0aXZlQ2hhcHRlcklkfQogICAgICAgICAgcHJhY3RpY2VNb2RlPXttb2RlfQogICAgICAgICAgb3ZlcmFsbE1hc3RlcmVkPXtvdmVyYWxsPy5tYXN0ZXJlZCA/PyAwfQogICAgICAgICAgb3ZlcmFsbFRvdGFsPXtvdmVyYWxsPy50b3RhbFRhc2tzID8/IDB9CiAgICAgICAgICBvdXRjb21lUHJvZ3Jlc3M9e292ZXJhbGw/Lm91dGNvbWVzID8/IFtdfQogICAgICAgICAgb25Td2l0Y2hDaGFwdGVyPXtoYW5kbGVTd2l0Y2hDaGFwdGVyfQogICAgICAgICAgb25Td2l0Y2hNb2RlPXtoYW5kbGVTd2l0Y2hNb2RlfQogICAgICAgIC8+CgogICAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT0id29ya3NwYWNlIiByZWY9e3dvcmtzcGFjZVJlZn0+CiAgICAgICAgICA8aGVhZGVyIGNsYXNzTmFtZT0idG9wLWJhciI+CiAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJleWVicm93Ij52MC4yIOWkmuaooeW8j+e7g+S5oOeJiDwvcD4KICAgICAgICAgICAgICA8aDI+5oyJ6K++56iL55uu5qCH5a6M5oiQ57u85ZCI5L2c562U77yM6YCQ5p2h6Ieq6K+E5o6M5o+h56iL5bqmPC9oMj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJleGFtLWNoaXAiPuacn+acq+mAmui/h+S8mOWFiDwvZGl2PgogICAgICAgICAgPC9oZWFkZXI+CgogICAgICAgICAgPE1ldHJpY0dyaWQKICAgICAgICAgICAgb3ZlcmFsbD17b3ZlcmFsbH0KICAgICAgICAgICAgY2hhcHRlckNvdW50PXtjaGFwdGVycy5sZW5ndGh9CiAgICAgICAgICAgIGxvYWRpbmc9e2NoYXB0ZXJzTG9hZGluZ30KICAgICAgICAgIC8+CgogICAgICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJjb250ZW50LWdyaWQiPgogICAgICAgICAgICB7Y3VycmVudERldGFpbCAmJiAhZGV0YWlsTG9hZGluZyA/ICgKICAgICAgICAgICAgICA8VGFza0NhcmQKICAgICAgICAgICAgICAgIGRldGFpbD17Y3VycmVudERldGFpbH0KICAgICAgICAgICAgICAgIGN1cnJlbnRBbnN3ZXI9e2N1cnJlbnRBbnN3ZXJ9CiAgICAgICAgICAgICAgICByZXZlYWxlZD17cmV2ZWFsZWR9CiAgICAgICAgICAgICAgICByZXFTdGF0dXNlcz17cmVxU3RhdHVzZXN9CiAgICAgICAgICAgICAgICBvbkFuc3dlckNoYW5nZT17dXBkYXRlQW5zd2VyfQogICAgICAgICAgICAgICAgb25SZXZlYWw9e3JldmVhbFJlZmVyZW5jZX0KICAgICAgICAgICAgICAgIG9uQXNzZXNzUmVxPXthc3Nlc3NSZXF9CiAgICAgICAgICAgICAgICBvbkFzc2Vzc1Rhc2s9e2hhbmRsZUFzc2Vzc1Rhc2t9CiAgICAgICAgICAgICAgICBvbk5leHQ9eygpID0+IHsKICAgICAgICAgICAgICAgICAgc2F2ZUN1cnJlbnRBbnN3ZXIoKTsKICAgICAgICAgICAgICAgICAgc2V0QWN0aXZlVGFza0luZGV4KChpKSA9PiBNYXRoLm1pbihpICsgMSwgdGFza3MubGVuZ3RoIC0gMSkpOwogICAgICAgICAgICAgICAgfX0KICAgICAgICAgICAgICAgIG9uUHJldj17KCkgPT4gewogICAgICAgICAgICAgICAgICBzYXZlQ3VycmVudEFuc3dlcigpOwogICAgICAgICAgICAgICAgICBzZXRBY3RpdmVUYXNrSW5kZXgoKGkpID0+IE1hdGgubWF4KGkgLSAxLCAwKSk7CiAgICAgICAgICAgICAgICB9fQogICAgICAgICAgICAgICAgY3VycmVudEluZGV4PXthY3RpdmVUYXNrSW5kZXh9CiAgICAgICAgICAgICAgICB0b3RhbENvdW50PXt0YXNrcy5sZW5ndGh9CiAgICAgICAgICAgICAgICB0b3RhbEF2YWlsYWJsZT17dG90YWx9CiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgKSA6ICgKICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZW1wdHktYmxvY2siPgogICAgICAgICAgICAgICAge3Rhc2tzTG9hZGluZyB8fCBkZXRhaWxMb2FkaW5nID8gIuWKoOi9veS4reKApiIgOgogICAgICAgICAgICAgICAgICBtb2RlID09PSAid2VhayIgPyAn5b2T5YmN56ug6IqC5pqC5peg6JaE5byx6aKY55uu77yM6K+35YWI5a6M5oiQ5LiA5Lqb57uD5Lmg5bm25qCH6K6wIumcgOWKoOW8uiLjgIInIDoKICAgICAgICAgICAgICAgICAgbW9kZSA9PT0gInJhbmRvbSIgPyAi5b2T5YmN56ug6IqC5pqC5peg6aKY55uu77yM5ZCO57ut5Lya57un57ut6KGl5YWF6aKY5bqT44CCIiA6CiAgICAgICAgICAgICAgICAgIG1vZGUgPT09ICJrbm93bGVkZ2UtcG9pbnQiID8gIuW9k+WJjeiAg+eCueaaguaXoOWFs+iBlOmimOebru+8jOWQjue7reS8mue7p+e7reihpeWFheOAgiIgOgogICAgICAgICAgICAgICAgICAi5b2T5YmN56ug6IqC5pqC5peg6aKY55uu77yM5ZCO57ut5Lya57un57ut6KGl5YWF6aKY5bqT44CCIn0KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgKX0KCiAgICAgICAgICAgIDxDaGFwdGVyUHJvZ3Jlc3NQYW5lbAogICAgICAgICAgICAgIGNoYXB0ZXJzPXtjaGFwdGVyc30KICAgICAgICAgICAgICBhY3RpdmVDaGFwdGVySWQ9e2FjdGl2ZUNoYXB0ZXJJZH0KICAgICAgICAgICAgICBjaGFwdGVyUHJvZ3Jlc3M9e2NoYXB0ZXJQcm9ncmVzc30KICAgICAgICAgICAgICBvblNlbGVjdEtub3dsZWRnZVBvaW50PXsoa3BJZDogc3RyaW5nKSA9PiB7CiAgICAgICAgICAgICAgICBzZWxlY3RLbm93bGVkZ2VQb2ludChrcElkKTsKICAgICAgICAgICAgICB9fQogICAgICAgICAgICAvPgogICAgICAgICAgPC9zZWN0aW9uPgoKICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgY2xhc3NOYW1lPSJiYWNrLXRvcC1idXR0b24iCiAgICAgICAgICAgIHR5cGU9ImJ1dHRvbiIKICAgICAgICAgICAgb25DbGljaz17KCkgPT4gd29ya3NwYWNlUmVmLmN1cnJlbnQ/LnNjcm9sbFRvKHsgdG9wOiAwLCBiZWhhdmlvcjogInNtb290aCIgfSl9CiAgICAgICAgICA+CiAgICAgICAgICAgIOWbnuWIsOmhtumDqAogICAgICAgICAgPC9idXR0b24+CiAgICAgICAgPC9zZWN0aW9uPgogICAgICA8L21haW4+CiAgICA8L0Vycm9yQm91bmRhcnk+CiAgKTsKfQoKZXhwb3J0IGRlZmF1bHQgQXBwOw==
+import { useState, useCallback, useRef, useEffect } from "react";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+import { Sidebar } from "./components/layout/Sidebar";
+import { MetricGrid } from "./components/overview/MetricGrid";
+import { TaskCard } from "./components/practice/TaskCard";
+import { ChapterProgressPanel } from "./components/overview/ChapterProgress";
+import { useChapters } from "./hooks/useChapters";
+import { useTasks } from "./hooks/useTasks";
+import { useTaskDetail } from "./hooks/useTaskDetail";
+import { useStats } from "./hooks/useStats";
+import { usePracticeMode } from "./hooks/usePracticeMode";
+import type { TaskDetail, Assessment } from "./types";
+
+function App() {
+  const workspaceRef = useRef<HTMLElement>(null);
+  const { chapters, outcomes, loading: chaptersLoading, error: chaptersError } = useChapters();
+  const { mode, selectedKnowledgePointId, switchMode, selectKnowledgePoint } = usePracticeMode();
+
+  const [activeChapterId, setActiveChapterId] = useState("");
+  const [activeTaskIndex, setActiveTaskIndex] = useState(0);
+
+  useEffect(() => {
+    if (chapters.length > 0 && !activeChapterId) {
+      setActiveChapterId(chapters[0].id);
+    }
+  }, [chapters, activeChapterId]);
+
+  const { tasks, total, loading: tasksLoading, error: tasksError } = useTasks(
+    activeChapterId,
+    mode,
+    selectedKnowledgePointId,
+    0,
+    200
+  );
+
+  const currentTaskId: string | null =
+    tasks.length > 0 && activeTaskIndex < tasks.length
+      ? tasks[activeTaskIndex].task.id
+      : null;
+
+  const {
+    detail,
+    loading: detailLoading,
+    currentAnswer,
+    revealed,
+    reqStatuses,
+    assessing,
+    updateAnswer,
+    saveCurrentAnswer,
+    revealReference,
+    assessReq,
+    assessWholeTask,
+  } = useTaskDetail(currentTaskId);
+
+  const { overall, chapter: chapterProgress, error: statsError, refresh: refreshStats } = useStats(activeChapterId);
+
+  const handleSwitchChapter = useCallback(
+    (chapterId: string) => {
+      saveCurrentAnswer();
+      setActiveChapterId(chapterId);
+      setActiveTaskIndex(0);
+      workspaceRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    [saveCurrentAnswer]
+  );
+
+  const handleSwitchMode = useCallback(
+    (newMode: typeof mode) => {
+      switchMode(newMode);
+      setActiveTaskIndex(0);
+    },
+    [switchMode]
+  );
+
+  const handleAssessTask = useCallback(
+    async (assessment: Assessment) => {
+      await assessWholeTask(assessment);
+      refreshStats();
+    },
+    [assessWholeTask, refreshStats]
+  );
+
+  const currentDetail: TaskDetail | null = detail;
+
+  return (
+    <ErrorBoundary>
+      <main className="app-shell">
+        <Sidebar
+          chapters={chapters}
+          outcomes={outcomes}
+          activeChapterId={activeChapterId}
+          practiceMode={mode}
+          overallMastered={overall?.mastered ?? 0}
+          overallTotal={overall?.totalTasks ?? 0}
+          outcomeProgress={overall?.outcomes ?? []}
+          onSwitchChapter={handleSwitchChapter}
+          onSwitchMode={handleSwitchMode}
+        />
+        {chaptersError && <div className="error-banner">{chaptersError}</div>}
+
+        <section className="workspace" ref={workspaceRef}>
+          <header className="top-bar">
+            <div>
+              <p className="eyebrow">v0.2 多模式练习版</p>
+              <h2>按课程目标完成综合作答，逐条自评掌握程度</h2>
+            </div>
+            <div className="exam-chip">期末通过优先</div>
+          </header>
+
+          <MetricGrid
+            overall={overall}
+            chapterCount={chapters.length}
+            loading={chaptersLoading}
+            error={statsError}
+          />
+
+          <section className="content-grid">
+            {currentDetail && !detailLoading ? (
+              <TaskCard
+                detail={currentDetail}
+                currentAnswer={currentAnswer}
+                revealed={revealed}
+                reqStatuses={reqStatuses}
+                assessing={assessing}
+                onAnswerChange={updateAnswer}
+                onReveal={revealReference}
+                onAssessReq={assessReq}
+                onAssessTask={handleAssessTask}
+                onNext={() => {
+                  saveCurrentAnswer();
+                  setActiveTaskIndex((i) => Math.min(i + 1, tasks.length - 1));
+                }}
+                onPrev={() => {
+                  saveCurrentAnswer();
+                  setActiveTaskIndex((i) => Math.max(i - 1, 0));
+                }}
+                currentIndex={activeTaskIndex}
+                totalCount={tasks.length}
+                totalAvailable={total}
+              />
+            ) : tasksError ? (
+              <div className="empty-block error">{tasksError}</div>
+            ) : (
+              <div className="empty-block">
+                {tasksLoading || detailLoading ? "加载中…" :
+                  mode === "weak" ? '当前章节暂无薄弱题目，请先完成一些练习并标记"需加强"。' :
+                  mode === "random" ? "当前章节暂无题目，后续会继续补充题库。" :
+                  mode === "knowledge-point" ? "当前考点暂无关联题目，后续会继续补充。" :
+                  "当前章节暂无题目，后续会继续补充题库。"}
+              </div>
+            )}
+
+            <ChapterProgressPanel
+              chapters={chapters}
+              activeChapterId={activeChapterId}
+              chapterProgress={chapterProgress}
+              onSelectKnowledgePoint={(kpId: string) => {
+                selectKnowledgePoint(kpId);
+              }}
+            />
+          </section>
+
+          <button
+            className="back-top-button"
+            type="button"
+            onClick={() => workspaceRef.current?.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            回到顶部
+          </button>
+        </section>
+      </main>
+    </ErrorBoundary>
+  );
+}
+
+export default App;

@@ -10,27 +10,41 @@ pub fn import_tasks(
     let seed: crate::models::SeedData =
         serde_json::from_str(&json_string).map_err(|e| e.to_string())?;
 
-    let conn = state.conn.lock().map_err(|e| e.to_string())?;
-    let tx = conn.unchecked_transaction().map_err(|e| e.to_string())?;
+    let mut conn = state.conn.lock().map_err(|e| e.to_string())?;
+    let tx = conn.transaction().map_err(|e| e.to_string())?;
+
+    // Insert prerequisite data first (course outcomes, chapters, knowledge points)
+    // so that task foreign keys don't fail.
+    for co in &seed.courseOutcomes {
+        tx.execute(
+            "INSERT OR IGNORE INTO course_outcomes (id, code, description, order_index) VALUES (?1, ?2, ?3, ?4)",
+            rusqlite::params![&co.id, &co.code, &co.description, &co.orderIndex],
+        )
+        .map_err(|e| e.to_string())?;
+    }
+
+    for ch in &seed.chapters {
+        tx.execute(
+            "INSERT OR IGNORE INTO chapters (id, title, description, order_index, course_outcome_id) VALUES (?1, ?2, ?3, ?4, ?5)",
+            rusqlite::params![&ch.id, &ch.title, &ch.description, &ch.orderIndex, &ch.courseOutcomeId],
+        )
+        .map_err(|e| e.to_string())?;
+    }
+
+    for kp in &seed.knowledgePoints {
+        tx.execute(
+            "INSERT OR IGNORE INTO knowledge_points (id, chapter_id, name, order_index) VALUES (?1, ?2, ?3, ?4)",
+            rusqlite::params![&kp.id, &kp.chapterId, &kp.name, &kp.orderIndex],
+        )
+        .map_err(|e| e.to_string())?;
+    }
 
     let mut imported: i64 = 0;
     let mut skipped: i64 = 0;
 
     for task in &seed.tasks {
-        let exists: i64 = tx
-            .query_row(
-                "SELECT COUNT(*) FROM tasks WHERE id = ?1",
-                [&task.id],
-                |row| row.get(0),
-            )
-            .map_err(|e| e.to_string())?;
-
-        if exists > 0 {
-            skipped += 1;
-            continue;
-        }
-
-        tx.execute(
+        // INSERT OR IGNORE handles the duplicate check — no need for a separate SELECT COUNT
+        let rows = tx.execute(
             "INSERT OR IGNORE INTO tasks (id, chapter_id, course_outcome_id, difficulty, scenario, reference) VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
             rusqlite::params![
                 &task.id,
@@ -42,6 +56,11 @@ pub fn import_tasks(
             ],
         )
         .map_err(|e| e.to_string())?;
+
+        if rows == 0 {
+            skipped += 1;
+            continue;
+        }
 
         for (i, req) in task.requirements.iter().enumerate() {
             let idx = i as i64;
@@ -80,8 +99,5 @@ pub fn import_tasks(
 
     tx.commit().map_err(|e| e.to_string())?;
 
-    Ok(ImportResult {
-        imported: imported,
-        skipped: skipped,
-    })
+    Ok(ImportResult { imported, skipped })
 }

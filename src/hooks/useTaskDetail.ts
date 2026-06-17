@@ -1,1 +1,137 @@
-aW1wb3J0IHsgdXNlU3RhdGUsIHVzZUVmZmVjdCwgdXNlQ2FsbGJhY2sgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGFwaSB9IGZyb20gIi4uL3NlcnZpY2VzL2FwaSI7CmltcG9ydCB0eXBlIHsgVGFza0RldGFpbCwgUmVxdWlyZW1lbnRTdGF0dXMsIEFzc2Vzc21lbnQgfSBmcm9tICIuLi90eXBlcyI7CgpleHBvcnQgZnVuY3Rpb24gdXNlVGFza0RldGFpbCh0YXNrSWQ6IHN0cmluZyB8IG51bGwpIHsKICBjb25zdCBbZGV0YWlsLCBzZXREZXRhaWxdID0gdXNlU3RhdGU8VGFza0RldGFpbCB8IG51bGw+KG51bGwpOwogIGNvbnN0IFtsb2FkaW5nLCBzZXRMb2FkaW5nXSA9IHVzZVN0YXRlKHRydWUpOwogIGNvbnN0IFthbnN3ZXJzLCBzZXRBbnN3ZXJzXSA9IHVzZVN0YXRlPFJlY29yZDxzdHJpbmcsIHN0cmluZz4+KHt9KTsKICBjb25zdCBbcmV2ZWFsZWQsIHNldFJldmVhbGVkXSA9IHVzZVN0YXRlKGZhbHNlKTsKICBjb25zdCBbcmVxU3RhdHVzZXMsIHNldFJlcVN0YXR1c2VzXSA9IHVzZVN0YXRlPFJlY29yZDxzdHJpbmcsIFJlcXVpcmVtZW50U3RhdHVzPj4oe30pOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgaWYgKCF0YXNrSWQpIHsKICAgICAgc2V0RGV0YWlsKG51bGwpOwogICAgICBzZXRMb2FkaW5nKGZhbHNlKTsKICAgICAgcmV0dXJuOwogICAgfQogICAgbGV0IGNhbmNlbGxlZCA9IGZhbHNlOwogICAgc2V0TG9hZGluZyh0cnVlKTsKICAgIGFwaS5nZXRUYXNrRGV0YWlsKHsgdGFza0lkIH0pCiAgICAgIC50aGVuKChkKSA9PiB7CiAgICAgICAgaWYgKCFjYW5jZWxsZWQpIHsKICAgICAgICAgIHNldERldGFpbChkKTsKICAgICAgICAgIHNldEFuc3dlcnMoKHByZXYpID0+ICh7CiAgICAgICAgICAgIC4uLnByZXYsCiAgICAgICAgICAgIFt0YXNrSWRdOiBkLmxhdGVzdEFuc3dlciA/PyAiIiwKICAgICAgICAgIH0pKTsKICAgICAgICAgIHNldFJldmVhbGVkKGZhbHNlKTsKICAgICAgICAgIGNvbnN0IHN0YXR1c01hcDogUmVjb3JkPHN0cmluZywgUmVxdWlyZW1lbnRTdGF0dXM+ID0ge307CiAgICAgICAgICBmb3IgKGNvbnN0IHJzIG9mIGQucmVxdWlyZW1lbnRTdGF0dXNlcykgewogICAgICAgICAgICBzdGF0dXNNYXBbYCR7dGFza0lkfS0ke3JzLnJlcUluZGV4fWBdID0gcnM7CiAgICAgICAgICB9CiAgICAgICAgICBzZXRSZXFTdGF0dXNlcyhzdGF0dXNNYXApOwogICAgICAgIH0KICAgICAgfSkKICAgICAgLmNhdGNoKChlcnJvcikgPT4gewogICAgICAgIGNvbnNvbGUuZXJyb3IoIuWKoOi9veS7u+WKoeivpuaDheWksei0pSIsIGVycm9yKTsKICAgICAgICBpZiAoIWNhbmNlbGxlZCkgewogICAgICAgICAgc2V0RGV0YWlsKG51bGwpOwogICAgICAgIH0KICAgICAgfSkKICAgICAgLmZpbmFsbHkoKCkgPT4gewogICAgICAgIGlmICghY2FuY2VsbGVkKSB7CiAgICAgICAgICBzZXRMb2FkaW5nKGZhbHNlKTsKICAgICAgICB9CiAgICAgIH0pOwogICAgcmV0dXJuICgpID0+IHsgY2FuY2VsbGVkID0gdHJ1ZTsgfTsKICB9LCBbdGFza0lkXSk7CgogIGNvbnN0IHVwZGF0ZUFuc3dlciA9IHVzZUNhbGxiYWNrKAogICAgKHZhbHVlOiBzdHJpbmcpID0+IHsKICAgICAgaWYgKCF0YXNrSWQpIHJldHVybjsKICAgICAgc2V0QW5zd2VycygocHJldikgPT4gKHsgLi4ucHJldiwgW3Rhc2tJZF06IHZhbHVlIH0pKTsKICAgIH0sCiAgICBbdGFza0lkXQogICk7CgogIGNvbnN0IHNhdmVDdXJyZW50QW5zd2VyID0gdXNlQ2FsbGJhY2soYXN5bmMgKCkgPT4gewogICAgaWYgKCF0YXNrSWQgfHwgIWRldGFpbCkgcmV0dXJuOwogICAgY29uc3QgYW5zd2VyID0gYW5zd2Vyc1t0YXNrSWRdID8/ICIiOwogICAgaWYgKGFuc3dlci50cmltKCkubGVuZ3RoID4gMCkgewogICAgICBhd2FpdCBhcGkuc2F2ZUFuc3dlcih7CiAgICAgICAgdGFza0lkLAogICAgICAgIGNoYXB0ZXJJZDogZGV0YWlsLnRhc2suY2hhcHRlcklkLAogICAgICAgIGFuc3dlclRleHQ6IGFuc3dlciwKICAgICAgfSk7CiAgICB9CiAgfSwgW3Rhc2tJZCwgZGV0YWlsLCBhbnN3ZXJzXSk7CgogIGNvbnN0IHJldmVhbFJlZmVyZW5jZSA9IHVzZUNhbGxiYWNrKCgpID0+IHsKICAgIHZvaWQgc2F2ZUN1cnJlbnRBbnN3ZXIoKTsKICAgIHNldFJldmVhbGVkKHRydWUpOwogIH0sIFtzYXZlQ3VycmVudEFuc3dlcl0pOwoKICBjb25zdCBhc3Nlc3NSZXEgPSB1c2VDYWxsYmFjaygKICAgIGFzeW5jIChyZXFJbmRleDogbnVtYmVyLCBzdGF0dXM6IEFzc2Vzc21lbnQpID0+IHsKICAgICAgaWYgKCF0YXNrSWQpIHJldHVybjsKICAgICAgYXdhaXQgYXBpLmFzc2Vzc1JlcXVpcmVtZW50KHsgdGFza0lkLCByZXFJbmRleCwgc3RhdHVzIH0pOwogICAgICBzZXRSZXFTdGF0dXNlcygocHJldikgPT4gKHsKICAgICAgICAuLi5wcmV2LAogICAgICAgIFtgJHt0YXNrSWR9LSR7cmVxSW5kZXh9YF06IHsKICAgICAgICAgIHJlcUluZGV4LAogICAgICAgICAgc3RhdHVzLAogICAgICAgIH0sCiAgICAgIH0pKTsKICAgIH0sCiAgICBbdGFza0lkXQogICk7CgogIGNvbnN0IGFzc2Vzc1dob2xlVGFzayA9IHVzZUNhbGxiYWNrKAogICAgYXN5bmMgKGFzc2Vzc21lbnQ6IEFzc2Vzc21lbnQpID0+IHsKICAgICAgaWYgKCF0YXNrSWQgfHwgIWRldGFpbCkgcmV0dXJuOwogICAgICBhd2FpdCBzYXZlQ3VycmVudEFuc3dlcigpOwogICAgICBhd2FpdCBhcGkuYXNzZXNzVGFzayh7CiAgICAgICAgdGFza0lkLAogICAgICAgIGNoYXB0ZXJJZDogZGV0YWlsLnRhc2suY2hhcHRlcklkLAogICAgICAgIGFzc2Vzc21lbnQsCiAgICAgIH0pOwogICAgfSwKICAgIFt0YXNrSWQsIGRldGFpbCwgc2F2ZUN1cnJlbnRBbnN3ZXJdCiAgKTsKCiAgY29uc3QgY3VycmVudEFuc3dlciA9IHRhc2tJZCA/IChhbnN3ZXJzW3Rhc2tJZF0gPz8gIiIpIDogIiI7CgogIHJldHVybiB7CiAgICBkZXRhaWwsCiAgICBsb2FkaW5nLAogICAgY3VycmVudEFuc3dlciwKICAgIHJldmVhbGVkLAogICAgcmVxU3RhdHVzZXMsCiAgICB1cGRhdGVBbnN3ZXIsCiAgICBzYXZlQ3VycmVudEFuc3dlciwKICAgIHJldmVhbFJlZmVyZW5jZSwKICAgIGFzc2Vzc1JlcSwKICAgIGFzc2Vzc1dob2xlVGFzaywKICB9Owp9
+import { useState, useEffect, useCallback, useRef } from "react";
+import { api } from "../services/api";
+import type { TaskDetail, RequirementStatus, Assessment } from "../types";
+
+export function useTaskDetail(taskId: string | null) {
+  const [detail, setDetail] = useState<TaskDetail | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [revealed, setRevealed] = useState(false);
+  const [reqStatuses, setReqStatuses] = useState<Record<string, RequirementStatus>>({});
+  const [assessing, setAssessing] = useState(false);
+
+  // Ref mirror of answers — avoids stale closures in saveCurrentAnswer
+  const answersRef = useRef<Record<string, string>>({});
+
+  useEffect(() => {
+    if (!taskId) {
+      setDetail(null);
+      setLoading(false);
+      return;
+    }
+    let cancelled = false;
+    setLoading(true);
+    api.getTaskDetail({ taskId })
+      .then((d) => {
+        if (!cancelled) {
+          setDetail(d);
+          setAnswers((prev) => {
+            const next = { ...prev, [taskId]: d.latestAnswer ?? "" };
+            answersRef.current = next;
+            return next;
+          });
+          setRevealed(false);
+          const statusMap: Record<string, RequirementStatus> = {};
+          for (const rs of d.requirementStatuses) {
+            statusMap[`${taskId}-${rs.reqIndex}`] = rs;
+          }
+          setReqStatuses(statusMap);
+        }
+      })
+      .catch((error) => {
+        console.error("加载任务详情失败", error);
+        if (!cancelled) {
+          setDetail(null);
+        }
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      });
+    return () => { cancelled = true; };
+  }, [taskId]);
+
+  const updateAnswer = useCallback(
+    (value: string) => {
+      if (!taskId) return;
+      setAnswers((prev) => {
+        const next = { ...prev, [taskId]: value };
+        answersRef.current = next;
+        return next;
+      });
+    },
+    [taskId]
+  );
+
+  const saveCurrentAnswer = useCallback(async () => {
+    if (!taskId || !detail) return;
+    const answer = answersRef.current[taskId] ?? "";
+    if (answer.trim().length > 0) {
+      await api.saveAnswer({
+        taskId,
+        chapterId: detail.task.chapterId,
+        answerText: answer,
+      });
+    }
+  }, [taskId, detail]);
+
+  const revealReference = useCallback(() => {
+    void saveCurrentAnswer();
+    setRevealed(true);
+  }, [saveCurrentAnswer]);
+
+  const assessReq = useCallback(
+    async (reqIndex: number, status: Assessment) => {
+      if (!taskId || assessing) return;
+      setAssessing(true);
+      try {
+        await api.assessRequirement({ taskId, reqIndex, status });
+        setReqStatuses((prev) => ({
+          ...prev,
+          [`${taskId}-${reqIndex}`]: {
+            reqIndex,
+            status,
+          },
+        }));
+      } finally {
+        setAssessing(false);
+      }
+    },
+    [taskId, assessing]
+  );
+
+  const assessWholeTask = useCallback(
+    async (assessment: Assessment) => {
+      if (!taskId || !detail || assessing) return;
+      setAssessing(true);
+      try {
+        await saveCurrentAnswer();
+        await api.assessTask({
+          taskId,
+          chapterId: detail.task.chapterId,
+          assessment,
+        });
+      } finally {
+        setAssessing(false);
+      }
+    },
+    [taskId, detail, saveCurrentAnswer, assessing]
+  );
+
+  const currentAnswer = taskId ? (answers[taskId] ?? "") : "";
+
+  return {
+    detail,
+    loading,
+    currentAnswer,
+    revealed,
+    reqStatuses,
+    assessing,
+    updateAnswer,
+    saveCurrentAnswer,
+    revealReference,
+    assessReq,
+    assessWholeTask,
+  };
+}

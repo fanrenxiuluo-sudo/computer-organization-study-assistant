@@ -1,1 +1,82 @@
-IyBDb21wdXRlciBPcmdhbml6YXRpb24gU3R1ZHkgQXNzaXN0YW50CgrpnaLlkJHjgIrorqHnrpfmnLrnu4TmiJDljp/nkIbjgIvor77nqIvnmoQgV2luZG93cyDmoYzpnaLlrabkuaDkuI7orq3nu4Pns7vnu5/jgIIKCuacrOmhueebrueahOesrOS4gOebruagh+aYr+i+heWKqeWkp+Wtpuacn+acq+Wkh+iAg++8jOmVv+acn+ebruagh+aYr+S9nOS4uue9kee7nOW3peeoi+S4k+S4muWtpueUn+eahOaxguiBjOWxleekuumhueebruOAgui9r+S7tuWwhuaPkOS+m+eroOiKguWtpuS5oOOAgU9CRSDnu7zlkIjku7vliqHorq3nu4PjgIHkvZznrZTlpI3nm5jjgIHmqKHmi5/ogIPmoLjjgIHlrabkuaDnu5/orqHlkozogIPliY3lhrLliLrlip/og73jgIIKCiMjIOmhueebruWumuS9jQoKLSDor77nqIvmlrnlkJHvvJrorqHnrpfmnLrnu4TmiJDljp/nkIYKLSDkvb/nlKjlr7nosaHvvJrorqHnrpfmnLrnsbvjgIHnvZHnu5zlt6XnqIvnsbvkuJPkuJrlrabnlJ8KLSDov5DooYzlubPlj7DvvJpXaW5kb3dzIOahjOmdouerr++8iOaUr+aMgeiHquWumuS5ieWuieijhei3r+W+hO+8iQotIOaguOW/g+ebruagh++8muaPkOmrmOWkjeS5oOaViOeOh++8jOWumuS9jeiWhOW8seeroOiKgu+8jOW9ouaIkOWPr+WxleekuueahOi9r+S7tumhueebrgoKIyMg5oqA5pyv5qCI6KeE5YiSCgotIOahjOmdouahhuaetu+8mlRhdXJpCi0g5YmN56uv5qGG5p6277yaUmVhY3QKLSDlvIDlj5Hor63oqIDvvJpUeXBlU2NyaXB0Ci0g5pys5Zyw5pWw5o2u77yaU1FMaXRlCi0g5Zu+6KGo5bGV56S677yaRUNoYXJ0cwotIOeJiOacrOWPkeW4g++8mkdpdEh1YiBSZWxlYXNlcwoKIyMg5qC45b+D5Yqf6IO96KeE5YiSCgoxLiDlrabkuaDot6/nur/vvJrlsZXnpLror77nqIvnq6DoioLjgIHlrabkuaDnirbmgIHlkozoloTlvLHnq6DoioLjgIIKMi4g55+l6K+G54K55Y2h54mH77ya5pW055CG5qaC5b+144CB5YWs5byP44CB5piT5re354K55ZKM6auY6aKR6ICD54K544CCCjMuIE9CRSDnu7zlkIjku7vliqHvvJrlm7Tnu5Xor77nqIvnm67moIforr7orqHlnLrmma/popjjgIHliIbmnpDpopjlkozorqHnrpfor7TmmI7popjjgIIKNC4g5L2c562U5aSN55uY77ya6K6w5b2V5L2c562U5YaF5a6544CB6JaE5byx54K55ZKM5aSN57uD54q25oCB44CCCjUuIOaooeaLn+iAg+aguO+8muaMieivvueoi+ebruagh+eUn+aIkOe7vOWQiOS7u+WKoeW5tui/m+ihjOiHquivhOOAggo2LiDlrabkuaDnu5/orqHvvJrlsZXnpLrpopjph4/jgIHmraPnoa7njofjgIHnq6DoioLmjozmj6Hluqblkozmr4/ml6Xov5vluqbjgIIKNy4g6ICD5YmN5Yay5Yi677ya6ZuG5Lit5aSN5Lmg5b+F6IOM5qaC5b+144CB5bi46ICD566A562U6aKY5ZKM5piT6ZSZ6aKY44CCCjguIOaVsOaNruWvvOWFpe+8muaUr+aMgSBKU09OIOmimOW6k++8jOWQjue7reaJqeWxlSBFeGNlbCDlr7zlhaXjgIIKCiMjIOeJiOacrOi3r+e6vwoKfCDniYjmnKwgfCDnm67moIcgfCDlhoXlrrkgfAp8IC0tLSB8IC0tLSB8IC0tLSB8CnwgdjAuMSB8IE9CRSDku7vliqHnu4PkuaDniYggfCDnq6DoioLliJfooajjgIHor77nqIvnm67moIfjgIHnu7zlkIjku7vliqHjgIHlj4LogIPnrZTmoYggfAp8IHYwLjIgfCDlpJrmqKHlvI/nu4PkuaDniYggfCA056eN57uD5Lmg5qih5byP77yI6aG65bqPL+W8semhuS/pmo/mnLov6ICD54K55a6a5ZCR77yJ44CB6Ieq5a6a5LmJ5a6J6KOF6Lev5b6E44CB5paH5qGj5pu05pawIHwKfCB2MC4zIHwg5L2c562U5aSN55uY54mIIHwg5L2c562U6K6w5b2V44CB6JaE5byx54K55qCH6K6w44CB5aSN57uD5qyh5pWw57uf6K6hIHwKfCB2MC40IHwg5aSH6ICD57O757uf54mIIHwg5a2m5Lmg6K6h5YiS44CB5o6M5o+h5bqm57uf6K6h44CB6ICD5YmN5Yay5Yi6IHwKfCB2MS4wIHwg5rGC6IGM5bGV56S654mIIHwg5a6M5pW0IFVJ44CB5a6J6KOF5YyF44CB5oiq5Zu+44CBR2l0SHViIFJlbGVhc2UgfAoKIyMg5b2T5YmN54q25oCBCgrpobnnm67lt7LlrozmiJAgdjAuMi4xIOeos+WumuS/ruWkjeeJiOOAguaUr+aMgTTnp43nu4PkuaDmqKHlvI/vvIjpobrluo/jgIHlvLHpobnjgIHpmo/mnLrjgIHogIPngrnlrprlkJHvvInvvIzkv67lpI3kuoYgV2luZG93cyDlronoo4XlkI7moYzpnaLlvILluLjliJvlu7rlkIzlkI3mlofku7blpLnjgIHnp43lrZDmlbDmja7op6PmnpDjgIHnu5/orqHlj6PlvoTlkozoloTlvLHpopjnrZvpgInnrYnpl67popjjgIIKCgojIyB2MC4yLjEg5L+u5aSN6K+05piOCgotIOS/ruWkjSBXaW5kb3dzIOWuieijheWQjuWPr+iDveWcqOahjOmdouWIm+W7uuWQjOWQjeaWh+S7tuWkueeahOmXrumimO+8muWuieijheaooeW8j+iwg+aVtOS4uuW9k+WJjeeUqOaIt+Wuieijhe+8jOWtpuS5oOaVsOaNruW6k+WbuuWumuWIsCBBcHBEYXRhIExvY2FsIOS4i+eahCBgc3R1ZHktZGF0YWAg55uu5b2V44CCCi0g5aKe5Yqg5pen54mI5qGM6Z2iIGBzdHVkeS5kYmAg55qE5a6J5YWo6L+B56e76YC76L6R77ya5LuF5aSN5Yi25pWw5o2u5bqT5Yiw5paw55uu5b2V77yM5LiN6Ieq5Yqo5Yig6Zmk55So5oi35qGM6Z2i5paH5Lu25aS544CCCi0g5L+u5aSNIGBkYXRhL3NlZWQuanNvbmAg6Z2e5rOVIEpTT04g5a+86Ie06aaW5qyh5ZCv5Yqo5pWw5o2u5bqT5Yid5aeL5YyW5aSx6LSl55qE6Zeu6aKY44CCCi0g5L+u5aSN57uf6K6h5Y+j5b6E77ya56ug6IqC44CB6K++56iL55uu5qCH44CB6ICD54K55o6M5o+h5bqm5ZKM6JaE5byx5LiT57uD57uf5LiA5oyJ5q+P6YGT6aKY5pyA5paw5LiA5qyh5pW05L2T6Ieq6K+E6K6h566X44CCCi0g5LyY5YyW5L2c562U5L+d5a2Y77ya5p+l55yL5Y+C6ICD562U5qGI5ZKM5pW05L2T6K+E5Lu35YmN5Lya5L+d5a2Y5b2T5YmN562U5qGI77yM5bm26YG/5YWN6YeN5aSN5L+d5a2Y5a6M5YWo55u45ZCM55qE562U5qGI44CCCi0g5L+u5aSN5YmN56uvIGxpbnQg6Zeu6aKY77yM5L2/IGBucG0gcnVuIGNoZWNrYCDlj6/pgJrov4fjgIIKCiMjIOS4i+i9veWuieijhQoK5LuOIFtSZWxlYXNlc10oaHR0cHM6Ly9naXRodWIuY29tL2ZhbnJlbnhpdWx1by1zdWRvL2NvbXB1dGVyLW9yZ2FuaXphdGlvbi1zdHVkeS1hc3Npc3RhbnQvcmVsZWFzZXMpIOmhtemdouS4i+i9veacgOaWsOeahCBg6K6h57uE5aSH6ICD5Yqp5omLX3gueC54X3g2NC1zZXR1cC5leGVg77yM5Y+M5Ye76L+Q6KGM5ZCO5Y+v6Ieq5a6a5LmJ5a6J6KOF6Lev5b6E44CCCgojIyDmnKzlnLDov5DooYwKCuWuieijheWJjeerr+S+nei1lu+8mgoKYGBgYmFzaApucG0gaW5zdGFsbApgYGAKCui/kOihjOWJjeerr+W8gOWPkeacjeWKoe+8mgoKYGBgYmFzaApucG0gcnVuIGRldgpgYGAKCui/kOihjCBUYXVyaSDmoYzpnaLnq6/vvJoKCmBgYGJhc2gKbnBtIHJ1biB0YXVyaTpkZXYKYGBgCgror7TmmI7vvJpUYXVyaSDmoYzpnaLnq6/pnIDopoHmnKzmnLrlronoo4UgUnVzdCDlt6Xlhbfpk77jgIIK
+# Computer Organization Study Assistant
+
+面向《计算机组成原理》课程的 Windows 桌面学习与训练系统。
+
+本项目的第一目标是辅助大学期末备考，长期目标是作为网络工程专业学生的求职展示项目。软件将提供章节学习、OBE 综合任务训练、作答复盘、模拟考核、学习统计和考前冲刺功能。
+
+## 项目定位
+
+- 课程方向：计算机组成原理
+- 使用对象：计算机类、网络工程类专业学生
+- 运行平台：Windows 桌面端（支持自定义安装路径）
+- 核心目标：提高复习效率，定位薄弱章节，形成可展示的软件项目
+
+## 技术栈规划
+
+- 桌面框架：Tauri
+- 前端框架：React
+- 开发语言：TypeScript
+- 本地数据：SQLite
+- 图表展示：ECharts（规划中）
+- 版本发布：GitHub Releases
+
+## 核心功能规划
+
+1. 学习路线：展示课程章节、学习状态和薄弱章节。
+2. 知识点卡片：整理概念、公式、易混点和高频考点。
+3. OBE 综合任务：围绕课程目标设计场景题、分析题和计算说明题。
+4. 作答复盘：记录作答内容、薄弱点和复练状态。
+5. 模拟考核：按课程目标生成综合任务并进行自评。
+6. 学习统计：展示题量、正确率、章节掌握度和每日进度。
+7. 考前冲刺：集中复习必背概念、常考简答题和易错题。
+8. 数据导入：支持 JSON 题库，后续扩展 Excel 导入。
+
+## 版本路线
+
+| 版本 | 目标 | 内容 |
+| --- | --- | --- |
+| v0.1 | OBE 任务练习版 | 章节列表、课程目标、综合任务、参考答案 |
+| v0.2 | 多模式练习版 | 4种练习模式（顺序/弱项/随机/考点定向）、自定义安装路径、文档更新 |
+| v0.3 | 作答复盘版 | 作答记录、薄弱点标记、复练次数统计 |
+| v0.4 | 备考系统版 | 学习计划、掌握度统计、考前冲刺 |
+| v1.0 | 求职展示版 | 完整 UI、安装包、截图、GitHub Release |
+
+## 当前状态
+
+项目已完成 v0.2.1 稳定修复版。支持4种练习模式（顺序、弱项、随机、考点定向），修复了 Windows 安装后桌面异常创建同名文件夹、种子数据解析、统计口径和薄弱题筛选等问题。
+
+
+## v0.2.1 修复说明
+
+- 修复 Windows 安装后可能在桌面创建同名文件夹的问题：安装模式调整为当前用户安装，学习数据库固定到 AppData Local 下的 `study-data` 目录。
+- 增加旧版桌面 `study.db` 的安全迁移逻辑：仅复制数据库到新目录，不自动删除用户桌面文件夹。
+- 修复 `data/seed.json` 非法 JSON 导致首次启动数据库初始化失败的问题。
+- 修复统计口径：章节、课程目标、考点掌握度和薄弱专练统一按每道题最新一次整体自评计算。
+- 优化作答保存：查看参考答案和整体评价前会保存当前答案，并避免重复保存完全相同的答案。
+- 修复前端 lint 问题，使 `npm run check` 可通过。
+
+## 下载安装
+
+从 [Releases](https://github.com/fanrenxiuluo-sudo/computer-organization-study-assistant/releases) 页面下载最新的 `计组备考助手_x.x.x_x64-setup.exe`，双击运行后可自定义安装路径。
+
+## 本地运行
+
+安装前端依赖：
+
+```bash
+npm install
+```
+
+运行前端开发服务：
+
+```bash
+npm run dev
+```
+
+运行 Tauri 桌面端：
+
+```bash
+npm run tauri:dev
+```
+
+说明：Tauri 桌面端需要本机安装 Rust 工具链。

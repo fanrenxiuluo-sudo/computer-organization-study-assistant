@@ -1,1 +1,68 @@
-aW1wb3J0IHsgdXNlU3RhdGUsIHVzZUVmZmVjdCwgdXNlQ2FsbGJhY2sgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGFwaSB9IGZyb20gIi4uL3NlcnZpY2VzL2FwaSI7CmltcG9ydCB0eXBlIHsgT3ZlcmFsbFByb2dyZXNzLCBDaGFwdGVyUHJvZ3Jlc3MgfSBmcm9tICIuLi90eXBlcyI7CgpleHBvcnQgZnVuY3Rpb24gdXNlU3RhdHMoY2hhcHRlcklkPzogc3RyaW5nKSB7CiAgY29uc3QgW292ZXJhbGwsIHNldE92ZXJhbGxdID0gdXNlU3RhdGU8T3ZlcmFsbFByb2dyZXNzIHwgbnVsbD4obnVsbCk7CiAgY29uc3QgW2NoYXB0ZXIsIHNldENoYXB0ZXJdID0gdXNlU3RhdGU8Q2hhcHRlclByb2dyZXNzIHwgbnVsbD4obnVsbCk7CiAgY29uc3QgW2xvYWRpbmcsIHNldExvYWRpbmddID0gdXNlU3RhdGUodHJ1ZSk7CgogIGNvbnN0IHJlZnJlc2ggPSB1c2VDYWxsYmFjayhhc3luYyAoKSA9PiB7CiAgICBzZXRMb2FkaW5nKHRydWUpOwogICAgdHJ5IHsKICAgICAgY29uc3QgbyA9IGF3YWl0IGFwaS5nZXRPdmVyYWxsUHJvZ3Jlc3MoKTsKICAgICAgc2V0T3ZlcmFsbChvKTsKICAgICAgaWYgKGNoYXB0ZXJJZCkgewogICAgICAgIGNvbnN0IGMgPSBhd2FpdCBhcGkuZ2V0Q2hhcHRlclByb2dyZXNzKHsgY2hhcHRlcklkIH0pOwogICAgICAgIHNldENoYXB0ZXIoYyk7CiAgICAgIH0gZWxzZSB7CiAgICAgICAgc2V0Q2hhcHRlcihudWxsKTsKICAgICAgfQogICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgY29uc29sZS5lcnJvcigi5Yqg6L2957uf6K6h5aSx6LSlIiwgZXJyb3IpOwogICAgICBzZXRPdmVyYWxsKG51bGwpOwogICAgICBzZXRDaGFwdGVyKG51bGwpOwogICAgfSBmaW5hbGx5IHsKICAgICAgc2V0TG9hZGluZyhmYWxzZSk7CiAgICB9CiAgfSwgW2NoYXB0ZXJJZF0pOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgcmVmcmVzaCgpOwogIH0sIFtyZWZyZXNoXSk7CgogIHJldHVybiB7IG92ZXJhbGwsIGNoYXB0ZXIsIGxvYWRpbmcsIHJlZnJlc2ggfTsKfQ==
+import { useState, useEffect, useCallback } from "react";
+import { api } from "../services/api";
+import type { OverallProgress, ChapterProgress } from "../types";
+
+export function useStats(chapterId?: string) {
+  const [overall, setOverall] = useState<OverallProgress | null>(null);
+  const [chapter, setChapter] = useState<ChapterProgress | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Exposed for manual refresh (called after task assessment)
+  const refresh = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const o = await api.getOverallProgress();
+      setOverall(o);
+      if (chapterId) {
+        const c = await api.getChapterProgress({ chapterId });
+        setChapter(c);
+      } else {
+        setChapter(null);
+      }
+    } catch (e) {
+      console.error("加载统计失败", e);
+      setOverall(null);
+      setChapter(null);
+      setError("加载统计数据失败");
+    } finally {
+      setLoading(false);
+    }
+  }, [chapterId]);
+
+  // Auto-load on chapterId change with cancellation guard
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
+
+    (async () => {
+      try {
+        const o = await api.getOverallProgress();
+        if (cancelled) return;
+        setOverall(o);
+
+        if (chapterId) {
+          const c = await api.getChapterProgress({ chapterId });
+          if (cancelled) return;
+          setChapter(c);
+        } else {
+          setChapter(null);
+        }
+      } catch (e) {
+        if (cancelled) return;
+        console.error("加载统计失败", e);
+        setOverall(null);
+        setChapter(null);
+        setError("加载统计数据失败");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+
+    return () => { cancelled = true; };
+  }, [chapterId]);
+
+  return { overall, chapter, loading, error, refresh };
+}

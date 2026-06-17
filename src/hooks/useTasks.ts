@@ -1,1 +1,92 @@
-aW1wb3J0IHsgdXNlU3RhdGUsIHVzZUVmZmVjdCwgdXNlQ2FsbGJhY2sgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGFwaSB9IGZyb20gIi4uL3NlcnZpY2VzL2FwaSI7CmltcG9ydCB0eXBlIHsgVGFza0RldGFpbCwgUHJhY3RpY2VNb2RlIH0gZnJvbSAiLi4vdHlwZXMiOwoKZXhwb3J0IGZ1bmN0aW9uIHVzZVRhc2tzKAogIGNoYXB0ZXJJZDogc3RyaW5nLAogIHByYWN0aWNlTW9kZTogUHJhY3RpY2VNb2RlLAogIHNlbGVjdGVkS25vd2xlZGdlUG9pbnRJZDogc3RyaW5nIHwgbnVsbCwKICBvZmZzZXQ6IG51bWJlciA9IDAsCiAgbGltaXQ6IG51bWJlciA9IDIwMAopIHsKICBjb25zdCBbdGFza3MsIHNldFRhc2tzXSA9IHVzZVN0YXRlPFRhc2tEZXRhaWxbXT4oW10pOwogIGNvbnN0IFt0b3RhbCwgc2V0VG90YWxdID0gdXNlU3RhdGUoMCk7CiAgY29uc3QgW2xvYWRpbmcsIHNldExvYWRpbmddID0gdXNlU3RhdGUodHJ1ZSk7CgogIGNvbnN0IGZldGNoVGFza3MgPSB1c2VDYWxsYmFjayhhc3luYyAoc2lnbmFsPzogQWJvcnRTaWduYWwpID0+IHsKICAgIGlmICghY2hhcHRlcklkKSB7CiAgICAgIHNldFRhc2tzKFtdKTsKICAgICAgc2V0VG90YWwoMCk7CiAgICAgIHNldExvYWRpbmcoZmFsc2UpOwogICAgICByZXR1cm47CiAgICB9CgogICAgc2V0TG9hZGluZyh0cnVlKTsKICAgIHRyeSB7CiAgICAgIGlmIChwcmFjdGljZU1vZGUgPT09ICJyYW5kb20iKSB7CiAgICAgICAgY29uc3QgaXRlbXMgPSBhd2FpdCBhcGkuZ2V0UmFuZG9tVGFza3MoewogICAgICAgICAgY2hhcHRlcklkLAogICAgICAgICAgY291bnQ6IDEwLAogICAgICAgICAgb25seVdlYWs6IGZhbHNlLAogICAgICAgIH0pOwogICAgICAgIGlmICghc2lnbmFsPy5hYm9ydGVkKSB7CiAgICAgICAgICBzZXRUYXNrcyhpdGVtcyk7CiAgICAgICAgICBzZXRUb3RhbChpdGVtcy5sZW5ndGgpOwogICAgICAgIH0KICAgICAgfSBlbHNlIGlmIChwcmFjdGljZU1vZGUgPT09ICJ3ZWFrIikgewogICAgICAgIGNvbnN0IGl0ZW1zID0gYXdhaXQgYXBpLmdldFJhbmRvbVRhc2tzKHsKICAgICAgICAgIGNoYXB0ZXJJZCwKICAgICAgICAgIGNvdW50OiAxMCwKICAgICAgICAgIG9ubHlXZWFrOiB0cnVlLAogICAgICAgIH0pOwogICAgICAgIGlmICghc2lnbmFsPy5hYm9ydGVkKSB7CiAgICAgICAgICBzZXRUYXNrcyhpdGVtcyk7CiAgICAgICAgICBzZXRUb3RhbChpdGVtcy5sZW5ndGgpOwogICAgICAgIH0KICAgICAgfSBlbHNlIGlmIChwcmFjdGljZU1vZGUgPT09ICJrbm93bGVkZ2UtcG9pbnQiICYmIHNlbGVjdGVkS25vd2xlZGdlUG9pbnRJZCkgewogICAgICAgIGNvbnN0IHBhZ2UgPSBhd2FpdCBhcGkubGlzdFRhc2tzKHsKICAgICAgICAgIGNoYXB0ZXJJZCwKICAgICAgICAgIGtub3dsZWRnZVBvaW50SWQ6IHNlbGVjdGVkS25vd2xlZGdlUG9pbnRJZCwKICAgICAgICAgIG9mZnNldCwKICAgICAgICAgIGxpbWl0LAogICAgICAgIH0pOwogICAgICAgIGlmICghc2lnbmFsPy5hYm9ydGVkKSB7CiAgICAgICAgICBzZXRUYXNrcyhwYWdlLml0ZW1zKTsKICAgICAgICAgIHNldFRvdGFsKHBhZ2UudG90YWwpOwogICAgICAgIH0KICAgICAgfSBlbHNlIHsKICAgICAgICAvLyBzZXF1ZW50aWFsIG1vZGUKICAgICAgICBjb25zdCBwYWdlID0gYXdhaXQgYXBpLmxpc3RUYXNrcyh7IGNoYXB0ZXJJZCwgb2Zmc2V0LCBsaW1pdCB9KTsKICAgICAgICBpZiAoIXNpZ25hbD8uYWJvcnRlZCkgewogICAgICAgICAgc2V0VGFza3MocGFnZS5pdGVtcyk7CiAgICAgICAgICBzZXRUb3RhbChwYWdlLnRvdGFsKTsKICAgICAgICB9CiAgICAgIH0KICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgIGNvbnNvbGUuZXJyb3IoIuWKoOi9vemimOebruWksei0pSIsIGVycm9yKTsKICAgICAgaWYgKCFzaWduYWw/LmFib3J0ZWQpIHsKICAgICAgICBzZXRUYXNrcyhbXSk7CiAgICAgICAgc2V0VG90YWwoMCk7CiAgICAgIH0KICAgIH0gZmluYWxseSB7CiAgICAgIGlmICghc2lnbmFsPy5hYm9ydGVkKSB7CiAgICAgICAgc2V0TG9hZGluZyhmYWxzZSk7CiAgICAgIH0KICAgIH0KICB9LCBbY2hhcHRlcklkLCBwcmFjdGljZU1vZGUsIHNlbGVjdGVkS25vd2xlZGdlUG9pbnRJZCwgb2Zmc2V0LCBsaW1pdF0pOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgY29uc3QgY29udHJvbGxlciA9IG5ldyBBYm9ydENvbnRyb2xsZXIoKTsKICAgIGZldGNoVGFza3MoY29udHJvbGxlci5zaWduYWwpOwogICAgcmV0dXJuICgpID0+IGNvbnRyb2xsZXIuYWJvcnQoKTsKICB9LCBbZmV0Y2hUYXNrc10pOwoKICBjb25zdCByZWZyZXNoID0gdXNlQ2FsbGJhY2soKCkgPT4gewogICAgZmV0Y2hUYXNrcygpOwogIH0sIFtmZXRjaFRhc2tzXSk7CgogIHJldHVybiB7IHRhc2tzLCB0b3RhbCwgbG9hZGluZywgcmVmcmVzaCB9Owp9Cg==
+import { useState, useEffect, useCallback } from "react";
+import { api } from "../services/api";
+import type { TaskDetail, PracticeMode } from "../types";
+
+export function useTasks(
+  chapterId: string,
+  practiceMode: PracticeMode,
+  selectedKnowledgePointId: string | null,
+  offset: number = 0,
+  limit: number = 200
+) {
+  const [tasks, setTasks] = useState<TaskDetail[]>([]);
+  const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchTasks = useCallback(async (signal?: AbortSignal) => {
+    if (!chapterId) {
+      setTasks([]);
+      setTotal(0);
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+    try {
+      if (practiceMode === "random") {
+        const items = await api.getRandomTasks({
+          chapterId,
+          count: 10,
+          onlyWeak: false,
+        });
+        if (!signal?.aborted) {
+          setTasks(items);
+          setTotal(items.length);
+        }
+      } else if (practiceMode === "weak") {
+        const items = await api.getRandomTasks({
+          chapterId,
+          count: 10,
+          onlyWeak: true,
+        });
+        if (!signal?.aborted) {
+          setTasks(items);
+          setTotal(items.length);
+        }
+      } else if (practiceMode === "knowledge-point" && selectedKnowledgePointId) {
+        const page = await api.listTasks({
+          chapterId,
+          knowledgePointId: selectedKnowledgePointId,
+          offset,
+          limit,
+        });
+        if (!signal?.aborted) {
+          setTasks(page.items);
+          setTotal(page.total);
+        }
+      } else {
+        // sequential mode
+        const page = await api.listTasks({ chapterId, offset, limit });
+        if (!signal?.aborted) {
+          setTasks(page.items);
+          setTotal(page.total);
+        }
+      }
+    } catch (e) {
+      console.error("加载题目失败", e);
+      if (!signal?.aborted) {
+        setTasks([]);
+        setTotal(0);
+        setError("加载题目失败");
+      }
+    } finally {
+      if (!signal?.aborted) {
+        setLoading(false);
+      }
+    }
+  }, [chapterId, practiceMode, selectedKnowledgePointId, offset, limit]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetchTasks(controller.signal);
+    return () => controller.abort();
+  }, [fetchTasks]);
+
+  const refresh = useCallback(() => {
+    fetchTasks();
+  }, [fetchTasks]);
+
+  return { tasks, total, loading, error, refresh };
+}

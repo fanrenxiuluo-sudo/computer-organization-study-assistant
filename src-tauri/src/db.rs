@@ -1,1 +1,245 @@
-dXNlIHJ1c3FsaXRlOjpDb25uZWN0aW9uOwp1c2Ugc3RkOjpwYXRoOjpQYXRoQnVmOwp1c2Ugc3RkOjpzeW5jOjpNdXRleDsKCnVzZSBjcmF0ZTo6bW9kZWxzOjoqOwoKcHViIHN0cnVjdCBEYlN0YXRlIHsKICAgIHB1YiBjb25uOiBNdXRleDxDb25uZWN0aW9uPiwKfQoKY29uc3QgU0NIRU1BX1ZFUlNJT046IGk2NCA9IDE7Cgpjb25zdCBTRUVEX0pTT046ICZzdHIgPSBpbmNsdWRlX3N0ciEoIi4uLy4uL2RhdGEvc2VlZC5qc29uIik7CgpwdWIgZm4gaW5pdF9kYihzdHVkeV9kYXRhX2RpcjogJlBhdGhCdWYpIC0+IFJlc3VsdDxDb25uZWN0aW9uLCBTdHJpbmc+IHsKICAgIGxldCBkYl9wYXRoID0gc3R1ZHlfZGF0YV9kaXIuam9pbigic3R1ZHkuZGIiKTsKICAgIGxldCBpc19uZXcgPSAhZGJfcGF0aC5leGlzdHMoKTsKCiAgICBsZXQgY29ubiA9IENvbm5lY3Rpb246Om9wZW4oJmRiX3BhdGgpLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKCiAgICBjb25uLmV4ZWN1dGVfYmF0Y2goIlBSQUdNQSBqb3VybmFsX21vZGU9V0FMOyBQUkFHTUEgZm9yZWlnbl9rZXlzPU9OOyIpCiAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKCiAgICBjcmVhdGVfdGFibGVzKCZjb25uKT87CgogICAgaWYgaXNfbmV3IHsKICAgICAgICBpbXBvcnRfc2VlZF9kYXRhKCZjb25uKT87CiAgICB9IGVsc2UgewogICAgICAgIHJ1bl9taWdyYXRpb25zKCZjb25uKT87CiAgICB9CgogICAgT2soY29ubikKfQoKZm4gY3JlYXRlX3RhYmxlcyhjb25uOiAmQ29ubmVjdGlvbikgLT4gUmVzdWx0PCgpLCBTdHJpbmc+IHsKICAgIGNvbm4uZXhlY3V0ZV9iYXRjaCgKICAgICAgICAiCiAgICAgICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgc2NoZW1hX3ZlcnNpb24gKAogICAgICAgICAgICB2ZXJzaW9uIElOVEVHRVIgUFJJTUFSWSBLRVkKICAgICAgICApOwoKICAgICAgICBDUkVBVEUgVEFCTEUgSUYgTk9UIEVYSVNUUyBjb3Vyc2Vfb3V0Y29tZXMgKAogICAgICAgICAgICBpZCAgICAgICAgICBURVhUIFBSSU1BUlkgS0VZLAogICAgICAgICAgICBjb2RlICAgICAgICBURVhUIE5PVCBOVUxMLAogICAgICAgICAgICBkZXNjcmlwdGlvbiBURVhUIE5PVCBOVUxMLAogICAgICAgICAgICBvcmRlcl9pbmRleCBJTlRFR0VSIE5PVCBOVUxMCiAgICAgICAgKTsKCiAgICAgICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgY2hhcHRlcnMgKAogICAgICAgICAgICBpZCAgICAgICAgICAgICAgICAgVEVYVCBQUklNQVJZIEtFWSwKICAgICAgICAgICAgdGl0bGUgICAgICAgICAgICAgIFRFWFQgTk9UIE5VTEwsCiAgICAgICAgICAgIGRlc2NyaXB0aW9uICAgICAgICBURVhUIE5PVCBOVUxMIERFRkFVTFQgJycsCiAgICAgICAgICAgIG9yZGVyX2luZGV4ICAgICAgICBJTlRFR0VSIE5PVCBOVUxMLAogICAgICAgICAgICBjb3Vyc2Vfb3V0Y29tZV9pZCAgVEVYVCBOT1QgTlVMTCBSRUZFUkVOQ0VTIGNvdXJzZV9vdXRjb21lcyhpZCkKICAgICAgICApOwoKICAgICAgICBDUkVBVEUgVEFCTEUgSUYgTk9UIEVYSVNUUyBrbm93bGVkZ2VfcG9pbnRzICgKICAgICAgICAgICAgaWQgICAgICAgICAgVEVYVCBQUklNQVJZIEtFWSwKICAgICAgICAgICAgY2hhcHRlcl9pZCAgVEVYVCBOT1QgTlVMTCBSRUZFUkVOQ0VTIGNoYXB0ZXJzKGlkKSwKICAgICAgICAgICAgbmFtZSAgICAgICAgVEVYVCBOT1QgTlVMTCwKICAgICAgICAgICAgb3JkZXJfaW5kZXggSU5URUdFUiBOT1QgTlVMTAogICAgICAgICk7CgogICAgICAgIENSRUFURSBUQUJMRSBJRiBOT1QgRVhJU1RTIHRhc2tzICgKICAgICAgICAgICAgaWQgICAgICAgICAgICAgICAgIFRFWFQgUFJJTUFSWSBLRVksCiAgICAgICAgICAgIGNoYXB0ZXJfaWQgICAgICAgICBURVhUIE5PVCBOVUxMIFJFRkVSRU5DRVMgY2hhcHRlcnMoaWQpLAogICAgICAgICAgICBjb3Vyc2Vfb3V0Y29tZV9pZCAgVEVYVCBOT1QgTlVMTCBSRUZFUkVOQ0VTIGNvdXJzZV9vdXRjb21lcyhpZCksCiAgICAgICAgICAgIGRpZmZpY3VsdHkgICAgICAgICBURVhUIE5PVCBOVUxMIENIRUNLKGRpZmZpY3VsdHkgSU4gKCdmb3VuZGF0aW9uJywnYXBwbGllZCcsJ2FkdmFuY2VkJykpLAogICAgICAgICAgICBzY2VuYXJpbyAgICAgICAgICAgVEVYVCBOT1QgTlVMTCwKICAgICAgICAgICAgcmVmZXJlbmNlICAgICAgICAgIFRFWFQgTk9UIE5VTEwsCiAgICAgICAgICAgIHNvdXJjZSAgICAgICAgICAgICBURVhULAogICAgICAgICAgICBjcmVhdGVkX2F0ICAgICAgICAgVEVYVCBOT1QgTlVMTCBERUZBVUxUIChkYXRldGltZSgnbm93JykpCiAgICAgICAgKTsKICAgICAgICBDUkVBVEUgSU5ERVggSUYgTk9UIEVYSVNUUyBpZHhfdGFza3NfY2hhcHRlciBPTiB0YXNrcyhjaGFwdGVyX2lkKTsKICAgICAgICBDUkVBVEUgSU5ERVggSUYgTk9UIEVYSVNUUyBpZHhfdGFza3NfZGlmZmljdWx0eSBPTiB0YXNrcyhkaWZmaWN1bHR5KTsKICAgICAgICBDUkVBVEUgSU5ERVggSUYgTk9UIEVYSVNUUyBpZHhfdGFza3Nfb3V0Y29tZSBPTiB0YXNrcyhjb3Vyc2Vfb3V0Y29tZV9pZCk7CgogICAgICAgIENSRUFURSBUQUJMRSBJRiBOT1QgRVhJU1RTIHRhc2tfa25vd2xlZGdlX3BvaW50cyAoCiAgICAgICAgICAgIHRhc2tfaWQgICAgICAgICAgICAgVEVYVCBOT1QgTlVMTCBSRUZFUkVOQ0VTIHRhc2tzKGlkKSBPTiBERUxFVEUgQ0FTQ0FERSwKICAgICAgICAgICAga25vd2xlZGdlX3BvaW50X2lkICBURVhUIE5PVCBOVUxMIFJFRkVSRU5DRVMga25vd2xlZGdlX3BvaW50cyhpZCkgT04gREVMRVRFIENBU0NBREUsCiAgICAgICAgICAgIFBSSU1BUlkgS0VZICh0YXNrX2lkLCBrbm93bGVkZ2VfcG9pbnRfaWQpCiAgICAgICAgKTsKCiAgICAgICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgdGFza19yZXF1aXJlbWVudHMgKAogICAgICAgICAgICBpZCAgICAgICAgICBJTlRFR0VSIFBSSU1BUlkgS0VZIEFVVE9JTkNSRU1FTlQsCiAgICAgICAgICAgIHRhc2tfaWQgICAgIFRFWFQgTk9UIE5VTEwgUkVGRVJFTkNFUyB0YXNrcyhpZCkgT04gREVMRVRFIENBU0NBREUsCiAgICAgICAgICAgIHJlcV9pbmRleCAgIElOVEVHRVIgTk9UIE5VTEwsCiAgICAgICAgICAgIGNvbnRlbnQgICAgIFRFWFQgTk9UIE5VTEwsCiAgICAgICAgICAgIFVOSVFVRSh0YXNrX2lkLCByZXFfaW5kZXgpCiAgICAgICAgKTsKICAgICAgICBDUkVBVEUgSU5ERVggSUYgTk9UIEVYSVNUUyBpZHhfcmVxX3Rhc2sgT04gdGFza19yZXF1aXJlbWVudHModGFza19pZCk7CgogICAgICAgIENSRUFURSBUQUJMRSBJRiBOT1QgRVhJU1RTIHRhc2tfc291cmNlcyAoCiAgICAgICAgICAgIGlkICAgICAgICAgICAgICBJTlRFR0VSIFBSSU1BUlkgS0VZIEFVVE9JTkNSRU1FTlQsCiAgICAgICAgICAgIHRhc2tfaWQgICAgICAgICBURVhUIE5PVCBOVUxMIFJFRkVSRU5DRVMgdGFza3MoaWQpIE9OIERFTEVURSBDQVNDQURFLAogICAgICAgICAgICB1bml2ZXJzaXR5ICAgICAgVEVYVCBOT1QgTlVMTCwKICAgICAgICAgICAgeWVhciAgICAgICAgICAgIFRFWFQsCiAgICAgICAgICAgIGV4YW1fdHlwZSAgICAgICBURVhUIE5PVCBOVUxMIENIRUNLKGV4YW1fdHlwZSBJTiAoJ2ZpbmFsJywncG9zdGdyYWR1YXRlJywnb2JlJywnYWRhcHRlZCcpKSwKICAgICAgICAgICAgb3JpZ2luYWxfdGV4dCAgIFRFWFQsCiAgICAgICAgICAgIG5vdGUgICAgICAgICAgICBURVhUCiAgICAgICAgKTsKICAgICAgICBDUkVBVEUgSU5ERVggSUYgTk9UIEVYSVNUUyBpZHhfc291cmNlX3Rhc2sgT04gdGFza19zb3VyY2VzKHRhc2tfaWQpOwoKICAgICAgICBDUkVBVEUgVEFCTEUgSUYgTk9UIEVYSVNUUyBhbnN3ZXJfcmVjb3JkcyAoCiAgICAgICAgICAgIGlkICAgICAgICAgIElOVEVHRVIgUFJJTUFSWSBLRVkgQVVUT0lOQ1JFTUVOVCwKICAgICAgICAgICAgdGFza19pZCAgICAgVEVYVCBOT1QgTlVMTCBSRUZFUkVOQ0VTIHRhc2tzKGlkKSwKICAgICAgICAgICAgY2hhcHRlcl9pZCAgVEVYVCBOT1QgTlVMTCBSRUZFUkVOQ0VTIGNoYXB0ZXJzKGlkKSwKICAgICAgICAgICAgYW5zd2VyX3RleHQgVEVYVCBOT1QgTlVMTCBERUZBVUxUICcnLAogICAgICAgICAgICBjcmVhdGVkX2F0ICBURVhUIE5PVCBOVUxMIERFRkFVTFQgKGRhdGV0aW1lKCdub3cnKSkKICAgICAgICApOwogICAgICAgIENSRUFURSBJTkRFWCBJRiBOT1QgRVhJU1RTIGlkeF9hbnN3ZXJfdGFzayBPTiBhbnN3ZXJfcmVjb3Jkcyh0YXNrX2lkKTsKCiAgICAgICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgcmVxdWlyZW1lbnRfYXNzZXNzbWVudHMgKAogICAgICAgICAgICBpZCAgICAgICAgICBJTlRFR0VSIFBSSU1BUlkgS0VZIEFVVE9JTkNSRU1FTlQsCiAgICAgICAgICAgIHRhc2tfaWQgICAgIFRFWFQgTk9UIE5VTEwgUkVGRVJFTkNFUyB0YXNrcyhpZCksCiAgICAgICAgICAgIHJlcV9pbmRleCAgIElOVEVHRVIgTk9UIE5VTEwsCiAgICAgICAgICAgIHN0YXR1cyAgICAgIFRFWFQgTk9UIE5VTEwgQ0hFQ0soc3RhdHVzIElOICgnbWFzdGVyZWQnLCduZWVkc193b3JrJykpLAogICAgICAgICAgICBjcmVhdGVkX2F0ICBURVhUIE5PVCBOVUxMIERFRkFVTFQgKGRhdGV0aW1lKCdub3cnKSkKICAgICAgICApOwogICAgICAgIENSRUFURSBJTkRFWCBJRiBOT1QgRVhJU1RTIGlkeF9hc3Nlc3NfdGFzayBPTiByZXF1aXJlbWVudF9hc3Nlc3NtZW50cyh0YXNrX2lkKTsKCiAgICAgICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgdGFza19hc3Nlc3NtZW50cyAoCiAgICAgICAgICAgIGlkICAgICAgICAgIElOVEVHRVIgUFJJTUFSWSBLRVkgQVVUT0lOQ1JFTUVOVCwKICAgICAgICAgICAgdGFza19pZCAgICAgVEVYVCBOT1QgTlVMTCBSRUZFUkVOQ0VTIHRhc2tzKGlkKSwKICAgICAgICAgICAgY2hhcHRlcl9pZCAgVEVYVCBOT1QgTlVMTCBSRUZFUkVOQ0VTIGNoYXB0ZXJzKGlkKSwKICAgICAgICAgICAgYXNzZXNzbWVudCAgVEVYVCBOT1QgTlVMTCBDSEVDSyhhc3Nlc3NtZW50IElOICgnbWFzdGVyZWQnLCduZWVkc193b3JrJykpLAogICAgICAgICAgICBjcmVhdGVkX2F0ICBURVhUIE5PVCBOVUxMIERFRkFVTFQgKGRhdGV0aW1lKCdub3cnKSkKICAgICAgICApOwogICAgICAgIENSRUFURSBJTkRFWCBJRiBOT1QgRVhJU1RTIGlkeF90YXNrX2Fzc2VzcyBPTiB0YXNrX2Fzc2Vzc21lbnRzKHRhc2tfaWQpOwogICAgICAgICIsCiAgICApCiAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwoKICAgIE9rKCgpKQp9CgpmbiBydW5fbWlncmF0aW9ucyhjb25uOiAmQ29ubmVjdGlvbikgLT4gUmVzdWx0PCgpLCBTdHJpbmc+IHsKICAgIGxldCBjdXJyZW50OiBpNjQgPSBjb25uCiAgICAgICAgLnF1ZXJ5X3JvdygKICAgICAgICAgICAgIlNFTEVDVCBDT0FMRVNDRShNQVgodmVyc2lvbiksIDApIEZST00gc2NoZW1hX3ZlcnNpb24iLAogICAgICAgICAgICBbXSwKICAgICAgICAgICAgfHJvd3wgcm93LmdldCgwKSwKICAgICAgICApCiAgICAgICAgLnVud3JhcF9vcigwKTsKCiAgICBpZiBjdXJyZW50IDwgU0NIRU1BX1ZFUlNJT04gewogICAgICAgIGNvbm4uZXhlY3V0ZSgKICAgICAgICAgICAgIklOU0VSVCBPUiBSRVBMQUNFIElOVE8gc2NoZW1hX3ZlcnNpb24gKHZlcnNpb24pIFZBTFVFUyAoPzEpIiwKICAgICAgICAgICAgW1NDSEVNQV9WRVJTSU9OXSwKICAgICAgICApCiAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKICAgIH0KCiAgICBPaygoKSkKfQoKZm4gaW1wb3J0X3NlZWRfZGF0YShjb25uOiAmQ29ubmVjdGlvbikgLT4gUmVzdWx0PCgpLCBTdHJpbmc+IHsKICAgIGxldCBjb3VudDogaTY0ID0gY29ubgogICAgICAgIC5xdWVyeV9yb3coIlNFTEVDVCBDT1VOVCgqKSBGUk9NIHRhc2tzIiwgW10sIHxyb3d8IHJvdy5nZXQoMCkpCiAgICAgICAgLnVud3JhcF9vcigwKTsKCiAgICBpZiBjb3VudCA+IDAgewogICAgICAgIHJldHVybiBPaygoKSk7CiAgICB9CgogICAgbGV0IHNlZWQ6IFNlZWREYXRhID0gc2VyZGVfanNvbjo6ZnJvbV9zdHIoU0VFRF9KU09OKS5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgbGV0IHR4ID0gY29ubi51bmNoZWNrZWRfdHJhbnNhY3Rpb24oKS5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgZm9yIGNvIGluICZzZWVkLmNvdXJzZU91dGNvbWVzIHsKICAgICAgICB0eC5leGVjdXRlKAogICAgICAgICAgICAiSU5TRVJUIE9SIElHTk9SRSBJTlRPIGNvdXJzZV9vdXRjb21lcyAoaWQsIGNvZGUsIGRlc2NyaXB0aW9uLCBvcmRlcl9pbmRleCkgVkFMVUVTICg/MSwgPzIsID8zLCA/NCkiLAogICAgICAgICAgICBbJmNvLmlkLCAmY28uY29kZSwgJmNvLmRlc2NyaXB0aW9uLCAmY28ub3JkZXJJbmRleC50b19zdHJpbmcoKV0sCiAgICAgICAgKQogICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CiAgICB9CgogICAgZm9yIGNoIGluICZzZWVkLmNoYXB0ZXJzIHsKICAgICAgICB0eC5leGVjdXRlKAogICAgICAgICAgICAiSU5TRVJUIE9SIElHTk9SRSBJTlRPIGNoYXB0ZXJzIChpZCwgdGl0bGUsIGRlc2NyaXB0aW9uLCBvcmRlcl9pbmRleCwgY291cnNlX291dGNvbWVfaWQpIFZBTFVFUyAoPzEsID8yLCA/MywgPzQsID81KSIsCiAgICAgICAgICAgIFsmY2guaWQsICZjaC50aXRsZSwgJmNoLmRlc2NyaXB0aW9uLCAmY2gub3JkZXJJbmRleC50b19zdHJpbmcoKSwgJmNoLmNvdXJzZU91dGNvbWVJZF0sCiAgICAgICAgKQogICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CiAgICB9CgogICAgZm9yIGtwIGluICZzZWVkLmtub3dsZWRnZVBvaW50cyB7CiAgICAgICAgdHguZXhlY3V0ZSgKICAgICAgICAgICAgIklOU0VSVCBPUiBJR05PUkUgSU5UTyBrbm93bGVkZ2VfcG9pbnRzIChpZCwgY2hhcHRlcl9pZCwgbmFtZSwgb3JkZXJfaW5kZXgpIFZBTFVFUyAoPzEsID8yLCA/MywgPzQpIiwKICAgICAgICAgICAgWyZrcC5pZCwgJmtwLmNoYXB0ZXJJZCwgJmtwLm5hbWUsICZrcC5vcmRlckluZGV4LnRvX3N0cmluZygpXSwKICAgICAgICApCiAgICAgICAgLm1hcF9lcnIofGV8IGUudG9fc3RyaW5nKCkpPzsKICAgIH0KCiAgICBmb3IgdGFzayBpbiAmc2VlZC50YXNrcyB7CiAgICAgICAgdHguZXhlY3V0ZSgKICAgICAgICAgICAgIklOU0VSVCBPUiBJR05PUkUgSU5UTyB0YXNrcyAoaWQsIGNoYXB0ZXJfaWQsIGNvdXJzZV9vdXRjb21lX2lkLCBkaWZmaWN1bHR5LCBzY2VuYXJpbywgcmVmZXJlbmNlKSBWQUxVRVMgKD8xLCA/MiwgPzMsID80LCA/NSwgPzYpIiwKICAgICAgICAgICAgWyZ0YXNrLmlkLCAmdGFzay5jaGFwdGVySWQsICZ0YXNrLmNvdXJzZU91dGNvbWVJZCwgJnRhc2suZGlmZmljdWx0eSwgJnRhc2suc2NlbmFyaW8sICZ0YXNrLnJlZmVyZW5jZV0sCiAgICAgICAgKQogICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgICAgIGZvciAoaSwgcmVxKSBpbiB0YXNrLnJlcXVpcmVtZW50cy5pdGVyKCkuZW51bWVyYXRlKCkgewogICAgICAgICAgICBsZXQgaWR4ID0gaSBhcyBpNjQ7CiAgICAgICAgICAgIHR4LmV4ZWN1dGUoCiAgICAgICAgICAgICAgICAiSU5TRVJUIE9SIElHTk9SRSBJTlRPIHRhc2tfcmVxdWlyZW1lbnRzICh0YXNrX2lkLCByZXFfaW5kZXgsIGNvbnRlbnQpIFZBTFVFUyAoPzEsID8yLCA/MykiLAogICAgICAgICAgICAgICAgWyZ0YXNrLmlkLCAmaWR4LnRvX3N0cmluZygpLCByZXFdLAogICAgICAgICAgICApCiAgICAgICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CiAgICAgICAgfQoKICAgICAgICBmb3Iga3BfaWQgaW4gJnRhc2sua25vd2xlZGdlUG9pbnRJZHMgewogICAgICAgICAgICB0eC5leGVjdXRlKAogICAgICAgICAgICAgICAgIklOU0VSVCBPUiBJR05PUkUgSU5UTyB0YXNrX2tub3dsZWRnZV9wb2ludHMgKHRhc2tfaWQsIGtub3dsZWRnZV9wb2ludF9pZCkgVkFMVUVTICg/MSwgPzIpIiwKICAgICAgICAgICAgICAgIFsmdGFzay5pZCwga3BfaWRdLAogICAgICAgICAgICApCiAgICAgICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CiAgICAgICAgfQoKICAgICAgICBmb3Igc3JjIGluICZ0YXNrLnNvdXJjZXMgewogICAgICAgICAgICB0eC5leGVjdXRlKAogICAgICAgICAgICAgICAgIklOU0VSVCBJTlRPIHRhc2tfc291cmNlcyAodGFza19pZCwgdW5pdmVyc2l0eSwgeWVhciwgZXhhbV90eXBlLCBvcmlnaW5hbF90ZXh0LCBub3RlKSBWQUxVRVMgKD8xLCA/MiwgPzMsID80LCA/NSwgPzYpIiwKICAgICAgICAgICAgICAgIHJ1c3FsaXRlOjpwYXJhbXMhWwogICAgICAgICAgICAgICAgICAgICZ0YXNrLmlkLAogICAgICAgICAgICAgICAgICAgICZzcmMudW5pdmVyc2l0eSwKICAgICAgICAgICAgICAgICAgICAmc3JjLnllYXIsCiAgICAgICAgICAgICAgICAgICAgJnNyYy5leGFtVHlwZSwKICAgICAgICAgICAgICAgICAgICAmc3JjLm9yaWdpbmFsVGV4dCwKICAgICAgICAgICAgICAgICAgICAmc3JjLm5vdGUsCiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICApCiAgICAgICAgICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CiAgICAgICAgfQogICAgfQoKICAgIHR4LmV4ZWN1dGUoCiAgICAgICAgIklOU0VSVCBJTlRPIHNjaGVtYV92ZXJzaW9uICh2ZXJzaW9uKSBWQUxVRVMgKD8xKSIsCiAgICAgICAgW1NDSEVNQV9WRVJTSU9OXSwKICAgICkKICAgIC5tYXBfZXJyKHxlfCBlLnRvX3N0cmluZygpKT87CgogICAgdHguY29tbWl0KCkubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwoKICAgIE9rKCgpKQp9
+use rusqlite::Connection;
+use std::path::PathBuf;
+use std::sync::Mutex;
+
+use crate::models::*;
+
+pub struct DbState {
+    pub conn: Mutex<Connection>,
+}
+
+const SCHEMA_VERSION: i64 = 1;
+
+const SEED_JSON: &str = include_str!("../../data/seed.json");
+
+pub fn init_db(study_data_dir: &PathBuf) -> Result<Connection, String> {
+    let db_path = study_data_dir.join("study.db");
+    let is_new = !db_path.exists();
+
+    let mut conn = Connection::open(&db_path).map_err(|e| e.to_string())?;
+
+    conn.execute_batch("PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON;")
+        .map_err(|e| e.to_string())?;
+
+    create_tables(&conn)?;
+
+    if is_new {
+        import_seed_data(&mut conn)?;
+    } else {
+        run_migrations(&conn)?;
+    }
+
+    Ok(conn)
+}
+
+fn create_tables(conn: &Connection) -> Result<(), String> {
+    conn.execute_batch(
+        "
+        CREATE TABLE IF NOT EXISTS schema_version (
+            version INTEGER PRIMARY KEY
+        );
+
+        CREATE TABLE IF NOT EXISTS course_outcomes (
+            id          TEXT PRIMARY KEY,
+            code        TEXT NOT NULL,
+            description TEXT NOT NULL,
+            order_index INTEGER NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS chapters (
+            id                 TEXT PRIMARY KEY,
+            title              TEXT NOT NULL,
+            description        TEXT NOT NULL DEFAULT '',
+            order_index        INTEGER NOT NULL,
+            course_outcome_id  TEXT NOT NULL REFERENCES course_outcomes(id)
+        );
+
+        CREATE TABLE IF NOT EXISTS knowledge_points (
+            id          TEXT PRIMARY KEY,
+            chapter_id  TEXT NOT NULL REFERENCES chapters(id),
+            name        TEXT NOT NULL,
+            order_index INTEGER NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS tasks (
+            id                 TEXT PRIMARY KEY,
+            chapter_id         TEXT NOT NULL REFERENCES chapters(id),
+            course_outcome_id  TEXT NOT NULL REFERENCES course_outcomes(id),
+            difficulty         TEXT NOT NULL CHECK(difficulty IN ('foundation','applied','advanced')),
+            scenario           TEXT NOT NULL,
+            reference          TEXT NOT NULL,
+            source             TEXT,
+            created_at         TEXT NOT NULL DEFAULT (datetime('now'))
+        );
+        CREATE INDEX IF NOT EXISTS idx_tasks_chapter ON tasks(chapter_id);
+        CREATE INDEX IF NOT EXISTS idx_tasks_difficulty ON tasks(difficulty);
+        CREATE INDEX IF NOT EXISTS idx_tasks_outcome ON tasks(course_outcome_id);
+
+        CREATE TABLE IF NOT EXISTS task_knowledge_points (
+            task_id             TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+            knowledge_point_id  TEXT NOT NULL REFERENCES knowledge_points(id) ON DELETE CASCADE,
+            PRIMARY KEY (task_id, knowledge_point_id)
+        );
+
+        CREATE TABLE IF NOT EXISTS task_requirements (
+            id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            task_id     TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+            req_index   INTEGER NOT NULL,
+            content     TEXT NOT NULL,
+            UNIQUE(task_id, req_index)
+        );
+        CREATE INDEX IF NOT EXISTS idx_req_task ON task_requirements(task_id);
+
+        CREATE TABLE IF NOT EXISTS task_sources (
+            id              INTEGER PRIMARY KEY AUTOINCREMENT,
+            task_id         TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+            university      TEXT NOT NULL,
+            year            TEXT,
+            exam_type       TEXT NOT NULL CHECK(exam_type IN ('final','postgraduate','obe','adapted')),
+            original_text   TEXT,
+            note            TEXT
+        );
+        CREATE INDEX IF NOT EXISTS idx_source_task ON task_sources(task_id);
+
+        CREATE TABLE IF NOT EXISTS answer_records (
+            id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            task_id     TEXT NOT NULL REFERENCES tasks(id),
+            chapter_id  TEXT NOT NULL REFERENCES chapters(id),
+            answer_text TEXT NOT NULL DEFAULT '',
+            created_at  TEXT NOT NULL DEFAULT (datetime('now'))
+        );
+        CREATE INDEX IF NOT EXISTS idx_answer_task ON answer_records(task_id);
+
+        CREATE TABLE IF NOT EXISTS requirement_assessments (
+            id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            task_id     TEXT NOT NULL REFERENCES tasks(id),
+            req_index   INTEGER NOT NULL,
+            status      TEXT NOT NULL CHECK(status IN ('mastered','needs_work')),
+            created_at  TEXT NOT NULL DEFAULT (datetime('now'))
+        );
+        CREATE INDEX IF NOT EXISTS idx_assess_task ON requirement_assessments(task_id);
+
+        CREATE TABLE IF NOT EXISTS task_assessments (
+            id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            task_id     TEXT NOT NULL REFERENCES tasks(id),
+            chapter_id  TEXT NOT NULL REFERENCES chapters(id),
+            assessment  TEXT NOT NULL CHECK(assessment IN ('mastered','needs_work')),
+            created_at  TEXT NOT NULL DEFAULT (datetime('now'))
+        );
+        CREATE INDEX IF NOT EXISTS idx_task_assess ON task_assessments(task_id);
+        CREATE INDEX IF NOT EXISTS idx_assess_task_req ON requirement_assessments(task_id, req_index, id DESC);
+        CREATE INDEX IF NOT EXISTS idx_task_assess_latest ON task_assessments(task_id, id DESC);
+        ",
+    )
+    .map_err(|e| e.to_string())?;
+
+    Ok(())
+}
+
+fn run_migrations(conn: &Connection) -> Result<(), String> {
+    let current: i64 = conn
+        .query_row(
+            "SELECT COALESCE(MAX(version), 0) FROM schema_version",
+            [],
+            |row| row.get(0),
+        )
+        .unwrap_or(0);
+
+    if current < SCHEMA_VERSION {
+        conn.execute(
+            "INSERT OR REPLACE INTO schema_version (version) VALUES (?1)",
+            [SCHEMA_VERSION],
+        )
+        .map_err(|e| e.to_string())?;
+    }
+
+    Ok(())
+}
+
+fn import_seed_data(conn: &mut Connection) -> Result<(), String> {
+    let count: i64 = conn
+        .query_row("SELECT COUNT(*) FROM tasks", [], |row| row.get(0))
+        .unwrap_or(0);
+
+    if count > 0 {
+        return Ok(());
+    }
+
+    let seed: SeedData = serde_json::from_str(SEED_JSON).map_err(|e| e.to_string())?;
+
+    let tx = conn.transaction().map_err(|e| e.to_string())?;
+
+    for co in &seed.courseOutcomes {
+        tx.execute(
+            "INSERT OR IGNORE INTO course_outcomes (id, code, description, order_index) VALUES (?1, ?2, ?3, ?4)",
+            [&co.id, &co.code, &co.description, &co.orderIndex.to_string()],
+        )
+        .map_err(|e| e.to_string())?;
+    }
+
+    for ch in &seed.chapters {
+        tx.execute(
+            "INSERT OR IGNORE INTO chapters (id, title, description, order_index, course_outcome_id) VALUES (?1, ?2, ?3, ?4, ?5)",
+            [&ch.id, &ch.title, &ch.description, &ch.orderIndex.to_string(), &ch.courseOutcomeId],
+        )
+        .map_err(|e| e.to_string())?;
+    }
+
+    for kp in &seed.knowledgePoints {
+        tx.execute(
+            "INSERT OR IGNORE INTO knowledge_points (id, chapter_id, name, order_index) VALUES (?1, ?2, ?3, ?4)",
+            [&kp.id, &kp.chapterId, &kp.name, &kp.orderIndex.to_string()],
+        )
+        .map_err(|e| e.to_string())?;
+    }
+
+    for task in &seed.tasks {
+        tx.execute(
+            "INSERT OR IGNORE INTO tasks (id, chapter_id, course_outcome_id, difficulty, scenario, reference) VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+            [&task.id, &task.chapterId, &task.courseOutcomeId, &task.difficulty, &task.scenario, &task.reference],
+        )
+        .map_err(|e| e.to_string())?;
+
+        for (i, req) in task.requirements.iter().enumerate() {
+            let idx = i as i64;
+            tx.execute(
+                "INSERT OR IGNORE INTO task_requirements (task_id, req_index, content) VALUES (?1, ?2, ?3)",
+                [&task.id, &idx.to_string(), req],
+            )
+            .map_err(|e| e.to_string())?;
+        }
+
+        for kp_id in &task.knowledgePointIds {
+            tx.execute(
+                "INSERT OR IGNORE INTO task_knowledge_points (task_id, knowledge_point_id) VALUES (?1, ?2)",
+                [&task.id, kp_id],
+            )
+            .map_err(|e| e.to_string())?;
+        }
+
+        for src in &task.sources {
+            tx.execute(
+                "INSERT INTO task_sources (task_id, university, year, exam_type, original_text, note) VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
+                rusqlite::params![
+                    &task.id,
+                    &src.university,
+                    &src.year,
+                    &src.examType,
+                    &src.originalText,
+                    &src.note,
+                ],
+            )
+            .map_err(|e| e.to_string())?;
+        }
+    }
+
+    tx.execute(
+        "INSERT INTO schema_version (version) VALUES (?1)",
+        [SCHEMA_VERSION],
+    )
+    .map_err(|e| e.to_string())?;
+
+    tx.commit().map_err(|e| e.to_string())?;
+
+    Ok(())
+}
