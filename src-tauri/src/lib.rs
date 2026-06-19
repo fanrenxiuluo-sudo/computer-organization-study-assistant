@@ -10,6 +10,10 @@ use tauri::Manager;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
+    // 初始化日志系统（只在调试模式下显示到控制台，生产模式输出到文件）
+    #[cfg(debug_assertions)]
+    env_logger::init();
+
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .setup(|app| {
@@ -23,7 +27,7 @@ ensure_not_on_desktop(app, &study_data_dir)?;
     std::fs::create_dir_all(&study_data_dir).map_err(|e| e.to_string())?;
     let migrated = migrate_legacy_desktop_db(app, &study_data_dir)?;
     if migrated {
-        eprintln!("[迁移] 已将桌面旧版数据复制到新目录，可手动删除桌面上的「计组备考助手」文件夹。");
+        log::info!("已将桌面旧版数据复制到新目录，可手动删除桌面上的「计组备考助手」文件夹。");
     }
     #[cfg(debug_assertions)]
     write_path_diagnostics(app, &study_data_dir);
@@ -50,14 +54,14 @@ ensure_not_on_desktop(app, &study_data_dir)?;
             commands::reset::reset_progress,
         ])
         .run(tauri::generate_context!())
-        .expect("error while running tauri application");
+        .expect("应用启动失败");
 }
 
 fn ensure_not_on_desktop(app: &tauri::App, path: &Path) -> Result<(), String> {
     if let Ok(desktop_dir) = app.path().desktop_dir() {
         if path.starts_with(&desktop_dir) {
-            eprintln!(
-                "[严重] 数据目录 {} 位于桌面 {} 下，已拒绝启动",
+            log::error!(
+                "数据目录 {} 位于桌面 {} 下，已拒绝启动",
                 path.display(),
                 desktop_dir.display()
             );
@@ -116,7 +120,7 @@ fn write_path_diagnostics(app: &tauri::App, study_data_dir: &Path) {
         .path()
         .desktop_dir()
         .map(path_to_string)
-        .unwrap_or_else(|e| format!("<error: {e}>"));
+               .unwrap_or_else(|e| format!("<error: {e}>"));
     let current_dir = std::env::current_dir()
         .map(path_to_string)
         .unwrap_or_else(|e| format!("<error: {e}>"));
