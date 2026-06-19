@@ -100,6 +100,12 @@ fn migrate_legacy_desktop_db(app: &tauri::App, study_data_dir: &Path) -> Result<
         }
     }
 
+    // 数据已安全迁移到新目录后，删除桌面旧版残留文件夹，保持桌面整洁。
+    // 仅在目标 study.db 确认存在（复制成功）后才删除源，避免复制失败却删了源数据。
+    if new_db.exists() {
+        let _ = std::fs::remove_dir_all(&legacy_dir);
+    }
+
     Ok(true)
 }
 

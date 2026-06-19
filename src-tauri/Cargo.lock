@@ -453,7 +453,7 @@ dependencies = [
 
 [[package]]
 name = "computer-organization-study-assistant"
-version = "0.3.1"
+version = "0.3.2"
 dependencies = [
  "env_logger",
  "log",
