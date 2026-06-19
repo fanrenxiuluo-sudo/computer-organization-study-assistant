@@ -65,6 +65,16 @@ jobs:
           if (-not $assets) {
             throw "No NSIS .exe installer found under src-tauri/target/release/bundle/nsis"
           }
+
+          # Release 实体不会随 tag 自动创建，需先确保存在。
+          # 幂等：已存在则跳过创建，直接上传资产（--clobber 覆盖同名资产）。
+          if (-not (gh release view $env:RELEASE_TAG --repo $env:GITHUB_REPOSITORY 2>$null)) {
+            gh release create $env:RELEASE_TAG `
+              --repo $env:GITHUB_REPOSITORY `
+              --title "$env:RELEASE_TAG" `
+              --notes "由 CI 自动构建并发布的 Windows 安装包。详见对应 tag 的提交说明与 README 修复记录。"
+          }
+
           foreach ($asset in $assets) {
             gh release upload $env:RELEASE_TAG $asset.FullName --repo $env:GITHUB_REPOSITORY --clobber
           }
