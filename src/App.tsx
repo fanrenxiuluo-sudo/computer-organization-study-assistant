@@ -122,7 +122,7 @@ function AppContent() {
         <section className="workspace" ref={workspaceRef}>
           <header className="top-bar">
             <div>
-              <p className="eyebrow">v0.3.1 生产版</p>
+              <p className="eyebrow">v{__APP_VERSION__} 生产版</p>
               <h2>按课程目标完成综合作答，逐条自评掌握程度</h2>
             </div>
             <div className="exam-chip">期末通过优先</div>
