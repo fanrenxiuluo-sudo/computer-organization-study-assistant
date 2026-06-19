@@ -1,9 +1,26 @@
 ; Tauri 2 NSIS 钩子脚本
-; 注意：Tauri 2 只识别 NSIS_HOOK_POSTINSTALL / NSIS_HOOK_POSTUNINSTALL 等钩子宏，
-; 不识别 Tauri 1 的 customInstall / customUnInstall。此前用错宏名导致清理逻辑从未生效。
+; 核心修复：阻止安装到桌面，强制安装路径到 %LOCALAPPDATA%
+;
+; 问题根因：NSIS 安装向导允许用户选择桌面作为安装目录，
+; 导致整个应用（exe/dll/resources）被解压到桌面，形成残留文件夹。
+; v0.3.2 的 POSTINSTALL 清理只处理数据文件，未阻止程序文件被装到桌面。
+;
+; 修复方案：
+; 1. PREINSTALL：无条件强制 $INSTDIR 到正确路径，覆盖任何用户选择/注册表残留
+; 2. POSTINSTALL：继续清理旧版桌面残留数据文件夹
+; 3. POSTUNINSTALL：同理清理
 
-; 桌面旧版残留文件夹名（早期版本曾把数据目录建在桌面）
 !define LEGACY_DESKTOP_DIR "$DESKTOP\计组备考助手"
+
+; ============================================================================
+; 安装前钩子：强制安装路径，防止桌面安装
+;
+; NSIS 的 $INSTDIR 控制文件解压目标、注册表条目和快捷方式。
+; 无论用户在"选择目录"页面选了什么，此处都强制重定向到 %LOCALAPPDATA%。
+; ============================================================================
+!macro NSIS_HOOK_PREINSTALL
+  StrCpy $INSTDIR "$LOCALAPPDATA\计组备考助手"
+!macroend
 
 ; ============================================================================
 ; 安装后钩子：清理旧版在桌面残留的「计组备考助手」文件夹
@@ -11,16 +28,12 @@
 ;       交给应用运行时的 migrate_legacy_desktop_db 迁移后再清理，避免丢失数据。
 ; ============================================================================
 !macro NSIS_HOOK_POSTINSTALL
-  ; 桌面快捷方式由 Tauri 官方模板负责创建，此处不重复创建。
-
   IfFileExists "${LEGACY_DESKTOP_DIR}\study.db" legacy_has_data legacy_no_data
 
   legacy_has_data:
-    ; 存在用户旧版数据，保留文件夹，等待应用运行时迁移并清理
     goto legacy_done
 
   legacy_no_data:
-    ; 纯残留空文件夹（或非数据垃圾），安全删除
     RMDir /r "${LEGACY_DESKTOP_DIR}"
 
   legacy_done:

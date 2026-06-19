@@ -9,7 +9,6 @@ use tauri::Manager;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    // 初始化日志系统（只在调试模式下显示到控制台，生产模式输出到文件）
     #[cfg(debug_assertions)]
     env_logger::init();
 
@@ -22,14 +21,14 @@ pub fn run() {
                 .map_err(|e| e.to_string())?
                 .join("study-data");
 
-ensure_not_on_desktop(app, &study_data_dir)?;
-    std::fs::create_dir_all(&study_data_dir).map_err(|e| e.to_string())?;
-    let migrated = migrate_legacy_desktop_db(app, &study_data_dir)?;
-    if migrated {
-        log::info!("已将桌面旧版数据复制到新目录，可手动删除桌面上的「计组备考助手」文件夹。");
-    }
-    #[cfg(debug_assertions)]
-    write_path_diagnostics(app, &study_data_dir);
+            ensure_not_on_desktop(app, &study_data_dir)?;
+            std::fs::create_dir_all(&study_data_dir).map_err(|e| e.to_string())?;
+            let migrated = migrate_legacy_desktop_db(app, &study_data_dir)?;
+            if migrated {
+                log::info!("已将桌面旧版数据复制到新目录，可手动删除桌面上的「计组备考助手」文件夹。");
+            }
+            #[cfg(debug_assertions)]
+            write_path_diagnostics(app, &study_data_dir);
 
             let conn = db::init_db(&study_data_dir)?;
             app.manage(DbState {
@@ -65,7 +64,7 @@ fn ensure_not_on_desktop(app: &tauri::App, path: &Path) -> Result<(), String> {
                 desktop_dir.display()
             );
             return Err(format!(
-                "应用数据目录异常：{} 位于桌面目录 {} 下，已拒绝启动以避免污染桌面。",
+                "应用数据目录异常：{} 位于桌面目录 {} 下，已拒绝启动以避免污染桌面。\n请重新安装到默认目录。",
                 path.display(),
                 desktop_dir.display()
             ));
@@ -100,8 +99,6 @@ fn migrate_legacy_desktop_db(app: &tauri::App, study_data_dir: &Path) -> Result<
         }
     }
 
-    // 数据已安全迁移到新目录后，删除桌面旧版残留文件夹，保持桌面整洁。
-    // 仅在目标 study.db 确认存在（复制成功）后才删除源，避免复制失败却删了源数据。
     if new_db.exists() {
         let _ = std::fs::remove_dir_all(&legacy_dir);
     }
@@ -125,13 +122,16 @@ fn write_path_diagnostics(app: &tauri::App, study_data_dir: &Path) {
         .path()
         .desktop_dir()
         .map(path_to_string)
-               .unwrap_or_else(|e| format!("<error: {e}>"));
+        .unwrap_or_else(|e| format!("<error: {e}>"));
     let current_dir = std::env::current_dir()
+        .map(path_to_string)
+        .unwrap_or_else(|e| format!("<error: {e}>"));
+    let exe_path = std::env::current_exe()
         .map(path_to_string)
         .unwrap_or_else(|e| format!("<error: {e}>"));
 
     let content = format!(
-        "product_name=计组备考助手\nidentifier=com.fanrenxiuluo.computer-organization-study-assistant\napp_data_dir={app_data_dir}\napp_local_data_dir={app_local_data_dir}\ndesktop_dir={desktop_dir}\ncurrent_dir={current_dir}\nstudy_data_dir={}\ndb_path={}\n",
+        "product_name=计组备考助手\nidentifier=com.fanrenxiuluo.computer-organization-study-assistant\napp_data_dir={app_data_dir}\napp_local_data_dir={app_local_data_dir}\ndesktop_dir={desktop_dir}\ncurrent_dir={current_dir}\nexe_path={exe_path}\nstudy_data_dir={}\ndb_path={}\n",
         study_data_dir.display(),
         study_data_dir.join("study.db").display(),
     );

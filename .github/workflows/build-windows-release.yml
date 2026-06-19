@@ -9,7 +9,7 @@ on:
       tag:
         description: "Release tag to upload installer asset to"
         required: true
-        default: "v0.2.1"
+        default: "v0.4.0"
 
 permissions:
   contents: write
