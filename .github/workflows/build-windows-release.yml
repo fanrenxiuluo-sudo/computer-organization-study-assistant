@@ -22,6 +22,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # 手动触发时切到指定 tag 的代码；push tag 事件时 ref_name 即为该 tag
+          ref: ${{ inputs.tag || github.ref_name }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -55,7 +58,8 @@ jobs:
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ github.ref_name }}
+          # 手动触发用 inputs.tag；push tag 事件用 ref_name
+          RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
         run: |
           $assets = Get-ChildItem "src-tauri/target/release/bundle/nsis" -Filter "*.exe"
           if (-not $assets) {
