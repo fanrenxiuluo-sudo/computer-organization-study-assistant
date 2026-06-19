@@ -1,6 +1,5 @@
 mod commands;
 mod db;
-mod errors;
 mod models;
 
 use db::DbState;
