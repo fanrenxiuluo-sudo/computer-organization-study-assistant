@@ -7,6 +7,41 @@ use std::path::{Path, PathBuf};
 use std::sync::Mutex;
 use tauri::Manager;
 
+/// 在 Windows 上弹出错误消息框（UTF-16），让用户能看到启动失败原因
+fn show_error(msg: &str) {
+    #[cfg(windows)]
+    {
+        let wide_msg: Vec<u16> = msg.encode_utf16().chain(std::iter::once(0)).collect();
+        let wide_title: Vec<u16> = "计组备考助手 - 错误"
+            .encode_utf16()
+            .chain(std::iter::once(0))
+            .collect();
+        unsafe {
+            windows_sys::Win32::UI::WindowsAndMessaging::MessageBoxW(
+                std::ptr::null_mut(),
+                wide_msg.as_ptr(),
+                wide_title.as_ptr(),
+                windows_sys::Win32::UI::WindowsAndMessaging::MB_ICONERROR,
+            );
+        }
+    }
+    #[cfg(not(windows))]
+    eprintln!("{}", msg);
+}
+
+/// 在 setup 中写出错时用：弹出 MessageBox、记录日志、然后 panic（触发 panic hook 写入 crash.log）
+fn fatal_error(msg: String) -> ! {
+    let log_path = std::env::var("LOCALAPPDATA")
+        .map(|d| std::path::PathBuf::from(d).join("计组备考助手").join("crash.log"))
+        .unwrap_or_else(|_| std::env::temp_dir().join("计组备考助手").join("crash.log"));
+    if let Some(parent) = log_path.parent() {
+        let _ = std::fs::create_dir_all(parent);
+    }
+    let _ = std::fs::write(&log_path, &msg);
+    show_error(&format!("应用启动失败：\n\n{}\n\n错误详情已保存至：\n{}", msg, log_path.display()));
+    panic!("{}", msg);
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     #[cfg(debug_assertions)]
@@ -15,22 +50,37 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .setup(|app| {
-            let study_data_dir = app
-                .path()
-                .app_local_data_dir()
-                .map_err(|e| e.to_string())?
-                .join("study-data");
+            let study_data_dir = match app.path().app_local_data_dir() {
+                Ok(d) => d.join("study-data"),
+                Err(e) => fatal_error(format!("获取应用数据目录失败：{}", e)),
+            };
 
-            ensure_not_on_desktop(app, &study_data_dir)?;
-            std::fs::create_dir_all(&study_data_dir).map_err(|e| e.to_string())?;
-            let migrated = migrate_legacy_desktop_db(app, &study_data_dir)?;
+            if let Err(e) = ensure_not_on_desktop(app, &study_data_dir) {
+                fatal_error(e);
+            }
+            if let Err(e) = std::fs::create_dir_all(&study_data_dir) {
+                fatal_error(format!("创建数据目录失败 ({}): {}", study_data_dir.display(), e));
+            }
+
+            let migrated = match migrate_legacy_desktop_db(app, &study_data_dir) {
+                Ok(m) => m,
+                Err(e) => {
+                    show_error(&format!("桌面数据迁移失败（不影响启动，可忽略）：{}", e));
+                    false
+                }
+            };
             if migrated {
                 log::info!("已将桌面旧版数据复制到新目录，可手动删除桌面上的「计组备考助手」文件夹。");
             }
+
             #[cfg(debug_assertions)]
             write_path_diagnostics(app, &study_data_dir);
 
-            let conn = db::init_db(&study_data_dir)?;
+            let conn = match db::init_db(&study_data_dir) {
+                Ok(c) => c,
+                Err(e) => fatal_error(format!("初始化数据库失败：{}", e)),
+            };
+
             app.manage(DbState {
                 conn: Mutex::new(conn),
             });
