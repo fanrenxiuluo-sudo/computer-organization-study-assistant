@@ -1,6 +1,6 @@
 [package]
 name = "computer-organization-study-assistant"
-version = "0.4.1"
+version = "0.5.0"
 description = "面向计算机组成原理课程的 Windows 桌面学习与训练系统"
 authors = ["fanrenxiuluo-sudo"]
 edition = "2021"
@@ -20,11 +20,11 @@ serde_json = "1"
 rusqlite = { version = "0.31", features = ["bundled"] }
 log = "0.4"
 env_logger = "0.10"
+windows-sys = { version = "0.59", features = ["Win32_UI_WindowsAndMessaging", "Win32_Foundation"] }
 
 [profile.release]
 strip = true
 lto = true
 codegen-units = 1
 opt-level = "z"
-panic = "abort"
 

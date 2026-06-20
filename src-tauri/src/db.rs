@@ -31,6 +31,8 @@ pub fn init_db(study_data_dir: &PathBuf) -> Result<Connection, String> {
             import_seed_data_from_json(&mut conn, &json)?;
         } else {
             let embedded_seed: &str = include_str!("../../data/seed.json");
+            // 去除可能存在的 UTF-8 BOM (Byte Order Mark)
+            let embedded_seed = embedded_seed.strip_prefix('\u{feff}').unwrap_or(embedded_seed);
             import_seed_data_from_json(&mut conn, embedded_seed)?;
         }
     } else {
